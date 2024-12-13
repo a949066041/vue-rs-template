@@ -6,13 +6,19 @@
     "lib": ["DOM", "ES2020"],
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
     "resolveJsonModule": true,
+    "types": [
+      "unplugin-vue-router/client"
+    ],
     "allowImportingTsExtensions": true,
     "strict": true,
     "noEmit": true,
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["src"]
+  "include": ["src", "./typed-router.d.ts"]
 }
