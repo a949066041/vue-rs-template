@@ -34,7 +34,7 @@ const { isLoading, data = { users: [] } } = useQuery({
     </RouterLink>
     {{ isLoading && 'loading...' }}
     <ul>
-      <li v-for="item of data?.users" :key="item.id">
+      <li v-for="item of data?.users" :key="item.id" @click="$router.push({ name: '/user/[id]', params: { id: item.id } })">
         firstName: {{ item.firstName }} -- lastName: {{ item.lastName }}
       </li>
     </ul>
