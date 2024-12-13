@@ -31,6 +31,7 @@ export default antfu({
   rules: {
     'no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'warn',
+    'import/first': 'off',
     'unused-imports/no-unused-vars': [
       'warn',
       {
