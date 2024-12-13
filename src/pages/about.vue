@@ -6,6 +6,9 @@ const countStore = useCountStore()
 
 <template>
   <div>
+    <RouterLink to="/user">
+      123
+    </RouterLink>
     <span class="text-blue">{{ countStore.count }}</span>
     <button @click="countStore.increment">
       add
