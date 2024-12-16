@@ -10,3 +10,5 @@ dist/
 # IDE
 !.vscode/extensions.json
 .idea
+
+typed-router.d.ts

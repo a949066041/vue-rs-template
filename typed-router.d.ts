@@ -19,9 +19,18 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
+    '/[...path]': RouteRecordInfo<'/[...path]', '/:path(.*)', { path: ParamValue<true> }, { path: ParamValue<false> }>,
     '/about': RouteRecordInfo<'/about', '/about', Record<never, never>, Record<never, never>>,
-    '/user': RouteRecordInfo<'/user', '/user', Record<never, never>, Record<never, never>>,
+    '/articles/': RouteRecordInfo<'/articles/', '/articles', Record<never, never>, Record<never, never>>,
+    '/articles/[id]': RouteRecordInfo<'/articles/[id]', '/articles/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/articles/[id]+': RouteRecordInfo<'/articles/[id]+', '/articles/:id+', { id: ParamValueOneOrMore<true> }, { id: ParamValueOneOrMore<false> }>,
+    '/n-[[n]]/': RouteRecordInfo<'/n-[[n]]/', '/n-:n?', { n?: ParamValueZeroOrOne<true> }, { n?: ParamValueZeroOrOne<false> }>,
+    '/n-[[n]]/[[more]]+/': RouteRecordInfo<'/n-[[n]]/[[more]]+/', '/n-:n?/:more*', { n?: ParamValueZeroOrOne<true>, more?: ParamValueZeroOrMore<true> }, { n?: ParamValueZeroOrOne<false>, more?: ParamValueZeroOrMore<false> }>,
+    '/n-[[n]]/[[more]]+/[final]': RouteRecordInfo<'/n-[[n]]/[[more]]+/[final]', '/n-:n?/:more*/:final', { n?: ParamValueZeroOrOne<true>, more?: ParamValueZeroOrMore<true>, final: ParamValue<true> }, { n?: ParamValueZeroOrOne<false>, more?: ParamValueZeroOrMore<false>, final: ParamValue<false> }>,
+    '/test-[aId]': RouteRecordInfo<'/test-[aId]', '/test-:aId', { aId: ParamValue<true> }, { aId: ParamValue<false> }>,
+    '/test-[...arr]': RouteRecordInfo<'/test-[...arr]', '/test-:arr(.*)', { arr: ParamValue<true> }, { arr: ParamValue<false> }>,
     '/user/': RouteRecordInfo<'/user/', '/user', Record<never, never>, Record<never, never>>,
     '/user/[id]': RouteRecordInfo<'/user/[id]', '/user/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/user/create.[id]': RouteRecordInfo<'/user/create.[id]', '/user/create/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
   }
 }

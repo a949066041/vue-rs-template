@@ -16,7 +16,7 @@ async function fetchUserAction(): Promise<{ users: IUserEntity[] }> {
       const res = await fetch('https://dummyjson.com/users/')
       resolve(res.json())
       value.value++
-    }, 3000)
+    }, 800)
   })
 }
 
@@ -28,10 +28,10 @@ const { isLoading, data = { users: [] } } = useQuery({
 
 <template>
   <div>
+    <div>
+      this is user page
+    </div>
     {{ value }}
-    <RouterLink to="/">
-      123
-    </RouterLink>
     {{ isLoading && 'loading...' }}
     <ul>
       <li v-for="item of data?.users" :key="item.id" @click="$router.push({ name: '/user/[id]', params: { id: item.id } })">

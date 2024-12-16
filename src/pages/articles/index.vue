@@ -1,0 +1,1 @@
+<template>articles index</template>

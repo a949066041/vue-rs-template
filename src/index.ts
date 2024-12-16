@@ -14,6 +14,7 @@ function bootstrap() {
     history: createWebHistory(),
     routes,
   })
+
   const app = createApp(App)
   const pinia = createPinia()
 

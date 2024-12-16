@@ -1,6 +1,5 @@
 <template>
-  <RouterLink to="/user">
-    user
-  </RouterLink>
-  <router-view />
+  <div>
+    this is home page
+  </div>
 </template>
