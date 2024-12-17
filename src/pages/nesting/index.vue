@@ -1,0 +1,3 @@
+<template>
+  nesting page
+</template>

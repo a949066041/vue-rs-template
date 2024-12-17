@@ -5,5 +5,5 @@ const route = useRoute('/[...path]')
 </script>
 
 <template>
-  <div> {{ route.params }} not founds</div>
+  <div> {{ route.params.path }} not founds</div>
 </template>

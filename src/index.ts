@@ -1,8 +1,9 @@
 import { VueQueryPlugin } from '@tanstack/vue-query'
 import { createPinia } from 'pinia'
+import { DataLoaderPlugin } from 'unplugin-vue-router/data-loaders'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import { routes } from 'vue-router/auto-routes'
+import { handleHotUpdate, routes } from 'vue-router/auto-routes'
 import App from './App.vue'
 
 import { queryClient } from './store'
@@ -15,6 +16,11 @@ function bootstrap() {
     routes,
   })
 
+  // @ts-expect-error hii
+  if (import.meta.hot) {
+    handleHotUpdate(router)
+  }
+
   const app = createApp(App)
   const pinia = createPinia()
 
@@ -22,6 +28,8 @@ function bootstrap() {
     queryClient,
     enableDevtoolsV6Plugin: true,
   })
+
+  app.use(DataLoaderPlugin, { router })
   app.use(router)
   app.use(pinia)
   app.mount('#root')

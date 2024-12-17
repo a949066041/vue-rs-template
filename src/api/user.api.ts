@@ -1,5 +1,7 @@
+import type { MaybeRefOrGetter } from 'vue'
 import type { IUserEntity, IUserList } from './user.type'
 import { queryOptions } from '@tanstack/vue-query'
+import { toValue } from 'vue'
 
 function delay(time: number) {
   return new Promise(resolve => setTimeout(resolve, time))
@@ -28,9 +30,9 @@ export const userQueryListOptions = queryOptions({
   queryFn: fetchUserList,
 })
 
-export function userQueryOptions(id: IUserEntity['id']) {
+export function userQueryOptions(id: MaybeRefOrGetter<IUserEntity['id']>) {
   return queryOptions({
-    queryKey: ['user-list', { id }],
-    queryFn: () => fetchUser(id),
+    queryKey: ['user-list', toValue(id)],
+    queryFn: () => fetchUser(toValue(id)),
   })
 }

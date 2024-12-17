@@ -1,46 +1,35 @@
 <script setup lang="ts">
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
+
+const routes = [
+  { path: '/', title: '首页', icon: 'icon-[line-md--home]' },
+  { path: '/store', title: 'pinia 缓存', icon: 'icon-[octicon--cache-24]' },
+  { path: '/user', title: 'vue query', icon: 'icon-[logos--vue]' },
+  { path: '/n', title: '动态路由', icon: 'icon-[material-symbols--dynamic-feed]' },
+  { path: '/nesting/', title: '嵌套路由', icon: 'icon-[ant-design--layout-outlined]' },
+  { path: '/404', title: 'not found page', icon: 'icon-[tabler--error-404]' },
+  { path: '/about', title: '关于', icon: 'icon-[ix--about]' },
+]
 </script>
 
 <template>
-  <VueQueryDevtools />
-  <div class="flex flex-wrap space-x-3xl">
-    <RouterLink to="/">
-      Home
-    </RouterLink>
-    <RouterLink to="/user">
-      user
-    </RouterLink>
-    <RouterLink :to="{ name: '/user/create.[id]', params: { id: 2 } }">
-      user create
-    </RouterLink>
-    <RouterLink to="/about">
-      about
-    </RouterLink>
-    <RouterLink :to="{ name: '/test-[aId]', params: { aId: '123' } }">
-      test user Id -> 123
-    </RouterLink>
-    <RouterLink :to="{ name: '/test-[...arr]', params: { arr: 1333 } }">
-      test user arr
-    </RouterLink>
-    <RouterLink :to="{ name: '/articles/', params: { arr: 1333 } }">
-      articles
-    </RouterLink>
-    <RouterLink :to="{ name: '/articles/[id]', params: { id: 1 } }">
-      articles 1
-    </RouterLink>
-    <RouterLink :to="{ name: '/articles/[id]+', params: { id: [1, 3, 4, '5'] } }">
-      articles arr
-    </RouterLink>
-    <RouterLink :to="{ name: '/n-[[n]]/', params: { n: 1 } }">
-      /n-[[n]]/
-    </RouterLink>
-    <RouterLink :to="{ name: '/n-[[n]]/[[more]]+/', params: { n: 1, more: [1, 2, 3] } }">
-      /n-[[n]]/[[more]]+/
-    </RouterLink>
-    <RouterLink :to="{ name: '/n-[[n]]/[[more]]+/[final]', params: { final: 'test' } }">
-      /n-[[n]]/[[more]]+/[final]
-    </RouterLink>
+  <div className=" flex h-screen dark:bg-black/75 bg-white/85 dark:text-white">
+    <ul className=" w-[200px] flex-none border-r-2 border-dashed border-blue-300 h-full">
+      <li v-for="item of routes" :key="item.path" class="h-10 p-2 leading-10">
+        <RouterLink :to="item.path" class="flex items-center" active-class=" text-red-400 font-bold">
+          <i class="mr-2" :class="[item.icon]" />
+          {{ item.title }}
+        </RouterLink>
+      </li>
+    </ul>
+    <div className="  flex-1 py-2 px-3">
+      <header className=" text-right">
+        <span className=" justify-end">
+          <ThemeMode />
+        </span>
+      </header>
+      <router-view />
+    </div>
+    <VueQueryDevtools />
   </div>
-  <router-view />
 </template>

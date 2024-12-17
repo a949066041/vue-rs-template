@@ -10,10 +10,10 @@ const countStore = useCountStore()
       this is about
     </div>
     <span class="text-blue">{{ countStore.count }}</span>
-    <button @click="countStore.increment">
+    <button class="border border-orange-500 rounded-lg border-solid px-20" @click="countStore.increment">
       add
     </button>
-    <button @click="countStore.decrement">
+    <button class="border border-orange-500 rounded-lg border-solid px-20" @click="countStore.decrement">
       sub
     </button>
     <RouterView />
