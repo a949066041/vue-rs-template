@@ -1873,8 +1873,8 @@ packages:
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
 
-  nanoid@3.3.7:
-    resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
+  nanoid@3.3.8:
+    resolution: {integrity: sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -2333,11 +2333,6 @@ packages:
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
-
-  tsx@4.19.1:
-    resolution: {integrity: sha512-0flMz1lh74BR4wOvBjuh9olbnwqCPc35OOlfyzHba0Dc+QNUeWX/Gq2YTbnwcWPO3BMd8fkzRVrHcsR+a7z7rA==}
-    engines: {node: '>=18.0.0'}
-    hasBin: true
 
   tsx@4.19.2:
     resolution: {integrity: sha512-pOUl6Vo2LUq/bSa8S5q7b91cgNSjctn9ugq/+Mvow99qW6x/UZYwzxy/3NmqoT66eHYfCVvFvACC58UBPFf28g==}
@@ -4075,12 +4070,12 @@ snapshots:
   importx@0.4.4:
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.1)
-      debug: 4.3.7
+      debug: 4.4.0
       esbuild: 0.23.1
       jiti: 2.0.0-beta.3
       jiti-v1: jiti@1.21.6
       pathe: 1.1.2
-      tsx: 4.19.1
+      tsx: 4.19.2
     transitivePeerDependencies:
       - supports-color
     optional: true
@@ -4568,7 +4563,7 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nanoid@3.3.7: {}
+  nanoid@3.3.8: {}
 
   natural-compare@1.4.0: {}
 
@@ -4726,7 +4721,7 @@ snapshots:
 
   postcss@8.4.49:
     dependencies:
-      nanoid: 3.3.7
+      nanoid: 3.3.8
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -4951,7 +4946,7 @@ snapshots:
   synckit@0.9.2:
     dependencies:
       '@pkgr/core': 0.1.1
-      tslib: 2.7.0
+      tslib: 2.8.1
     optional: true
 
   tailwindcss@3.4.16:
@@ -5042,14 +5037,6 @@ snapshots:
   tslib@2.7.0: {}
 
   tslib@2.8.1: {}
-
-  tsx@4.19.1:
-    dependencies:
-      esbuild: 0.23.1
-      get-tsconfig: 4.8.1
-    optionalDependencies:
-      fsevents: 2.3.3
-    optional: true
 
   tsx@4.19.2:
     dependencies:
