@@ -8,15 +8,3 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
-
-// manual extension of route types
-declare module 'vue-router/auto-routes' {
-  export interface RouteNamedMap {
-    'custom-dynamic-name': RouteRecordInfo<
-      'custom-dynamic-name',
-      '/added-during-runtime/[...path]',
-      { path: ParamValue<true> },
-      { path: ParamValue<false> }
-    >
-  }
-}
