@@ -12,14 +12,16 @@ export default defineConfig({
     },
   },
   tools: {
-    async rspack(config) {
+    async rspack(config, ctx) {
       const { scanPages, generateRoutes } = createRoutesContext(resolveOptions({ }))
 
       await scanPages()
 
-      config.plugins?.push(new RspackVirtualModulePlugin({
-        'vue-router/auto-routes': generateRoutes(),
-      }))
+      if (ctx.isDev) {
+        config.plugins?.push(new RspackVirtualModulePlugin({
+          'vue-router/auto-routes': generateRoutes(),
+        }))
+      }
     },
   },
 })
