@@ -1,8 +1,6 @@
 import { defineConfig } from '@rsbuild/core'
 import { pluginVue } from '@rsbuild/plugin-vue'
-import { RspackVirtualModulePlugin } from 'rspack-plugin-virtual-module'
-import { createRoutesContext } from 'unplugin-vue-router'
-import { resolveOptions } from 'unplugin-vue-router/options'
+import rspackPluginVueRouter from 'unplugin-vue-router'
 
 export default defineConfig({
   plugins: [pluginVue()],
@@ -12,16 +10,10 @@ export default defineConfig({
     },
   },
   tools: {
-    async rspack(config, ctx) {
-      const { scanPages, generateRoutes } = createRoutesContext(resolveOptions({ }))
-
-      await scanPages()
-
-      if (ctx.isDev) {
-        config.plugins?.push(new RspackVirtualModulePlugin({
-          'vue-router/auto-routes': generateRoutes(),
-        }))
-      }
+    rspack(config) {
+      config.plugins?.push(
+        rspackPluginVueRouter.rspack(),
+      )
     },
   },
 })
