@@ -1,5 +1,4 @@
 import { VueQueryPlugin } from '@tanstack/vue-query'
-import { createPinia } from 'pinia'
 import { DataLoaderPlugin } from 'unplugin-vue-router/data-loaders'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
@@ -16,7 +15,6 @@ function bootstrap() {
   })
 
   const app = createApp(App)
-  const pinia = createPinia()
 
   app.use(VueQueryPlugin, {
     queryClient,
@@ -25,7 +23,6 @@ function bootstrap() {
 
   app.use(DataLoaderPlugin, { router })
   app.use(router)
-  app.use(pinia)
   app.mount('#root')
 }
 

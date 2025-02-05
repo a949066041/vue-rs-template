@@ -1,7 +1,7 @@
-import { defineStore } from 'pinia'
+import { createGlobalState } from '@vueuse/core'
 import { ref } from 'vue'
 
-export const useCountStore = defineStore('count', () => {
+export const useCountStore = createGlobalState(() => {
   const count = ref(1)
 
   function increment() {
