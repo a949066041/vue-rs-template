@@ -16,7 +16,7 @@ const RenderItem2 = defineComponent(async (_, ctx) => {
   const pageValue = await new Promise((resolve) => {
     setTimeout(() => {
       resolve(100)
-    }, 3000)
+    }, 1)
   })
 
   return () => ctx.slots.default?.({
@@ -44,7 +44,7 @@ const RenderItem2 = defineComponent(async (_, ctx) => {
       <Suspense>
         <RenderItem2 v-slot="{ page }">
           <div>
-            123123
+            <i class=" icon-[custom--anq]" />
             {{ page }}
           </div>
         </RenderItem2>

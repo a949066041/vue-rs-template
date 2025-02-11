@@ -12,3 +12,6 @@ dist/
 .idea
 
 typed-router.d.ts
+
+# assets
+custom.json

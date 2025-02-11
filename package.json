@@ -4,16 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "rsbuild dev",
+    "postinstall": "esno scripts/svg2json.ts",
     "build": "rsbuild build",
     "preview": "rsbuild preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@iconify/tools": "^4.1.1",
     "@tailwindcss/postcss": "^4.0.5",
     "@tanstack/vue-query": "^5.66.0",
     "@vueuse/core": "^12.5.0",
     "dayjs": "^1.11.13",
+    "esno": "^4.8.0",
     "lodash-es": "^4.17.21",
     "ohash": "^1.1.4",
     "rspack-plugin-virtual-module": "^0.1.13",
@@ -21,7 +24,8 @@
     "taze": "^18.4.0",
     "unplugin-auto-import": "^19.0.0",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.2.0",

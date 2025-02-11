@@ -1,3 +1,9 @@
 import { addDynamicIconSelectors } from '@iconify/tailwind'
+import customIconJson from '../assets/custom.json'
 
-export default addDynamicIconSelectors()
+// * render node env
+export default addDynamicIconSelectors({
+  iconSets: {
+    custom: customIconJson,
+  },
+})
