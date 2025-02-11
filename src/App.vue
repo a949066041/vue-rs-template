@@ -7,6 +7,7 @@ const routes = [
   { path: '/store', title: 'pinia 缓存', icon: 'icon-[octicon--cache-24]' },
   { path: '/user', title: 'vue query', icon: 'icon-[logos--vue]' },
   { path: '/n', title: '动态路由', icon: 'icon-[material-symbols--dynamic-feed]' },
+  { path: '/auth', title: '用户鉴权', icon: 'icon-[material-symbols--dynamic-feed]' },
   { path: '/nesting/', title: '嵌套路由', icon: 'icon-[ant-design--layout-outlined]' },
   { path: '/404', title: 'not found page', icon: 'icon-[tabler--error-404]' },
   { path: '/about', title: '关于', icon: 'icon-[ix--about]' },

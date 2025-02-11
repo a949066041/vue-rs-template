@@ -26,6 +26,7 @@ declare module 'vue-router/auto-routes' {
     '/about/[value]/create': RouteRecordInfo<'/about/[value]/create', '/about/:value/create', { value: ParamValue<true> }, { value: ParamValue<false> }>,
     '/about/name/': RouteRecordInfo<'/about/name/', '/about/name', Record<never, never>, Record<never, never>>,
     '/about/name/[name]': RouteRecordInfo<'/about/name/[name]', '/about/name/:name', { name: ParamValue<true> }, { name: ParamValue<false> }>,
+    '/auth': RouteRecordInfo<'/auth', '/auth', Record<never, never>, Record<never, never>>,
     '/n': RouteRecordInfo<'/n', '/n', Record<never, never>, Record<never, never>>,
     '/n/': RouteRecordInfo<'/n/', '/n', Record<never, never>, Record<never, never>>,
     '/n/value-[[more]]+/': RouteRecordInfo<'/n/value-[[more]]+/', '/n/value-:more*', { more?: ParamValueZeroOrMore<true> }, { more?: ParamValueZeroOrMore<false> }>,
