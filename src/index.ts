@@ -6,6 +6,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { routes } from 'vue-router/auto-routes'
 import App from './App.vue'
 import { queryClient } from './store'
+import './setup'
 import './style/index.css'
 
 function bootstrap() {
