@@ -11,12 +11,10 @@ function handleTestValue() {
   })
 }
 
-
-async function  hanldeAddCountValue() {
+async function hanldeAddCountValue() {
   await handleTestValue()
-  count.value ++
+  count.value++
 }
-
 </script>
 
 <template>
@@ -36,7 +34,9 @@ async function  hanldeAddCountValue() {
     </button>
     <h1>list</h1>
     <ul>
-      <li v-for="item of count">{{ item }}</li>
+      <li v-for="item of count" :key="item">
+        {{ item }}
+      </li>
     </ul>
     <RouterView />
   </div>

@@ -1,1 +1,3 @@
-<template>n+</template>
+<template>
+  n+
+</template>

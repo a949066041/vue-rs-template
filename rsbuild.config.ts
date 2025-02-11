@@ -1,7 +1,6 @@
 import { defineConfig } from '@rsbuild/core'
 import { pluginVue } from '@rsbuild/plugin-vue'
-// @ts-expect-error ignore rspack vue router
-import { rspack as VueRouter } from 'unplugin-vue-router'
+import RspackVueRouterPlugin from './vue-router-rspack'
 
 export default defineConfig({
   plugins: [pluginVue()],
@@ -12,7 +11,7 @@ export default defineConfig({
   },
   tools: {
     rspack: {
-      plugins: [VueRouter()],
+      plugins: [new RspackVueRouterPlugin()],
     },
   },
 })

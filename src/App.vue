@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
-import { defineComponent, h, onMounted, ref } from 'vue'
+import { defineComponent } from 'vue'
 
 const routes = [
   { path: '/', title: '首页', icon: 'icon-[line-md--home]' },
