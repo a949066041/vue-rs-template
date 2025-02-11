@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
+import { defineComponent } from 'vue'
 
 const routes = [
   { path: '/', title: '首页', icon: 'icon-[line-md--home]' },
@@ -10,6 +11,18 @@ const routes = [
   { path: '/404', title: 'not found page', icon: 'icon-[tabler--error-404]' },
   { path: '/about', title: '关于', icon: 'icon-[ix--about]' },
 ]
+
+const RenderItem2 = defineComponent(async (_, ctx) => {
+  const pageValue = await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(100)
+    }, 3000)
+  })
+
+  return () => ctx.slots.default?.({
+    page: pageValue,
+  })
+})
 </script>
 
 <template>
@@ -28,6 +41,17 @@ const routes = [
           <ThemeMode />
         </span>
       </header>
+      <Suspense>
+        <RenderItem2 v-slot="{ page }">
+          <div>
+            123123
+            {{ page }}
+          </div>
+        </RenderItem2>
+        <template #fallback>
+          Loading...
+        </template>
+      </Suspense>
       <router-view />
     </div>
     <VueQueryDevtools />

@@ -1,6 +1,6 @@
 import { defineConfig } from '@rsbuild/core'
 import { pluginVue } from '@rsbuild/plugin-vue'
-import rspackPluginVueRouter from 'unplugin-vue-router'
+import RspackVueRouterPlugin from './vue-router-rspack'
 
 export default defineConfig({
   plugins: [pluginVue()],
@@ -10,10 +10,8 @@ export default defineConfig({
     },
   },
   tools: {
-    rspack(config) {
-      config.plugins?.push(
-        rspackPluginVueRouter.rspack(),
-      )
+    rspack: {
+      plugins: [new RspackVueRouterPlugin()],
     },
   },
 })

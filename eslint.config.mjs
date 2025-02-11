@@ -2,7 +2,7 @@ import antfu from '@antfu/eslint-config'
 import unusedImports from 'eslint-plugin-unused-imports'
 
 export default antfu({
-  unocss: true,
+  unocss: false,
   vue: true,
 
   // Enable stylistic formatting rules
