@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useIsFetching } from '@tanstack/vue-query'
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
+import { userMeQueryOptions } from './api'
+
+const isFetching = useIsFetching({ queryKey: userMeQueryOptions().queryKey })
 
 const routes = [
   { path: '/', title: '首页', icon: 'icon-[line-md--home]' },
@@ -12,8 +15,6 @@ const routes = [
   { path: '/404', title: 'not found page', icon: 'icon-[tabler--error-404]' },
   { path: '/about', title: '关于', icon: 'icon-[ix--about]' },
 ]
-
-const isFetching = useIsFetching()
 </script>
 
 <template>
