@@ -1,12 +1,18 @@
 <script lang="ts" setup>
 import type { ILoginUserParams } from '~/api'
 import { useMutation } from '@tanstack/vue-query'
+import { useRouter } from 'vue-router'
 import { useAuthStore } from '~/store'
 
 const { loginUser } = useAuthStore()
+const router = useRouter()
 const { mutateAsync, isPending } = useMutation({
   mutationKey: ['login'],
-  mutationFn: (params: ILoginUserParams) => loginUser({ ...params, username: 'emilys', password: 'emilyspass' }),
+  mutationFn: (params: ILoginUserParams) => loginUser({
+    ...params,
+    username: 'emilys',
+    password: 'emilyspass',
+  }),
 })
 
 async function handleSubmitLogin(evt: unknown) {
@@ -15,6 +21,7 @@ async function handleSubmitLogin(evt: unknown) {
   const password = data.get('password') as string
 
   await mutateAsync({ username, password })
+  router.push({ name: '/(auth)/page' })
 }
 </script>
 

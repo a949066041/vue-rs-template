@@ -1,8 +1,8 @@
-import { addCustomTab } from '@vue/devtools-api'
-import { h } from 'vue'
-import CountState from '~/pages/store.vue'
-import { useAuthStore, useCountStore } from '~/store'
+import { watchEffect } from 'vue'
+import { useAuthStore, useCacheStore, useCountStore } from '~/store'
 import { setupFetch } from './fetch.setup'
+
+export * from './auth.setup'
 
 function setupApp() {
   setupFetch()
@@ -13,15 +13,25 @@ setupApp()
 
 function addCustomeDevtoolsTab() {
   const countStore = useCountStore()
-  addCustomTab({
-    name: 'plugin-count',
-    title: 'Plugin Count',
-    icon: 'baseline-exposure-plus-1',
-    // SFC view
-    view: {
-      type: 'vnode',
-      vnode: h('div', ['hello world', h('div', `1 ${countStore.count.value}`)]),
-    },
-    category: 'app',
+  const authStore = useAuthStore()
+  const cacheStore = useCacheStore()
+
+  watchEffect(() => {
+    Object.entries(countStore).forEach(([key, value]) => {
+      if (typeof value !== 'function') {
+        console.warn('count', key, value.value)
+      }
+    })
+    Object.entries(authStore).forEach(([key, value]) => {
+      if (typeof value !== 'function') {
+        console.warn('auth', key, value.value)
+      }
+    })
+
+    Object.entries(cacheStore).forEach(([key, value]) => {
+      if (typeof value !== 'function') {
+        console.warn('cache', key, value.value)
+      }
+    })
   })
 }

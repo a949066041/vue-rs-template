@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { useIsFetching } from '@tanstack/vue-query'
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
-import { defineComponent } from 'vue'
 
 const routes = [
   { path: '/', title: '首页', icon: 'icon-[line-md--home]' },
@@ -13,17 +13,7 @@ const routes = [
   { path: '/about', title: '关于', icon: 'icon-[ix--about]' },
 ]
 
-const RenderItem2 = defineComponent(async (_, ctx) => {
-  const pageValue = await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(100)
-    }, 1)
-  })
-
-  return () => ctx.slots.default?.({
-    page: pageValue,
-  })
-})
+const isFetching = useIsFetching()
 </script>
 
 <template>
@@ -42,17 +32,7 @@ const RenderItem2 = defineComponent(async (_, ctx) => {
           <ThemeMode />
         </span>
       </header>
-      <Suspense>
-        <RenderItem2 v-slot="{ page }">
-          <div>
-            <i class=" icon-[custom--anq]" />
-            {{ page }}
-          </div>
-        </RenderItem2>
-        <template #fallback>
-          Loading...
-        </template>
-      </Suspense>
+      {{ isFetching > 0 && 'loading... auth page' }}
       <router-view />
     </div>
     <VueQueryDevtools />

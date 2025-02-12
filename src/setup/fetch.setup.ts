@@ -4,10 +4,10 @@ import { useAuthStore, useCacheStore } from '~/store'
 function fetchAuthIntercept(req: RequestInit) {
   const { token } = useCacheStore()
 
-  if (token) {
+  if (token.value) {
     req.headers = {
       ...(req.headers || {}),
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${token.value}`,
     }
   }
 

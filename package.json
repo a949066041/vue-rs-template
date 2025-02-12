@@ -14,7 +14,6 @@
     "@iconify/tools": "^4.1.1",
     "@tailwindcss/postcss": "^4.0.5",
     "@tanstack/vue-query": "^5.66.0",
-    "@vue/devtools-api": "^7.7.1",
     "@vueuse/core": "^12.5.0",
     "dayjs": "^1.11.13",
     "esno": "^4.8.0",
