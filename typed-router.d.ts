@@ -19,6 +19,7 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
+    '/(auth)/page': RouteRecordInfo<'/(auth)/page', '/page', Record<never, never>, Record<never, never>>,
     '/[...path]': RouteRecordInfo<'/[...path]', '/:path(.*)', { path: ParamValue<true> }, { path: ParamValue<false> }>,
     '/about/': RouteRecordInfo<'/about/', '/about', Record<never, never>, Record<never, never>>,
     '/about/[id]': RouteRecordInfo<'/about/[id]', '/about/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
@@ -26,6 +27,7 @@ declare module 'vue-router/auto-routes' {
     '/about/[value]/create': RouteRecordInfo<'/about/[value]/create', '/about/:value/create', { value: ParamValue<true> }, { value: ParamValue<false> }>,
     '/about/name/': RouteRecordInfo<'/about/name/', '/about/name', Record<never, never>, Record<never, never>>,
     '/about/name/[name]': RouteRecordInfo<'/about/name/[name]', '/about/name/:name', { name: ParamValue<true> }, { name: ParamValue<false> }>,
+    '/auth': RouteRecordInfo<'/auth', '/auth', Record<never, never>, Record<never, never>>,
     '/n': RouteRecordInfo<'/n', '/n', Record<never, never>, Record<never, never>>,
     '/n/': RouteRecordInfo<'/n/', '/n', Record<never, never>, Record<never, never>>,
     '/n/value-[[more]]+/': RouteRecordInfo<'/n/value-[[more]]+/', '/n/value-:more*', { more?: ParamValueZeroOrMore<true> }, { more?: ParamValueZeroOrMore<false> }>,
