@@ -29,6 +29,7 @@ export default antfu({
     'unused-imports': unusedImports,
   },
   rules: {
+    'node/prefer-global/process': 'off',
     'no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'warn',
     'import/first': 'off',
