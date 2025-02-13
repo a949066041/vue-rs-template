@@ -1,24 +1,24 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "jsx": "preserve",
     "jsxImportSource": "vue",
-    "lib": ["DOM", "ES2020"],
+    "lib": ["DOM", "ESNext"],
     "useDefineForClassFields": true,
+    "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "~~/*": ["./*"]
     },
     "resolveJsonModule": true,
-    "types": [
-      "unplugin-vue-router/client"
-    ],
     "allowImportingTsExtensions": true,
     "strict": true,
     "noEmit": true,
+    "esModuleInterop": true,
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["src", "./typed-router.d.ts", "scripts", "custom.json"]
+  "include": ["src", "typed-router.d.ts", "scripts", "custom.json", "rsbuild.config.ts"]
 }

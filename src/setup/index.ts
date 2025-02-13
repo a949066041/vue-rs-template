@@ -6,7 +6,7 @@ export * from './auth.setup'
 
 function setupApp() {
   setupFetch()
-  addCustomeDevtoolsTab()
+  import.meta.env.DEV && addCustomeDevtoolsTab()
 }
 
 setupApp()
