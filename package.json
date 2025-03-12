@@ -13,28 +13,28 @@
   },
   "dependencies": {
     "@iconify/tools": "^4.1.1",
-    "@tailwindcss/postcss": "^4.0.12",
-    "@tanstack/vue-query": "^5.67.2",
+    "@tailwindcss/postcss": "^4.0.13",
+    "@tanstack/vue-query": "^5.67.3",
     "@vueuse/core": "^13.0.0",
     "dayjs": "^1.11.13",
     "esno": "^4.8.0",
     "lodash-es": "^4.17.21",
     "ohash": "^2.0.11",
     "rspack-plugin-virtual-module": "^0.1.13",
-    "tailwindcss": "^4.0.12",
-    "taze": "^19.0.1",
+    "tailwindcss": "^4.0.13",
+    "taze": "^19.0.2",
     "unplugin-auto-import": "^19.1.1",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.8.1",
-    "@iconify/json": "^2.2.315",
+    "@antfu/eslint-config": "^4.10.0",
+    "@iconify/json": "^2.2.316",
     "@iconify/tailwind": "^1.2.0",
-    "@rsbuild/core": "^1.2.17",
+    "@rsbuild/core": "^1.2.18",
     "@rsbuild/plugin-vue": "^1.0.7",
-    "@tanstack/vue-query-devtools": "^5.67.2",
+    "@tanstack/vue-query-devtools": "^5.67.3",
     "@types/lodash-es": "^4.17.12",
     "eslint": "^9.22.0",
     "eslint-plugin-unused-imports": "^4.1.4",
@@ -49,5 +49,6 @@
       "core-js",
       "esbuild"
     ]
-  }
+  },
+  "packageManager": "pnpm@9.15.9"
 }
