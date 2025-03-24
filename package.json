@@ -29,14 +29,14 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.10.2",
-    "@iconify/json": "^2.2.319",
+    "@antfu/eslint-config": "^4.11.0",
+    "@iconify/json": "^2.2.320",
     "@iconify/tailwind": "^1.2.0",
     "@rsbuild/core": "^1.2.19",
     "@rsbuild/plugin-vue": "^1.0.7",
     "@tanstack/vue-query-devtools": "^5.69.0",
     "@types/lodash-es": "^4.17.12",
-    "eslint": "^9.22.0",
+    "eslint": "^9.23.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "typescript": "^5.8.2",
     "unplugin-vue-router": "^0.12.0"
