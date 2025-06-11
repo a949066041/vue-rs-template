@@ -6,7 +6,7 @@ function fetchAuthIntercept(req: RequestInit) {
 
   if (token.value) {
     req.headers = {
-      ...(req.headers || {}),
+      ...req.headers,
       Authorization: `Bearer ${token.value}`,
     }
   }

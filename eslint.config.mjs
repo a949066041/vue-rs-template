@@ -1,4 +1,5 @@
 import antfu from '@antfu/eslint-config'
+import oxlint from 'eslint-plugin-oxlint'
 import unusedImports from 'eslint-plugin-unused-imports'
 
 export default antfu({
@@ -43,4 +44,4 @@ export default antfu({
       },
     ],
   },
-})
+}, oxlint.configs['flat/recommended'])
