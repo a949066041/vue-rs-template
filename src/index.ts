@@ -26,7 +26,9 @@ function bootstrap() {
 
   app.use(DataLoaderPlugin, { router })
   app.use(router)
-  app.mount('#root')
+  router.isReady().then(() => {
+    app.mount('#root')
+  })
 }
 
 bootstrap()
