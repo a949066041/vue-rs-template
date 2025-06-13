@@ -1,12 +1,17 @@
 import { defineConfig } from '@rsbuild/core'
+import { pluginMdx } from '@rsbuild/plugin-mdx'
 import { pluginVue } from '@rsbuild/plugin-vue'
 import { version } from './package.json' with { type: 'json' }
+import { pluginDemoMdOptions } from './scripts/remark'
 import RspackVueRouterPlugin from './vue-router-rspack'
 
 const APP_TITLE = 'template vue rs'
 
 export default defineConfig({
-  plugins: [pluginVue()],
+  plugins: [
+    pluginVue(),
+    pluginMdx(pluginDemoMdOptions),
+  ],
   source: {
     define: {
       APP_TITLE: JSON.stringify(APP_TITLE),
