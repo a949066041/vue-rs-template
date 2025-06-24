@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.12.2",
   "scripts": {
     "dev": "rsbuild dev",
     "postinstall": "esno scripts/svg2json.ts",
@@ -20,7 +20,7 @@
     "@types/fs-extra": "^11.0.4",
     "@vueuse/core": "^13.4.0",
     "dayjs": "^1.11.13",
-    "eslint-plugin-oxlint": "^1.2.0",
+    "eslint-plugin-oxlint": "^1.3.0",
     "esno": "^4.8.0",
     "fs-extra": "^11.3.0",
     "lodash-es": "^4.17.21",
@@ -38,8 +38,8 @@
     "zod": "^3.25.67"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.15.0",
-    "@iconify/json": "^2.2.351",
+    "@antfu/eslint-config": "^4.16.1",
+    "@iconify/json": "^2.2.352",
     "@iconify/tailwind": "^1.2.0",
     "@rsbuild/core": "^1.3.22",
     "@rsbuild/plugin-vue": "^1.0.7",
