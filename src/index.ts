@@ -1,12 +1,13 @@
+import { PiniaColada } from '@pinia/colada'
 import { VueQueryPlugin } from '@tanstack/vue-query'
 import { DataLoaderPlugin } from 'unplugin-vue-router/data-loaders'
-import { createApp } from 'vue'
+import { createApp, vaporInteropPlugin } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import { routes } from 'vue-router/auto-routes'
 import App from './App.vue'
 import { authSetup } from './setup'
-import { queryClient } from './store'
+import { pinia, queryClient } from './store'
 import './style/index.css'
 
 function bootstrap() {
@@ -18,6 +19,15 @@ function bootstrap() {
   authSetup(router)
 
   const app = createApp(App)
+  app.use(pinia)
+
+  app.use(PiniaColada, {
+    queryOptions: {
+      gcTime: 300_000,
+    },
+  })
+
+  app.use(vaporInteropPlugin)
 
   app.use(VueQueryPlugin, {
     queryClient,

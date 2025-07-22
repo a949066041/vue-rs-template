@@ -1,4 +1,5 @@
 import type { ILoginUserParams, IUserEntity, IUserList, LoginRes } from './user.type'
+import { defineQueryOptions } from '@pinia/colada'
 import { infiniteQueryOptions, queryOptions } from '@tanstack/vue-query'
 import { fetchClient } from '~/api/fetch'
 import { delay } from '~/utils'
@@ -15,9 +16,9 @@ export function fetchUser(id: IUserEntity['id']) {
   return fetchClient.get<IUserEntity>(`${baseUrl}/${id}`)
 }
 
-const USER_PAGER_LIMIT = 10
+const USER_PAGER_LIMIT = 40
 export function fetchUserPager({ pageParam: offset }: { pageParam: number }): Promise<IUserList> {
-  return fetchClient.get<IUserList>(`${baseUrl}?limit=${USER_PAGER_LIMIT}&skip=${offset}`)
+  return fetchClient.get<IUserList>(`${baseUrl}?limit=${USER_PAGER_LIMIT}&skip=${USER_PAGER_LIMIT * (offset - 1)}`)
 }
 
 export function loginUser(params: ILoginUserParams) {
@@ -68,3 +69,17 @@ export function userMeQueryOptions(enabled = false) {
     enabled,
   })
 }
+
+// pinia query
+export const DOCUMENT_QUERY_KEYS = {
+  root: ['user'] as const,
+  byId: (id: number) => [...DOCUMENT_QUERY_KEYS.root, id] as const,
+  byIdWithComments: (id: number) => [...DOCUMENT_QUERY_KEYS.byId(id)] as const,
+}
+
+export const documentByIdQuery = defineQueryOptions(
+  ({ id }: { id: number }) => ({
+    key: DOCUMENT_QUERY_KEYS.byIdWithComments(id),
+    query: () => fetchUser(id),
+  }),
+)

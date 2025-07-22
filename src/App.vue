@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import { useIsFetching } from '@tanstack/vue-query'
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
-import { userMeQueryOptions } from './api'
-
-const isFetching = useIsFetching({ queryKey: userMeQueryOptions().queryKey })
 
 const routes = [
   { path: '/', title: '首页', icon: 'icon-[line-md--home]' },
   { path: '/store', title: 'pinia 缓存', icon: 'icon-[octicon--cache-24]' },
   { path: '/user', title: 'vue query', icon: 'icon-[logos--vue]' },
+  { path: '/query', title: 'pinia query', icon: 'icon-[logos--pinia]' },
   { path: '/n', title: '动态路由', icon: 'icon-[material-symbols--dynamic-feed]' },
   { path: '/auth', title: '用户鉴权', icon: 'icon-[material-symbols--dynamic-feed]' },
   { path: '/nesting/', title: '嵌套路由', icon: 'icon-[ant-design--layout-outlined]' },
@@ -27,15 +24,14 @@ const routes = [
         </RouterLink>
       </li>
     </ul>
-    <div className="  flex-1 py-2 px-3">
+    <div className="  flex-1 py-2 px-3 overflow-hidden">
       <header className=" text-right">
         <span className=" justify-end">
           <ThemeMode />
         </span>
       </header>
-      {{ isFetching > 0 && 'loading... auth page' }}
       <router-view />
     </div>
-    <VueQueryDevtools />
+    <VueQueryDevtools position="top" />
   </div>
 </template>

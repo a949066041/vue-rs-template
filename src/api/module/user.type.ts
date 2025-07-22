@@ -23,5 +23,6 @@ export type LoginRes = ILogRes & IUserEntity
 export interface IUserList {
   users: IUserEntity[]
   skip: number
+  limit: number
   total: number
 }
