@@ -3,7 +3,6 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.13.1",
   "scripts": {
     "dev": "rsbuild dev",
     "postinstall": "esno scripts/svg2json.ts",
@@ -14,15 +13,15 @@
   },
   "dependencies": {
     "@iconify/tools": "^4.1.2",
-    "@pinia/colada": "^0.17.0",
+    "@pinia/colada": "^0.17.1",
     "@pinia/colada-devtools": "^0.1.5",
-    "@rsbuild/plugin-mdx": "^1.0.2",
+    "@rsbuild/plugin-mdx": "^1.0.3",
     "@tailwindcss/postcss": "^4.1.11",
-    "@tanstack/vue-query": "^5.83.0",
+    "@tanstack/vue-query": "^5.83.1",
     "@types/fs-extra": "^11.0.4",
-    "@vueuse/core": "^13.5.0",
+    "@vueuse/core": "^13.6.0",
     "dayjs": "^1.11.13",
-    "eslint-plugin-oxlint": "^1.7.0",
+    "eslint-plugin-oxlint": "^1.9.0",
     "esno": "^4.8.0",
     "fs-extra": "^11.3.0",
     "lodash-es": "^4.17.21",
@@ -30,7 +29,7 @@
     "pinia": "^3.0.3",
     "remark-gfm": "^4.0.1",
     "rspack-plugin-virtual-module": "^1.0.1",
-    "shiki": "^3.8.1",
+    "shiki": "^3.9.2",
     "tailwindcss": "^4.1.11",
     "taze": "^19.1.0",
     "unified": "^11.0.5",
@@ -38,20 +37,20 @@
     "unplugin-auto-import": "^19.3.0",
     "vue": "^3.6.0-alpha.2",
     "vue-router": "^4.5.1",
-    "zod": "^4.0.5"
+    "zod": "^4.0.14"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.17.0",
-    "@iconify/json": "^2.2.360",
+    "@antfu/eslint-config": "^5.1.0",
+    "@iconify/json": "^2.2.366",
     "@iconify/tailwind": "^1.2.0",
-    "@rsbuild/core": "^1.4.8",
+    "@rsbuild/core": "^1.4.14",
     "@rsbuild/plugin-vue": "^1.1.0",
-    "@tanstack/vue-query-devtools": "^5.83.0",
+    "@tanstack/vue-query-devtools": "^5.84.0",
     "@types/lodash-es": "^4.17.12",
-    "eslint": "^9.31.0",
+    "eslint": "^9.32.0",
     "eslint-plugin-unused-imports": "^4.1.4",
-    "typescript": "^5.8.3",
-    "unplugin-vue-router": "^0.14.0"
+    "typescript": "^5.9.2",
+    "unplugin-vue-router": "^0.15.0"
   },
   "pnpm": {
     "ignoredBuiltDependencies": [
