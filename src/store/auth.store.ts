@@ -1,6 +1,6 @@
 import type { ILoginUserParams, LoginRes } from '~/api'
 import { createGlobalState } from '@vueuse/core'
-import { omit } from 'lodash-es'
+import { omit } from 'es-toolkit'
 import { ref } from 'vue'
 import { loginUser as loginUserAction, userMeQueryOptions } from '~/api'
 import { queryClient } from '.'
@@ -12,7 +12,7 @@ export const useAuthStore = createGlobalState(() => {
 
   async function loginUser(params: ILoginUserParams) {
     const res = await loginUserAction(params)
-    userInfo.value = omit(res, 'accessToken')
+    userInfo.value = omit(res, ['accessToken'])
     setToken(res.accessToken)
   }
 
