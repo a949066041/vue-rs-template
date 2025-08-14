@@ -47,4 +47,140 @@ declare module 'vue-router/auto-routes' {
     '/user/create.[id]': RouteRecordInfo<'/user/create.[id]', '/user/create/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
     '/user/page': RouteRecordInfo<'/user/page', '/user/page', Record<never, never>, Record<never, never>>,
   }
+
+  /**
+   * Route file to route info map by unplugin-vue-router.
+   * Used by the volar plugin to automatically type useRoute()
+   *
+   * Each key is a file path relative to the project root with 2 properties:
+   * - routes: union of route names of the possible routes when in this page (passed to useRoute<...>())
+   * - views: names of nested views (can be passed to <RouterView name="...">)
+   *
+   * @internal
+   */
+  export interface _RouteFileInfoMap {
+    'src/pages/index.vue': {
+      routes: '/'
+      views: never
+    }
+    'src/pages/(auth)/page.vue': {
+      routes: '/(auth)/page'
+      views: never
+    }
+    'src/pages/[...path].vue': {
+      routes: '/[...path]'
+      views: never
+    }
+    'src/pages/about/index.vue': {
+      routes: '/about/'
+      views: never
+    }
+    'src/pages/about/[id].vue': {
+      routes: '/about/[id]'
+      views: never
+    }
+    'src/pages/about/[value]/index.vue': {
+      routes: '/about/[value]/'
+      views: never
+    }
+    'src/pages/about/[value]/create.vue': {
+      routes: '/about/[value]/create'
+      views: never
+    }
+    'src/pages/about/name/index.vue': {
+      routes: '/about/name/'
+      views: never
+    }
+    'src/pages/about/name/[name].vue': {
+      routes: '/about/name/[name]'
+      views: never
+    }
+    'src/pages/auth.vue': {
+      routes: '/auth'
+      views: never
+    }
+    'src/pages/n.vue': {
+      routes: '/n' | '/n/' | '/n/value-[[more]]+/' | '/n/value-[[more]]+'
+      views: 'default'
+    }
+    'src/pages/n/index.vue': {
+      routes: '/n/'
+      views: never
+    }
+    'src/pages/n/value-[[more]]+/index.vue': {
+      routes: '/n/value-[[more]]+/'
+      views: never
+    }
+    'src/pages/nesting.vue': {
+      routes: '/nesting' | '/nesting/' | '/nesting/nesting2' | '/nesting/nesting2/test2' | '/nesting/nesting2/test3'
+      views: 'default'
+    }
+    'src/pages/nesting/index.vue': {
+      routes: '/nesting/'
+      views: never
+    }
+    'src/pages/nesting/nesting2.vue': {
+      routes: '/nesting/nesting2' | '/nesting/nesting2/test2' | '/nesting/nesting2/test3'
+      views: 'default'
+    }
+    'src/pages/nesting/nesting2/test2.vue': {
+      routes: '/nesting/nesting2/test2'
+      views: never
+    }
+    'src/pages/nesting/nesting2/test3.vue': {
+      routes: '/nesting/nesting2/test3'
+      views: never
+    }
+    'src/pages/query.vue': {
+      routes: '/query' | '/query/' | '/query/[id]' | '/query/page'
+      views: 'default'
+    }
+    'src/pages/query/index.vue': {
+      routes: '/query/'
+      views: never
+    }
+    'src/pages/query/[id].vue': {
+      routes: '/query/[id]'
+      views: never
+    }
+    'src/pages/query/page.vue': {
+      routes: '/query/page'
+      views: never
+    }
+    'src/pages/store.vue': {
+      routes: '/store'
+      views: never
+    }
+    'src/pages/user.vue': {
+      routes: '/user' | '/user/' | '/user/[id]' | '/user/create.[id]' | '/user/page'
+      views: 'default'
+    }
+    'src/pages/user/index.vue': {
+      routes: '/user/'
+      views: never
+    }
+    'src/pages/user/[id].vue': {
+      routes: '/user/[id]'
+      views: never
+    }
+    'src/pages/user/create.[id].vue': {
+      routes: '/user/create.[id]'
+      views: never
+    }
+    'src/pages/user/page.vue': {
+      routes: '/user/page'
+      views: never
+    }
+  }
+
+  /**
+   * Get a union of possible route names in a certain route component file.
+   * Used by the volar plugin to automatically type useRoute()
+   *
+   * @internal
+   */
+  export type _RouteNamesForFilePath<FilePath extends string> =
+    _RouteFileInfoMap extends Record<FilePath, infer Info>
+      ? Info['routes']
+      : keyof RouteNamedMap
 }

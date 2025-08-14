@@ -1,7 +1,7 @@
 import { PiniaColada } from '@pinia/colada'
 import { VueQueryPlugin } from '@tanstack/vue-query'
 import { DataLoaderPlugin } from 'unplugin-vue-router/data-loaders'
-import { createApp, vaporInteropPlugin } from 'vue'
+import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import { routes } from 'vue-router/auto-routes'
@@ -26,8 +26,6 @@ function bootstrap() {
       gcTime: 300_000,
     },
   })
-
-  app.use(vaporInteropPlugin)
 
   app.use(VueQueryPlugin, {
     queryClient,

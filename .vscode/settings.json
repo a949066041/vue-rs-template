@@ -48,7 +48,7 @@
     "postcss"
   ],
   "explorer.fileNesting.patterns": {
-    "package.json": "pnpm-lock.yaml",
+    "package.json": "pnpm-lock.yaml, bun.lock",
     "config.ts": "*.config.ts, *.config.js, *.config.cjs, *.config.mjs,tsconfig.json, jsconfig.json"
   },
   "typescript.tsdk": "node_modules/typescript/lib",
