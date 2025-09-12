@@ -20,5 +20,5 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["src", "typed-router.d.ts", "scripts", "custom.json", "rsbuild.config.ts"]
+  "include": ["src", "typed-router.d.ts", "scripts", "custom.json", "*.config.ts"]
 }
