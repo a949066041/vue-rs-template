@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@iconify/tools": "^4.1.4",
-    "@pinia/colada": "^0.17.5",
+    "@pinia/colada": "^0.17.6",
     "@pinia/colada-devtools": "^0.1.6",
     "@rsbuild/plugin-mdx": "^1.1.0",
     "@tailwindcss/postcss": "^4.1.13",
