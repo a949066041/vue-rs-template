@@ -6,7 +6,7 @@
       "dependencies": {
         "@iconify/tools": "^4.1.4",
         "@pinia/colada": "^0.17.6",
-        "@pinia/colada-devtools": "^0.1.6",
+        "@pinia/colada-devtools": "^0.1.7",
         "@rsbuild/plugin-mdx": "^1.1.0",
         "@tailwindcss/postcss": "^4.1.13",
         "@tanstack/vue-query": "^5.90.2",
@@ -158,7 +158,7 @@
 
     "@pinia/colada": ["@pinia/colada@0.17.6", "", { "dependencies": { "@vue/devtools-api": "^8.0.2" }, "peerDependencies": { "pinia": "^2.2.6 || ^3.0.0", "vue": "^3.5.17" } }, "sha512-odayx9xVMUgC8ZMU/hwqODoboHnSWigp7VsbKGHKrNl9yHnljmxgJMwm1vtF/KIBSd2vUBigmN3maFqcC48/Rg=="],
 
-    "@pinia/colada-devtools": ["@pinia/colada-devtools@0.1.6", "https://registry.npmmirror.com/@pinia/colada-devtools/-/colada-devtools-0.1.6.tgz", {}, "sha512-wRW/GxP8SiahC5TRVulQe+5NuIQ7DGtgsO4Xsf9tP2HSTTRD8ac+7pn9vbKxovPdXrgAyAo9PWzk1b+y5MYEUQ=="],
+    "@pinia/colada-devtools": ["@pinia/colada-devtools@0.1.7", "", {}, "sha512-WWp95C+HxPSf9KWOVNzQVUW+46oJizQxLCcZjsBEqk6q32jQNB99P2Wu3egFrWoEQUkptR5aD3eKrqAZ6N1MeA=="],
 
     "@quansync/fs": ["@quansync/fs@0.1.5", "https://registry.npmmirror.com/@quansync/fs/-/fs-0.1.5.tgz", { "dependencies": { "quansync": "^0.2.11" } }, "sha512-lNS9hL2aS2NZgNW7BBj+6EBl4rOf8l+tQ0eRY6JWCI8jI2kc53gSoqbjojU0OnAWhzoXiOjFyGsHcDGePB3lhA=="],
 
