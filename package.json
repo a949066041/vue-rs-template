@@ -25,7 +25,7 @@
     "@vueuse/core": "^13.9.0",
     "dayjs": "^1.11.18",
     "es-toolkit": "^1.39.10",
-    "eslint-plugin-oxlint": "^1.18.0",
+    "eslint-plugin-oxlint": "^1.19.0",
     "esno": "^4.8.0",
     "fs-extra": "^11.3.2",
     "ohash": "^2.0.11",
