@@ -15,7 +15,7 @@
         "@vueuse/core": "^13.9.0",
         "dayjs": "^1.11.18",
         "es-toolkit": "^1.39.10",
-        "eslint-plugin-oxlint": "^1.19.0",
+        "eslint-plugin-oxlint": "^1.22.0",
         "esno": "^4.8.0",
         "fs-extra": "^11.3.2",
         "ohash": "^2.0.11",
@@ -562,7 +562,7 @@
 
     "escape-string-regexp": ["escape-string-regexp@5.0.0", "https://registry.npmmirror.com/escape-string-regexp/-/escape-string-regexp-5.0.0.tgz", {}, "sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw=="],
 
-    "eslint-plugin-oxlint": ["eslint-plugin-oxlint@1.19.0", "", { "dependencies": { "jsonc-parser": "^3.3.1" } }, "sha512-lkInWudeZjLW2k78rGl9hAtSlYYo2tEqt7OxWWUtkVdEJO819RM2N9GfQCg3OeBHEpT4nEi+y1eVsLfMyM1ueg=="],
+    "eslint-plugin-oxlint": ["eslint-plugin-oxlint@1.22.0", "", { "dependencies": { "jsonc-parser": "^3.3.1" } }, "sha512-EOzcSweCPXfy2ncWriSHlA5omZhXrnY60ESOLRxarOQxmOfZnwHciFsw6IRG2K6X1MCimRK9ak5uuEi1DElZJQ=="],
 
     "eslint-scope": ["eslint-scope@5.1.1", "https://registry.npmmirror.com/eslint-scope/-/eslint-scope-5.1.1.tgz", { "dependencies": { "esrecurse": "^4.3.0", "estraverse": "^4.1.1" } }, "sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw=="],
 
