@@ -19,6 +19,7 @@
     "@iconify/tools": "^4.1.4",
     "@pinia/colada": "^0.17.6",
     "@pinia/colada-devtools": "^0.1.7",
+    "@rsbuild/core": "^1.5.17",
     "@rsbuild/plugin-mdx": "^1.1.0",
     "@rsbuild/plugin-vue": "^1.2.0",
     "@tailwindcss/postcss": "^4.1.16",
