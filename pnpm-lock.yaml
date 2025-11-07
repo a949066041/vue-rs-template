@@ -18,8 +18,8 @@ importers:
         specifier: ^4.1.4
         version: 4.1.4
       '@pinia/colada':
-        specifier: ^0.17.6
-        version: 0.17.6(pinia@3.0.3(typescript@5.9.2)(vue@3.5.22(typescript@5.9.2)))(vue@3.5.22(typescript@5.9.2))
+        specifier: ^0.17.8
+        version: 0.17.8(pinia@3.0.3(typescript@5.9.2)(vue@3.5.22(typescript@5.9.2)))(vue@3.5.22(typescript@5.9.2))
       '@pinia/colada-devtools':
         specifier: ^0.1.7
         version: 0.1.7
@@ -390,8 +390,8 @@ packages:
   '@pinia/colada-devtools@0.1.7':
     resolution: {integrity: sha512-WWp95C+HxPSf9KWOVNzQVUW+46oJizQxLCcZjsBEqk6q32jQNB99P2Wu3egFrWoEQUkptR5aD3eKrqAZ6N1MeA==}
 
-  '@pinia/colada@0.17.6':
-    resolution: {integrity: sha512-odayx9xVMUgC8ZMU/hwqODoboHnSWigp7VsbKGHKrNl9yHnljmxgJMwm1vtF/KIBSd2vUBigmN3maFqcC48/Rg==}
+  '@pinia/colada@0.17.8':
+    resolution: {integrity: sha512-xJ2LzQvkG7ztWhJBlU/3hsQPc8OYwmJcOrqRLrKykO2fSX2LNW7UQbo8rqg35XmNzBf6Unz0dW84kz1TldSnYQ==}
     peerDependencies:
       pinia: ^2.2.6 || ^3.0.0
       vue: ^3.5.17
@@ -2761,7 +2761,7 @@ snapshots:
 
   '@pinia/colada-devtools@0.1.7': {}
 
-  '@pinia/colada@0.17.6(pinia@3.0.3(typescript@5.9.2)(vue@3.5.22(typescript@5.9.2)))(vue@3.5.22(typescript@5.9.2))':
+  '@pinia/colada@0.17.8(pinia@3.0.3(typescript@5.9.2)(vue@3.5.22(typescript@5.9.2)))(vue@3.5.22(typescript@5.9.2))':
     dependencies:
       '@vue/devtools-api': 8.0.3
       pinia: 3.0.3(typescript@5.9.2)(vue@3.5.22(typescript@5.9.2))
