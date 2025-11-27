@@ -40,7 +40,7 @@
     "rspack-plugin-virtual-module": "^1.0.1",
     "shiki": "^3.14.0",
     "tailwindcss": "^4.1.17",
-    "taze": "^19.8.1",
+    "taze": "^19.9.2",
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0",
     "unplugin-auto-import": "^20.2.0",
