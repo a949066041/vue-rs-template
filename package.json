@@ -23,7 +23,7 @@
     "@rsbuild/plugin-mdx": "^1.1.0",
     "@rsbuild/plugin-vue": "^1.2.0",
     "@tailwindcss/postcss": "^4.1.17",
-    "@tanstack/vue-query": "^5.92.0",
+    "@tanstack/vue-query": "^5.92.1",
     "@tanstack/vue-query-devtools": "^6.1.2",
     "@types/fs-extra": "^11.0.4",
     "@vitejs/plugin-vue": "^6.0.2",
