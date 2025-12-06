@@ -14,7 +14,7 @@
     "lint:fix": "npx oxlint . --fix && eslint . --fix"
   },
   "dependencies": {
-    "@iconify/json": "^2.2.412",
+    "@iconify/json": "^2.2.414",
     "@iconify/tailwind": "^1.2.0",
     "@iconify/tools": "^5.0.0",
     "@pinia/colada": "^0.17.9",
