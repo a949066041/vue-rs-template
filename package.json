@@ -38,7 +38,7 @@
     "remark-gfm": "^4.0.1",
     "rolldown-vite": "^7.2.8",
     "rspack-plugin-virtual-module": "^1.0.1",
-    "shiki": "^3.17.0",
+    "shiki": "^3.20.0",
     "tailwindcss": "^4.1.17",
     "taze": "^19.9.2",
     "unified": "^11.0.5",
