@@ -17,7 +17,7 @@
     "@iconify/json": "^2.2.412",
     "@iconify/tailwind": "^1.2.0",
     "@iconify/tools": "^5.0.0",
-    "@pinia/colada": "^0.17.9",
+    "@pinia/colada": "^0.20.0",
     "@pinia/colada-devtools": "^0.1.9",
     "@rsbuild/core": "^1.6.10",
     "@rsbuild/plugin-mdx": "^1.1.0",
