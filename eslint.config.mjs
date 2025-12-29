@@ -1,5 +1,5 @@
 import antfu from '@antfu/eslint-config'
-import oxlint from 'eslint-plugin-oxlint'
+import pluginRouter from '@tanstack/eslint-plugin-router'
 import unusedImports from 'eslint-plugin-unused-imports'
 
 export default antfu({
@@ -28,6 +28,7 @@ export default antfu({
 }, {
   plugins: {
     'unused-imports': unusedImports,
+    'router': pluginRouter,
   },
   rules: {
     'node/prefer-global/process': 'off',
@@ -44,4 +45,4 @@ export default antfu({
       },
     ],
   },
-}, oxlint.configs['flat/recommended'])
+})

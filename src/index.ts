@@ -1,26 +1,33 @@
 import { PiniaColada } from '@pinia/colada'
 import { VueQueryPlugin } from '@tanstack/vue-query'
-import { DataLoaderPlugin } from 'unplugin-vue-router/data-loaders'
-import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
-
-import { routes } from 'vue-router/auto-routes'
-import App from './App.vue'
-import { authSetup } from './setup'
+import { createRouter, RouterProvider } from '@tanstack/vue-router'
+import { createApp, h } from 'vue'
+import { routeTree } from './routeTree.gen'
 import { pinia, queryClient } from './store'
 import './style/index.css'
 
+const router = createRouter({
+  routeTree,
+  defaultPreload: 'intent',
+  defaultStaleTime: 5000,
+  scrollRestoration: true,
+})
+
+// Register things for typesafety
+declare module '@tanstack/vue-router' {
+  interface Register {
+    router: typeof router
+  }
+}
+
 function bootstrap() {
-  const router = createRouter({
-    history: createWebHistory(),
-    routes: routes || [],
+  const app = createApp({
+    setup() {
+      return () => h(RouterProvider, { router })
+    },
   })
 
-  authSetup(router)
-
-  const app = createApp(App)
   app.use(pinia)
-
   app.use(PiniaColada, {
     queryOptions: {
       gcTime: 300_000,
@@ -32,11 +39,7 @@ function bootstrap() {
     enableDevtoolsV6Plugin: true,
   })
 
-  app.use(DataLoaderPlugin, { router })
-  app.use(router)
-  router.isReady().then(() => {
-    app.mount('#root')
-  })
+  app.mount('#root')
 }
 
 bootstrap()

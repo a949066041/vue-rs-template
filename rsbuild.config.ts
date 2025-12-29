@@ -1,9 +1,9 @@
 import { defineConfig } from '@rsbuild/core'
 import { pluginMdx } from '@rsbuild/plugin-mdx'
 import { pluginVue } from '@rsbuild/plugin-vue'
+import { tanstackRouter } from '@tanstack/router-plugin/rspack'
 import { version } from './package.json' with { type: 'json' }
 import { pluginDemoMdOptions } from './scripts/remark'
-import RspackVueRouterPlugin from './vue-router-rspack'
 
 const APP_TITLE = 'template vue rs'
 
@@ -27,7 +27,12 @@ export default defineConfig({
   },
   tools: {
     rspack: {
-      plugins: [new RspackVueRouterPlugin()],
+      plugins: [
+        tanstackRouter({
+          target: 'vue',
+          autoCodeSplitting: true,
+        }),
+      ],
     },
   },
 })
