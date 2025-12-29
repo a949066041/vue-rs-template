@@ -20,5 +20,6 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["src", "typed-router.d.ts", "scripts", "custom.json", "*.config.ts"]
+  "include": ["src/**/*", "src/**/*.vue", "scripts", "custom.json", "*.config.ts"],
+  "exclude": ["node_modules", "dist"]
 }

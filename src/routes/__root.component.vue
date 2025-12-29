@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {
-  HeadContent,
+  Link,
   Outlet,
   useRouterState,
 } from '@tanstack/vue-router'
@@ -10,8 +10,20 @@ const _state = useRouterState()
 </script>
 
 <template>
-  <HeadContent />
-  this is ok
+  <Link
+    to="/"
+    :active-props="{ class: 'font-bold' }"
+    :active-options="{ exact: true }"
+  >
+    Home
+  </Link>
+  <Link
+    to="/home"
+    :active-props="{ class: 'font-bold' }"
+    :active-options="{ exact: true }"
+  >
+    Home
+  </Link>
   <Outlet />
   <TanStackRouterDevtools position="bottom-right" />
 </template>

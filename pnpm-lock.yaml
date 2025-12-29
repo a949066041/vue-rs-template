@@ -42,20 +42,20 @@ importers:
         specifier: ^1.141.0
         version: 1.141.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.2)
       '@tanstack/router-plugin':
-        specifier: ^1.143.11
-        version: 1.143.11(@rsbuild/core@1.6.15)(vite@7.1.12(@types/node@24.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.2))(webpack@5.104.1)
+        specifier: ^1.144.0
+        version: 1.144.0(@rsbuild/core@1.6.15)(vite@7.1.12(@types/node@24.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.2))(webpack@5.104.1)
       '@tanstack/vue-query':
-        specifier: ^5.92.1
-        version: 5.92.1(vue@3.5.24(typescript@5.9.2))
+        specifier: ^5.92.3
+        version: 5.92.3(vue@3.5.24(typescript@5.9.2))
       '@tanstack/vue-query-devtools':
-        specifier: ^6.1.2
-        version: 6.1.2(@tanstack/vue-query@5.92.1(vue@3.5.24(typescript@5.9.2)))(vue@3.5.24(typescript@5.9.2))
+        specifier: ^6.1.3
+        version: 6.1.3(@tanstack/vue-query@5.92.3(vue@3.5.24(typescript@5.9.2)))(vue@3.5.24(typescript@5.9.2))
       '@tanstack/vue-router':
-        specifier: ^1.143.6
-        version: 1.143.6(vue@3.5.24(typescript@5.9.2))
+        specifier: ^1.144.0
+        version: 1.144.0(vue@3.5.24(typescript@5.9.2))
       '@tanstack/vue-router-devtools':
-        specifier: ^1.143.6
-        version: 1.143.6(@tanstack/router-core@1.143.6)(@tanstack/vue-router@1.143.6(vue@3.5.24(typescript@5.9.2)))(@types/node@24.2.0)(csstype@3.2.3)(jiti@2.6.1)(lightningcss@1.30.2)(solid-js@1.9.10)(terser@5.43.1)(tsx@4.20.3)(vue@3.5.24(typescript@5.9.2))(yaml@2.8.2)
+        specifier: ^1.144.0
+        version: 1.144.0(@tanstack/router-core@1.144.0)(@tanstack/vue-router@1.144.0(vue@3.5.24(typescript@5.9.2)))(@types/node@24.2.0)(csstype@3.2.3)(jiti@2.6.1)(lightningcss@1.30.2)(solid-js@1.9.10)(terser@5.43.1)(tsx@4.20.3)(vue@3.5.24(typescript@5.9.2))(yaml@2.8.2)
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -74,9 +74,6 @@ importers:
       eslint:
         specifier: ^9.39.2
         version: 9.39.2(jiti@2.6.1)
-      eslint-plugin-oxlint:
-        specifier: ^1.35.0
-        version: 1.35.0
       eslint-plugin-unused-imports:
         specifier: ^4.3.0
         version: 4.3.0(@typescript-eslint/eslint-plugin@8.50.1(@typescript-eslint/parser@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.2(jiti@2.6.1))
@@ -120,8 +117,8 @@ importers:
         specifier: ^20.3.0
         version: 20.3.0(@vueuse/core@14.1.0(vue@3.5.24(typescript@5.9.2)))
       unplugin-vue-router:
-        specifier: ^0.19.1
-        version: 0.19.1(@vue/compiler-sfc@3.5.24)(vue-router@4.6.4(vue@3.5.24(typescript@5.9.2)))(vue@3.5.24(typescript@5.9.2))
+        specifier: ^0.19.2
+        version: 0.19.2(@vue/compiler-sfc@3.5.24)(vue-router@4.6.4(vue@3.5.24(typescript@5.9.2)))(vue@3.5.24(typescript@5.9.2))
       vue:
         specifier: 3.5.24
         version: 3.5.24(typescript@5.9.2)
@@ -1071,37 +1068,37 @@ packages:
     resolution: {integrity: sha512-Wo1iKt2b9OT7d+YGhvEPD3DXvPv2etTusIMhMUoG7fbhmxcXCtIjJDEygy91Y2JFlwGyjqiBPRozme7UD8hoqg==}
     engines: {node: '>=12'}
 
-  '@tanstack/query-core@5.90.12':
-    resolution: {integrity: sha512-T1/8t5DhV/SisWjDnaiU2drl6ySvsHj1bHBCWNXd+/T+Hh1cf6JodyEYMd5sgwm+b/mETT4EV3H+zCVczCU5hg==}
+  '@tanstack/query-core@5.90.14':
+    resolution: {integrity: sha512-/6di2yNI+YxpVrH9Ig74Q+puKnkCE+D0LGyagJEGndJHJc6ahkcc/UqirHKy8zCYE/N9KLggxcQvzYCsUBWgdw==}
 
-  '@tanstack/query-devtools@5.91.1':
-    resolution: {integrity: sha512-l8bxjk6BMsCaVQH6NzQEE/bEgFy1hAs5qbgXl0xhzezlaQbPk6Mgz9BqEg2vTLPOHD8N4k+w/gdgCbEzecGyNg==}
+  '@tanstack/query-devtools@5.92.0':
+    resolution: {integrity: sha512-N8D27KH1vEpVacvZgJL27xC6yPFUy0Zkezn5gnB3L3gRCxlDeSuiya7fKge8Y91uMTnC8aSxBQhcK6ocY7alpQ==}
 
-  '@tanstack/router-core@1.143.6':
-    resolution: {integrity: sha512-NOdkn0lQNNjtyqns8lzZrq05mK3UdIOLR6WyH/reCwTqQ5w7lflquqM0AqbDuBA4iT2hOdNf1lS9NdW9esE2ig==}
+  '@tanstack/router-core@1.144.0':
+    resolution: {integrity: sha512-6oVERtK9XDHCP4XojgHsdHO56ZSj11YaWjF5g/zw39LhyA6Lx+/X86AEIHO4y0BUrMQaJfcjdAQMVSAs6Vjtdg==}
     engines: {node: '>=12'}
 
-  '@tanstack/router-devtools-core@1.143.6':
-    resolution: {integrity: sha512-8EUfacvsOSWt+7VvBkWMSvvyfd5OWiJBAheLvC7AMD1AWF2JWUQsLLpYUbYCxShdKpU0PrT50KukwVQFl3o7/Q==}
+  '@tanstack/router-devtools-core@1.144.0':
+    resolution: {integrity: sha512-rbpQn1aHUtcfY3U3SyJqOZRqDu0a2uPK+TE2CH50HieJApmCuNKj5RsjVQYHgwiFFvR0w0LUmueTnl2X2hiWTg==}
     engines: {node: '>=12'}
     peerDependencies:
-      '@tanstack/router-core': ^1.143.6
+      '@tanstack/router-core': ^1.144.0
       csstype: ^3.0.10
       solid-js: '>=1.9.5'
     peerDependenciesMeta:
       csstype:
         optional: true
 
-  '@tanstack/router-generator@1.143.11':
-    resolution: {integrity: sha512-vq5LnMyN3VuZN2Stnv5B9FzkxQK+0nr4D6S1stAag1fv6ypb7/QF5IBunojs1uLfLMB4E/Kl8lFtlRImJ/KTQA==}
+  '@tanstack/router-generator@1.144.0':
+    resolution: {integrity: sha512-NRXO/e9fZkSPF/Xa2S2+UxKgQWQpA/DmTQLCjQfPumCnNLUHpq0+iQPUWY9b5Rk2fnKwQkBZNLAl2EuWGa7rvw==}
     engines: {node: '>=12'}
 
-  '@tanstack/router-plugin@1.143.11':
-    resolution: {integrity: sha512-mG1bP30mXA89Ury5/NrjqJnEzz5QiVUomeOjaftg/OioAlCSEpq20+1t/wrCqnGHq1y+0AZDVfArAPp5YtTdcg==}
+  '@tanstack/router-plugin@1.144.0':
+    resolution: {integrity: sha512-P5pJ/dYeDxwgHkDk5xq4MYdWIRWiehlfWjcIewnd21hG0hud/IQCfAwnGY89k/izJV8WZSOV+rKtJf6ufW2aKw==}
     engines: {node: '>=12'}
     peerDependencies:
       '@rsbuild/core': '>=1.0.2'
-      '@tanstack/react-router': ^1.143.11
+      '@tanstack/react-router': ^1.144.0
       vite: '>=5.0.0 || >=6.0.0 || >=7.0.0'
       vite-plugin-solid: ^2.11.10
       webpack: '>=5.92.0'
@@ -1128,14 +1125,14 @@ packages:
     resolution: {integrity: sha512-CJrWtr6L9TVzEImm9S7dQINx+xJcYP/aDkIi6gnaWtIgbZs1pnzsE0yJc2noqXZ+yAOqLx3TBGpBEs9tS0P9/A==}
     engines: {node: '>=12'}
 
-  '@tanstack/vue-query-devtools@6.1.2':
-    resolution: {integrity: sha512-1E886RHorY432aOJU3dyzLbI67PhqQzvAPQyp8hU6UR4EVXKZSVzVT0O0utmTT2jnBpbbUiCFt2uNSs8W3grHw==}
+  '@tanstack/vue-query-devtools@6.1.3':
+    resolution: {integrity: sha512-26g3qyNCnS+7Vguo/R/X3upcrvL+AU6Gn+lMQD7mT/1rl546aq+bP6sBNm1Xi5QFN+X1i29VNG9fI+WhcMXFDQ==}
     peerDependencies:
-      '@tanstack/vue-query': ^5.92.0
+      '@tanstack/vue-query': ^5.92.3
       vue: ^3.3.0
 
-  '@tanstack/vue-query@5.92.1':
-    resolution: {integrity: sha512-m672jBiwK6sv1HHFF7Q3XsLUVKejzjEAMDqhFgLXIVtmwSayUo0WnhNQmlBlcHRKCR/Lw5jmIh6iu08ZXBh4ag==}
+  '@tanstack/vue-query@5.92.3':
+    resolution: {integrity: sha512-xiymdMOG902xDmH4OLmAEKicZtZnJY8e1E5pPSRON8s93akA4jdZjqD8NS3wDgxOL5LFpCLpfDBX4J6ANlF48g==}
     peerDependencies:
       '@vue/composition-api': ^1.1.2
       vue: ^2.6.0 || ^3.3.0
@@ -1143,19 +1140,19 @@ packages:
       '@vue/composition-api':
         optional: true
 
-  '@tanstack/vue-router-devtools@1.143.6':
-    resolution: {integrity: sha512-6n7C+9cQyHZQDAM5tjNRr2Cq/dyZCen/m3145Lq/PpyRgSJiVlXs/8XEcgOtVOtzo6jzNh7oU/xlprM9dwI1oQ==}
+  '@tanstack/vue-router-devtools@1.144.0':
+    resolution: {integrity: sha512-7xRcH0wz/Mso4n88y5XQl/cLFRJf0WxDdT0HEXYXETPMwe+vruS5bLBlWjqh+1blVKpKxMwMrjx9cN2I5DI9fg==}
     engines: {node: '>=12'}
     peerDependencies:
-      '@tanstack/router-core': ^1.143.6
-      '@tanstack/vue-router': ^1.143.6
+      '@tanstack/router-core': ^1.144.0
+      '@tanstack/vue-router': ^1.144.0
       vue: ^3.5.13
     peerDependenciesMeta:
       '@tanstack/router-core':
         optional: true
 
-  '@tanstack/vue-router@1.143.6':
-    resolution: {integrity: sha512-IQinGL/vqkbilZxvxfYr4MslCHgvbncR8dAwUJm+1qXvTQSeSDMZR6fIgdSzGyp/6xgNjxNcZPvBqcRNZzY/DA==}
+  '@tanstack/vue-router@1.144.0':
+    resolution: {integrity: sha512-5zOA5nySygpSYiKLdKlzrsTgoxEYW8CCjx+soLCtTzqndILF9YLHFJ5UyaLX9MkHHtfsRwkuQiuUfnInrWrphg==}
     engines: {node: '>=12'}
     peerDependencies:
       vue: ^3.3.0
@@ -1901,9 +1898,6 @@ packages:
     resolution: {integrity: sha512-brcKcxGnISN2CcVhXJ/kEQlNa0MEfGRtwKtWA16SkqXHKitaKIMrfemJKLKX1YqDU5C/5JY3PvZXd5jEW04e0Q==}
     engines: {node: '>=5.0.0'}
 
-  eslint-plugin-oxlint@1.35.0:
-    resolution: {integrity: sha512-XTwAUJE41nxk8PS1Ed+IwIQy/PF2AYbm9Nn1jUKLm3yYcIQCpm2sbyXkK9Fna5V2ioSulBDy3C7ge3UCs4Y0Lg==}
-
   eslint-plugin-perfectionist@4.15.1:
     resolution: {integrity: sha512-MHF0cBoOG0XyBf7G0EAFCuJJu4I18wy0zAoT1OHfx2o6EOx1EFTIzr2HGeuZa1kDcusoX0xJ9V7oZmaeFd773Q==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -2331,9 +2325,6 @@ packages:
   jsonc-eslint-parser@2.4.2:
     resolution: {integrity: sha512-1e4qoRgnn448pRuMvKGsFFymUCquZV0mpGgOyIKNgD3JVDTsVJyRBGH/Fm0tBb8WsWGgmB1mDe6/yJMQM37DUA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
-  jsonc-parser@3.3.1:
-    resolution: {integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==}
 
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
@@ -3275,8 +3266,8 @@ packages:
     resolution: {integrity: sha512-5lWVjgi6vuHhJ526bI4nlCOmkCIF3nnfXkCMDeMJrtdvxTs6ZFCM8oNufGTsDbKv/tJ/xj8RpvXjRuPBZJuJog==}
     engines: {node: '>=20.19.0'}
 
-  unplugin-vue-router@0.19.1:
-    resolution: {integrity: sha512-LJVRzfxS4j34K4sx4pggzhqpfAtXNZ6mLLRHvlSbDw11lWKLluuLXRbSWLXfiVj4RHeNHXu/+XxsGX65Ogu07Q==}
+  unplugin-vue-router@0.19.2:
+    resolution: {integrity: sha512-u5dgLBarxE5cyDK/hzJGfpCTLIAyiTXGlo85COuD4Nssj6G7NxS+i9mhCWz/1p/ud1eMwdcUbTXehQe41jYZUA==}
     peerDependencies:
       '@vue/compiler-sfc': ^3.5.17
       vue-router: ^4.6.0
@@ -3524,7 +3515,7 @@ snapshots:
       '@babel/types': 7.28.5
       '@jridgewell/remapping': 2.3.5
       convert-source-map: 2.0.0
-      debug: 4.4.1
+      debug: 4.4.3
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -3606,7 +3597,7 @@ snapshots:
       '@babel/parser': 7.28.5
       '@babel/template': 7.27.2
       '@babel/types': 7.28.5
-      debug: 4.4.1
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -4311,11 +4302,11 @@ snapshots:
     dependencies:
       remove-accents: 0.5.0
 
-  '@tanstack/query-core@5.90.12': {}
+  '@tanstack/query-core@5.90.14': {}
 
-  '@tanstack/query-devtools@5.91.1': {}
+  '@tanstack/query-devtools@5.92.0': {}
 
-  '@tanstack/router-core@1.143.6':
+  '@tanstack/router-core@1.144.0':
     dependencies:
       '@tanstack/history': 1.141.0
       '@tanstack/store': 0.8.0
@@ -4325,9 +4316,9 @@ snapshots:
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
 
-  '@tanstack/router-devtools-core@1.143.6(@tanstack/router-core@1.143.6)(csstype@3.2.3)(solid-js@1.9.10)':
+  '@tanstack/router-devtools-core@1.144.0(@tanstack/router-core@1.144.0)(csstype@3.2.3)(solid-js@1.9.10)':
     dependencies:
-      '@tanstack/router-core': 1.143.6
+      '@tanstack/router-core': 1.144.0
       clsx: 2.1.1
       goober: 2.1.18(csstype@3.2.3)
       solid-js: 1.9.10
@@ -4335,9 +4326,9 @@ snapshots:
     optionalDependencies:
       csstype: 3.2.3
 
-  '@tanstack/router-generator@1.143.11':
+  '@tanstack/router-generator@1.144.0':
     dependencies:
-      '@tanstack/router-core': 1.143.6
+      '@tanstack/router-core': 1.144.0
       '@tanstack/router-utils': 1.143.11
       '@tanstack/virtual-file-routes': 1.141.0
       prettier: 3.7.4
@@ -4348,7 +4339,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tanstack/router-plugin@1.143.11(@rsbuild/core@1.6.15)(vite@7.1.12(@types/node@24.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.2))(webpack@5.104.1)':
+  '@tanstack/router-plugin@1.144.0(@rsbuild/core@1.6.15)(vite@7.1.12(@types/node@24.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.2))(webpack@5.104.1)':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-syntax-jsx': 7.27.1(@babel/core@7.28.5)
@@ -4356,8 +4347,8 @@ snapshots:
       '@babel/template': 7.27.2
       '@babel/traverse': 7.28.5
       '@babel/types': 7.28.5
-      '@tanstack/router-core': 1.143.6
-      '@tanstack/router-generator': 1.143.11
+      '@tanstack/router-core': 1.144.0
+      '@tanstack/router-generator': 1.144.0
       '@tanstack/router-utils': 1.143.11
       '@tanstack/virtual-file-routes': 1.141.0
       babel-dead-code-elimination: 1.0.11
@@ -4387,28 +4378,28 @@ snapshots:
 
   '@tanstack/virtual-file-routes@1.141.0': {}
 
-  '@tanstack/vue-query-devtools@6.1.2(@tanstack/vue-query@5.92.1(vue@3.5.24(typescript@5.9.2)))(vue@3.5.24(typescript@5.9.2))':
+  '@tanstack/vue-query-devtools@6.1.3(@tanstack/vue-query@5.92.3(vue@3.5.24(typescript@5.9.2)))(vue@3.5.24(typescript@5.9.2))':
     dependencies:
-      '@tanstack/query-devtools': 5.91.1
-      '@tanstack/vue-query': 5.92.1(vue@3.5.24(typescript@5.9.2))
+      '@tanstack/query-devtools': 5.92.0
+      '@tanstack/vue-query': 5.92.3(vue@3.5.24(typescript@5.9.2))
       vue: 3.5.24(typescript@5.9.2)
 
-  '@tanstack/vue-query@5.92.1(vue@3.5.24(typescript@5.9.2))':
+  '@tanstack/vue-query@5.92.3(vue@3.5.24(typescript@5.9.2))':
     dependencies:
       '@tanstack/match-sorter-utils': 8.19.4
-      '@tanstack/query-core': 5.90.12
+      '@tanstack/query-core': 5.90.14
       '@vue/devtools-api': 6.6.4
       vue: 3.5.24(typescript@5.9.2)
       vue-demi: 0.14.10(vue@3.5.24(typescript@5.9.2))
 
-  '@tanstack/vue-router-devtools@1.143.6(@tanstack/router-core@1.143.6)(@tanstack/vue-router@1.143.6(vue@3.5.24(typescript@5.9.2)))(@types/node@24.2.0)(csstype@3.2.3)(jiti@2.6.1)(lightningcss@1.30.2)(solid-js@1.9.10)(terser@5.43.1)(tsx@4.20.3)(vue@3.5.24(typescript@5.9.2))(yaml@2.8.2)':
+  '@tanstack/vue-router-devtools@1.144.0(@tanstack/router-core@1.144.0)(@tanstack/vue-router@1.144.0(vue@3.5.24(typescript@5.9.2)))(@types/node@24.2.0)(csstype@3.2.3)(jiti@2.6.1)(lightningcss@1.30.2)(solid-js@1.9.10)(terser@5.43.1)(tsx@4.20.3)(vue@3.5.24(typescript@5.9.2))(yaml@2.8.2)':
     dependencies:
-      '@tanstack/router-devtools-core': 1.143.6(@tanstack/router-core@1.143.6)(csstype@3.2.3)(solid-js@1.9.10)
-      '@tanstack/vue-router': 1.143.6(vue@3.5.24(typescript@5.9.2))
+      '@tanstack/router-devtools-core': 1.144.0(@tanstack/router-core@1.144.0)(csstype@3.2.3)(solid-js@1.9.10)
+      '@tanstack/vue-router': 1.144.0(vue@3.5.24(typescript@5.9.2))
       vite: 7.1.12(@types/node@24.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.2)
       vue: 3.5.24(typescript@5.9.2)
     optionalDependencies:
-      '@tanstack/router-core': 1.143.6
+      '@tanstack/router-core': 1.144.0
     transitivePeerDependencies:
       - '@types/node'
       - csstype
@@ -4424,10 +4415,10 @@ snapshots:
       - tsx
       - yaml
 
-  '@tanstack/vue-router@1.143.6(vue@3.5.24(typescript@5.9.2))':
+  '@tanstack/vue-router@1.144.0(vue@3.5.24(typescript@5.9.2))':
     dependencies:
       '@tanstack/history': 1.141.0
-      '@tanstack/router-core': 1.143.6
+      '@tanstack/router-core': 1.144.0
       '@tanstack/vue-store': 0.8.0(vue@3.5.24(typescript@5.9.2))
       '@vue/runtime-dom': 3.5.26
       isbot: 5.1.32
@@ -4699,7 +4690,7 @@ snapshots:
     dependencies:
       '@volar/language-core': 2.4.27
       '@vue/compiler-dom': 3.5.24
-      '@vue/shared': 3.5.24
+      '@vue/shared': 3.5.26
       alien-signals: 3.0.3
       muggle-string: 0.4.1
       path-browserify: 1.0.1
@@ -5292,10 +5283,6 @@ snapshots:
 
   eslint-plugin-no-only-tests@3.3.0: {}
 
-  eslint-plugin-oxlint@1.35.0:
-    dependencies:
-      jsonc-parser: 3.3.1
-
   eslint-plugin-perfectionist@4.15.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.2):
     dependencies:
       '@typescript-eslint/types': 8.50.1
@@ -5771,8 +5758,6 @@ snapshots:
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
       semver: 7.7.3
-
-  jsonc-parser@3.3.1: {}
 
   jsonfile@6.1.0:
     dependencies:
@@ -7031,7 +7016,7 @@ snapshots:
       pathe: 2.0.3
       picomatch: 4.0.3
 
-  unplugin-vue-router@0.19.1(@vue/compiler-sfc@3.5.24)(vue-router@4.6.4(vue@3.5.24(typescript@5.9.2)))(vue@3.5.24(typescript@5.9.2)):
+  unplugin-vue-router@0.19.2(@vue/compiler-sfc@3.5.24)(vue-router@4.6.4(vue@3.5.24(typescript@5.9.2)))(vue@3.5.24(typescript@5.9.2)):
     dependencies:
       '@babel/generator': 7.28.5
       '@vue-macros/common': 3.1.1(vue@3.5.24(typescript@5.9.2))
