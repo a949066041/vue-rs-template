@@ -30,8 +30,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0(@rsbuild/core@1.6.15)(acorn@8.15.0)(webpack@5.104.1)
       '@rsbuild/plugin-vue':
-        specifier: ^1.2.2
-        version: 1.2.2(@rsbuild/core@1.6.15)(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))
+        specifier: ^1.2.3
+        version: 1.2.3(@rsbuild/core@1.6.15)(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))
       '@tailwindcss/postcss':
         specifier: ^4.1.18
         version: 4.1.18
@@ -611,10 +611,10 @@ packages:
       '@rsbuild/core':
         optional: true
 
-  '@rsbuild/plugin-vue@1.2.2':
-    resolution: {integrity: sha512-BVCejQjVIxsaG0WF3WSBy1jyVjoLjmrWyslSi0eq1zGxLB4BlyEkIvBQguXI9YsxKxKg0VsXIJQjXus03Rzqkg==}
+  '@rsbuild/plugin-vue@1.2.3':
+    resolution: {integrity: sha512-Y84py1vYRWh9mTmjYV9PsjL4jFjwMQ3pI11DwKGCMMSlWgJ0OGbI5Up9N/PO67WDBn8OqyyRhxNArx4xod0JVA==}
     peerDependencies:
-      '@rsbuild/core': 1.x
+      '@rsbuild/core': ^1.0.0 || ^2.0.0-0
 
   '@rspack/binding-darwin-arm64@1.6.8':
     resolution: {integrity: sha512-e8CTQtzaeGnf+BIzR7wRMUwKfIg0jd/sxMRc1Vd0bCMHBhSN9EsGoMuJJaKeRrSmy2nwMCNWHIG+TvT1CEKg+A==}
@@ -2690,7 +2690,7 @@ snapshots:
       - supports-color
       - webpack
 
-  '@rsbuild/plugin-vue@1.2.2(@rsbuild/core@1.6.15)(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))':
+  '@rsbuild/plugin-vue@1.2.3(@rsbuild/core@1.6.15)(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))':
     dependencies:
       '@rsbuild/core': 1.6.15
       rspack-vue-loader: 17.4.4(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))(webpack@5.104.1)
