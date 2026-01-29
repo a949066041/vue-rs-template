@@ -10,10 +10,11 @@
     "build": "rsbuild build",
     "vite:build": "vite build",
     "preview": "rsbuild preview",
-    "lint": "npx oxlint . && eslint .",
-    "lint:fix": "npx oxlint . --fix && eslint . --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@antfu/eslint-config": "^7.2.0",
     "@iconify/json": "^2.2.417",
     "@iconify/tailwind": "^1.2.0",
     "@iconify/tools": "^5.0.1",
@@ -30,7 +31,9 @@
     "@vueuse/core": "^14.1.0",
     "dayjs": "^1.11.19",
     "es-toolkit": "^1.43.0",
+    "eslint": "^9.39.2",
     "eslint-plugin-oxlint": "^1.35.0",
+    "eslint-plugin-unused-imports": "^4.3.0",
     "esno": "^4.8.0",
     "fs-extra": "^11.3.3",
     "ohash": "^2.0.11",
