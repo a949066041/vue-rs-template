@@ -17,7 +17,7 @@
     "@antfu/eslint-config": "^7.2.0",
     "@iconify/json": "^2.2.417",
     "@iconify/tailwind": "^1.2.0",
-    "@iconify/tools": "^5.0.1",
+    "@iconify/tools": "^5.0.3",
     "@pinia/colada": "^0.20.0",
     "@pinia/colada-devtools": "^0.4.1",
     "@rsbuild/core": "^1.6.15",
