@@ -30,8 +30,8 @@ importers:
         specifier: ^1.7.3
         version: 1.7.3
       '@rsbuild/plugin-mdx':
-        specifier: ^1.1.0
-        version: 1.1.0(@rsbuild/core@1.7.3)(acorn@8.15.0)(webpack@5.104.1)
+        specifier: ^1.1.1
+        version: 1.1.1(@rsbuild/core@1.7.3)(acorn@8.15.0)(webpack@5.104.1)
       '@rsbuild/plugin-vue':
         specifier: ^1.2.2
         version: 1.2.2(@rsbuild/core@1.7.3)(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))
@@ -515,8 +515,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.29':
     resolution: {integrity: sha512-uw6guiW/gcAGPDhLmd77/6lW8QLeiV5RUTsAX46Db6oLhGaVj4lhnPwb184s1bkc8kdVg/+h988dro8GRDpmYQ==}
 
-  '@mdx-js/loader@3.1.0':
-    resolution: {integrity: sha512-xU/lwKdOyfXtQGqn3VnJjlDrmKXEvMi1mgYxVmukEUtVycIz1nh7oQ40bKTd4cA7rLStqu0740pnhGYxGoqsCg==}
+  '@mdx-js/loader@3.1.1':
+    resolution: {integrity: sha512-0TTacJyZ9mDmY+VefuthVshaNIyCGZHJG2fMnGaDttCt8HmjUF7SizlHJpaCDoGnN635nK1wpzfpx/Xx5S4WnQ==}
     peerDependencies:
       webpack: '>=5'
     peerDependenciesMeta:
@@ -783,10 +783,10 @@ packages:
     engines: {node: '>=18.12.0'}
     hasBin: true
 
-  '@rsbuild/plugin-mdx@1.1.0':
-    resolution: {integrity: sha512-/IX7Z9JkgKqlknILc1JnZmCNipvEBsRuPOOPfWCZ4v+aMcD14LLzbrOgEIrGvO9iakxLS6l7M1rh5IGeY49ADA==}
+  '@rsbuild/plugin-mdx@1.1.1':
+    resolution: {integrity: sha512-w+8uC0mQObdO9C8gEYQAex8tQOnHKnd1SyE11CcWzlNi7+vGeo4kQfX7ftlUSIs7Fym69nJ9Jnyme6iaKBMjWw==}
     peerDependencies:
-      '@rsbuild/core': 1.x
+      '@rsbuild/core': ^1.0.0 || ^2.0.0-0
     peerDependenciesMeta:
       '@rsbuild/core':
         optional: true
@@ -3520,7 +3520,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@mdx-js/loader@3.1.0(acorn@8.15.0)(webpack@5.104.1)':
+  '@mdx-js/loader@3.1.1(acorn@8.15.0)(webpack@5.104.1)':
     dependencies:
       '@mdx-js/mdx': 3.1.0(acorn@8.15.0)
       source-map: 0.7.6
@@ -3734,9 +3734,9 @@ snapshots:
       core-js: 3.47.0
       jiti: 2.6.1
 
-  '@rsbuild/plugin-mdx@1.1.0(@rsbuild/core@1.7.3)(acorn@8.15.0)(webpack@5.104.1)':
+  '@rsbuild/plugin-mdx@1.1.1(@rsbuild/core@1.7.3)(acorn@8.15.0)(webpack@5.104.1)':
     dependencies:
-      '@mdx-js/loader': 3.1.0(acorn@8.15.0)(webpack@5.104.1)
+      '@mdx-js/loader': 3.1.1(acorn@8.15.0)(webpack@5.104.1)
     optionalDependencies:
       '@rsbuild/core': 1.7.3
     transitivePeerDependencies:
