@@ -33,8 +33,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0(@rsbuild/core@1.7.3)(acorn@8.15.0)(webpack@5.104.1)
       '@rsbuild/plugin-vue':
-        specifier: ^1.2.2
-        version: 1.2.2(@rsbuild/core@1.7.3)(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))
+        specifier: ^1.2.6
+        version: 1.2.6(@rsbuild/core@1.7.3)(@rspack/core@1.7.5(@swc/helpers@0.5.18))(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))
       '@tailwindcss/postcss':
         specifier: ^4.1.18
         version: 4.1.18
@@ -791,10 +791,10 @@ packages:
       '@rsbuild/core':
         optional: true
 
-  '@rsbuild/plugin-vue@1.2.2':
-    resolution: {integrity: sha512-BVCejQjVIxsaG0WF3WSBy1jyVjoLjmrWyslSi0eq1zGxLB4BlyEkIvBQguXI9YsxKxKg0VsXIJQjXus03Rzqkg==}
+  '@rsbuild/plugin-vue@1.2.6':
+    resolution: {integrity: sha512-4DdKAocXrNLghdFfunFRyc3YXKCnYbmAng5FLQD4mqt2imcgf7gggbAreKI1lAc6cd5SMhyIrHTruvWz+oMVWQ==}
     peerDependencies:
-      '@rsbuild/core': 1.x
+      '@rsbuild/core': ^1.0.0 || ^2.0.0-0
 
   '@rspack/binding-darwin-arm64@1.7.5':
     resolution: {integrity: sha512-dg2/IrF+g498NUt654N8LFWfIiUsHlTankWieE1S3GWEQM6jweeRbNuu1Py1nWIUsjR2yQtv7ziia7c9Q8UTaQ==}
@@ -2737,13 +2737,15 @@ packages:
   rspack-plugin-virtual-module@1.0.1:
     resolution: {integrity: sha512-NQJ3fXa1v0WayvfHMWbyqLUA3JIqgCkhIcIOnZscuisinxorQyIAo+bqcU5pCusMKSyPqVIWO3caQyl0s9VDAg==}
 
-  rspack-vue-loader@17.4.4:
-    resolution: {integrity: sha512-T4rkTZWg9hC7DZapTaJcIphser4ogsTffH/rwnX0pwMpNKjv1XKLBPa5Icd/xNPOh1NiKVxoxcT+gb8NQliukA==}
+  rspack-vue-loader@17.5.0:
+    resolution: {integrity: sha512-hJrL2+jytfTs6ORHBOKTh5lU7BVZvmv7afELuQfyEpGC1ll7MKj1BxlgAIbhd6pZwoEwfdH79Lewtwe4VOlfCQ==}
     peerDependencies:
+      '@rspack/core': ^1.0.0 || ^2.0.0-0
       '@vue/compiler-sfc': '*'
       vue: '*'
-      webpack: ^4.1.0 || ^5.0.0-0
     peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
       '@vue/compiler-sfc':
         optional: true
       vue:
@@ -3512,6 +3514,7 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.12
       '@jridgewell/trace-mapping': 0.3.29
+    optional: true
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
@@ -3744,18 +3747,14 @@ snapshots:
       - supports-color
       - webpack
 
-  '@rsbuild/plugin-vue@1.2.2(@rsbuild/core@1.7.3)(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))':
+  '@rsbuild/plugin-vue@1.2.6(@rsbuild/core@1.7.3)(@rspack/core@1.7.5(@swc/helpers@0.5.18))(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))':
     dependencies:
       '@rsbuild/core': 1.7.3
-      rspack-vue-loader: 17.4.4(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))(webpack@5.104.1)
-      webpack: 5.104.1
+      rspack-vue-loader: 17.5.0(@rspack/core@1.7.5(@swc/helpers@0.5.18))(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))
     transitivePeerDependencies:
-      - '@swc/core'
+      - '@rspack/core'
       - '@vue/compiler-sfc'
-      - esbuild
-      - uglify-js
       - vue
-      - webpack-cli
 
   '@rspack/binding-darwin-arm64@1.7.5':
     optional: true
@@ -3965,11 +3964,13 @@ snapshots:
     dependencies:
       '@types/eslint': 9.6.1
       '@types/estree': 1.0.8
+    optional: true
 
   '@types/eslint@9.6.1':
     dependencies:
       '@types/estree': 1.0.8
       '@types/json-schema': 7.0.15
+    optional: true
 
   '@types/estree-jsx@1.0.5':
     dependencies:
@@ -4286,20 +4287,26 @@ snapshots:
     dependencies:
       '@webassemblyjs/helper-numbers': 1.13.2
       '@webassemblyjs/helper-wasm-bytecode': 1.13.2
+    optional: true
 
-  '@webassemblyjs/floating-point-hex-parser@1.13.2': {}
+  '@webassemblyjs/floating-point-hex-parser@1.13.2':
+    optional: true
 
-  '@webassemblyjs/helper-api-error@1.13.2': {}
+  '@webassemblyjs/helper-api-error@1.13.2':
+    optional: true
 
-  '@webassemblyjs/helper-buffer@1.14.1': {}
+  '@webassemblyjs/helper-buffer@1.14.1':
+    optional: true
 
   '@webassemblyjs/helper-numbers@1.13.2':
     dependencies:
       '@webassemblyjs/floating-point-hex-parser': 1.13.2
       '@webassemblyjs/helper-api-error': 1.13.2
       '@xtuc/long': 4.2.2
+    optional: true
 
-  '@webassemblyjs/helper-wasm-bytecode@1.13.2': {}
+  '@webassemblyjs/helper-wasm-bytecode@1.13.2':
+    optional: true
 
   '@webassemblyjs/helper-wasm-section@1.14.1':
     dependencies:
@@ -4307,16 +4314,20 @@ snapshots:
       '@webassemblyjs/helper-buffer': 1.14.1
       '@webassemblyjs/helper-wasm-bytecode': 1.13.2
       '@webassemblyjs/wasm-gen': 1.14.1
+    optional: true
 
   '@webassemblyjs/ieee754@1.13.2':
     dependencies:
       '@xtuc/ieee754': 1.2.0
+    optional: true
 
   '@webassemblyjs/leb128@1.13.2':
     dependencies:
       '@xtuc/long': 4.2.2
+    optional: true
 
-  '@webassemblyjs/utf8@1.13.2': {}
+  '@webassemblyjs/utf8@1.13.2':
+    optional: true
 
   '@webassemblyjs/wasm-edit@1.14.1':
     dependencies:
@@ -4328,6 +4339,7 @@ snapshots:
       '@webassemblyjs/wasm-opt': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
       '@webassemblyjs/wast-printer': 1.14.1
+    optional: true
 
   '@webassemblyjs/wasm-gen@1.14.1':
     dependencies:
@@ -4336,6 +4348,7 @@ snapshots:
       '@webassemblyjs/ieee754': 1.13.2
       '@webassemblyjs/leb128': 1.13.2
       '@webassemblyjs/utf8': 1.13.2
+    optional: true
 
   '@webassemblyjs/wasm-opt@1.14.1':
     dependencies:
@@ -4343,6 +4356,7 @@ snapshots:
       '@webassemblyjs/helper-buffer': 1.14.1
       '@webassemblyjs/wasm-gen': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
+    optional: true
 
   '@webassemblyjs/wasm-parser@1.14.1':
     dependencies:
@@ -4352,19 +4366,24 @@ snapshots:
       '@webassemblyjs/ieee754': 1.13.2
       '@webassemblyjs/leb128': 1.13.2
       '@webassemblyjs/utf8': 1.13.2
+    optional: true
 
   '@webassemblyjs/wast-printer@1.14.1':
     dependencies:
       '@webassemblyjs/ast': 1.14.1
       '@xtuc/long': 4.2.2
+    optional: true
 
-  '@xtuc/ieee754@1.2.0': {}
+  '@xtuc/ieee754@1.2.0':
+    optional: true
 
-  '@xtuc/long@4.2.2': {}
+  '@xtuc/long@4.2.2':
+    optional: true
 
   acorn-import-phases@1.0.4(acorn@8.15.0):
     dependencies:
       acorn: 8.15.0
+    optional: true
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -4375,11 +4394,13 @@ snapshots:
   ajv-formats@2.1.1(ajv@8.17.1):
     optionalDependencies:
       ajv: 8.17.1
+    optional: true
 
   ajv-keywords@5.1.0(ajv@8.17.1):
     dependencies:
       ajv: 8.17.1
       fast-deep-equal: 3.1.3
+    optional: true
 
   ajv@6.12.6:
     dependencies:
@@ -4394,6 +4415,7 @@ snapshots:
       fast-uri: 3.0.6
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
+    optional: true
 
   alien-signals@3.0.3: {}
 
@@ -4446,7 +4468,8 @@ snapshots:
       node-releases: 2.0.27
       update-browserslist-db: 1.2.3(browserslist@4.28.1)
 
-  buffer-from@1.1.2: {}
+  buffer-from@1.1.2:
+    optional: true
 
   builtin-modules@5.0.0: {}
 
@@ -4477,7 +4500,8 @@ snapshots:
     dependencies:
       readdirp: 5.0.0
 
-  chrome-trace-event@1.0.4: {}
+  chrome-trace-event@1.0.4:
+    optional: true
 
   ci-info@4.3.1: {}
 
@@ -4497,7 +4521,8 @@ snapshots:
 
   commander@11.1.0: {}
 
-  commander@2.20.3: {}
+  commander@2.20.3:
+    optional: true
 
   comment-parser@1.4.1: {}
 
@@ -4616,7 +4641,8 @@ snapshots:
 
   entities@7.0.0: {}
 
-  es-module-lexer@2.0.0: {}
+  es-module-lexer@2.0.0:
+    optional: true
 
   es-toolkit@1.43.0: {}
 
@@ -4882,6 +4908,7 @@ snapshots:
     dependencies:
       esrecurse: 4.3.0
       estraverse: 4.3.0
+    optional: true
 
   eslint-scope@8.4.0:
     dependencies:
@@ -4965,7 +4992,8 @@ snapshots:
     dependencies:
       estraverse: 5.3.0
 
-  estraverse@4.3.0: {}
+  estraverse@4.3.0:
+    optional: true
 
   estraverse@5.3.0: {}
 
@@ -5006,7 +5034,8 @@ snapshots:
 
   esutils@2.0.3: {}
 
-  events@3.3.0: {}
+  events@3.3.0:
+    optional: true
 
   exsolve@1.0.7: {}
 
@@ -5018,7 +5047,8 @@ snapshots:
 
   fast-levenshtein@2.0.6: {}
 
-  fast-uri@3.0.6: {}
+  fast-uri@3.0.6:
+    optional: true
 
   fault@2.0.1:
     dependencies:
@@ -5071,7 +5101,8 @@ snapshots:
     dependencies:
       is-glob: 4.0.3
 
-  glob-to-regexp@0.4.1: {}
+  glob-to-regexp@0.4.1:
+    optional: true
 
   globals@14.0.0: {}
 
@@ -5201,6 +5232,7 @@ snapshots:
       '@types/node': 24.2.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
+    optional: true
 
   jiti@2.6.1: {}
 
@@ -5220,11 +5252,13 @@ snapshots:
 
   json-buffer@3.0.1: {}
 
-  json-parse-even-better-errors@2.3.1: {}
+  json-parse-even-better-errors@2.3.1:
+    optional: true
 
   json-schema-traverse@0.4.1: {}
 
-  json-schema-traverse@1.0.0: {}
+  json-schema-traverse@1.0.0:
+    optional: true
 
   json-stable-stringify-without-jsonify@1.0.1: {}
 
@@ -5303,7 +5337,8 @@ snapshots:
       lightningcss-win32-arm64-msvc: 1.30.2
       lightningcss-win32-x64-msvc: 1.30.2
 
-  loader-runner@4.3.1: {}
+  loader-runner@4.3.1:
+    optional: true
 
   local-pkg@1.1.2:
     dependencies:
@@ -5509,7 +5544,8 @@ snapshots:
 
   mdn-data@2.12.2: {}
 
-  merge-stream@2.0.0: {}
+  merge-stream@2.0.0:
+    optional: true
 
   micromark-core-commonmark@2.0.3:
     dependencies:
@@ -5782,11 +5818,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  mime-db@1.52.0: {}
+  mime-db@1.52.0:
+    optional: true
 
   mime-types@2.1.35:
     dependencies:
       mime-db: 1.52.0
+    optional: true
 
   mimic-function@5.0.1: {}
 
@@ -5819,7 +5857,8 @@ snapshots:
 
   natural-orderby@5.0.0: {}
 
-  neo-async@2.6.2: {}
+  neo-async@2.6.2:
+    optional: true
 
   node-fetch-native@1.6.7: {}
 
@@ -5959,6 +5998,7 @@ snapshots:
   randombytes@2.1.0:
     dependencies:
       safe-buffer: 5.2.1
+    optional: true
 
   readdirp@5.0.0: {}
 
@@ -6067,7 +6107,8 @@ snapshots:
 
   remove-accents@0.5.0: {}
 
-  require-from-string@2.0.2: {}
+  require-from-string@2.0.2:
+    optional: true
 
   reserved-identifiers@1.2.0: {}
 
@@ -6150,16 +6191,17 @@ snapshots:
     dependencies:
       fs-extra: 11.3.3
 
-  rspack-vue-loader@17.4.4(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2))(webpack@5.104.1):
+  rspack-vue-loader@17.5.0(@rspack/core@1.7.5(@swc/helpers@0.5.18))(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.2)):
     dependencies:
+      '@rspack/lite-tapable': 1.1.0
       chalk: 4.1.2
-      watchpack: 2.4.4
-      webpack: 5.104.1
     optionalDependencies:
+      '@rspack/core': 1.7.5(@swc/helpers@0.5.18)
       '@vue/compiler-sfc': 3.5.26
       vue: 3.5.26(typescript@5.9.2)
 
-  safe-buffer@5.2.1: {}
+  safe-buffer@5.2.1:
+    optional: true
 
   sax@1.4.3: {}
 
@@ -6169,6 +6211,7 @@ snapshots:
       ajv: 8.17.1
       ajv-formats: 2.1.1(ajv@8.17.1)
       ajv-keywords: 5.1.0(ajv@8.17.1)
+    optional: true
 
   scslre@0.3.0:
     dependencies:
@@ -6183,6 +6226,7 @@ snapshots:
   serialize-javascript@6.0.2:
     dependencies:
       randombytes: 2.1.0
+    optional: true
 
   shebang-command@2.0.0:
     dependencies:
@@ -6211,8 +6255,10 @@ snapshots:
     dependencies:
       buffer-from: 1.1.2
       source-map: 0.6.1
+    optional: true
 
-  source-map@0.6.1: {}
+  source-map@0.6.1:
+    optional: true
 
   source-map@0.7.6: {}
 
@@ -6261,6 +6307,7 @@ snapshots:
   supports-color@8.1.1:
     dependencies:
       has-flag: 4.0.0
+    optional: true
 
   svgo@4.0.0:
     dependencies:
@@ -6303,6 +6350,7 @@ snapshots:
       serialize-javascript: 6.0.2
       terser: 5.43.1
       webpack: 5.104.1
+    optional: true
 
   terser@5.43.1:
     dependencies:
@@ -6310,6 +6358,7 @@ snapshots:
       acorn: 8.15.0
       commander: 2.20.3
       source-map-support: 0.5.21
+    optional: true
 
   tinyexec@1.0.2: {}
 
@@ -6550,8 +6599,10 @@ snapshots:
     dependencies:
       glob-to-regexp: 0.4.1
       graceful-fs: 4.2.11
+    optional: true
 
-  webpack-sources@3.3.3: {}
+  webpack-sources@3.3.3:
+    optional: true
 
   webpack-virtual-modules@0.6.2: {}
 
@@ -6586,6 +6637,7 @@ snapshots:
       - '@swc/core'
       - esbuild
       - uglify-js
+    optional: true
 
   which@2.0.2:
     dependencies:

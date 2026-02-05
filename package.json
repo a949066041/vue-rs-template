@@ -22,7 +22,7 @@
     "@pinia/colada-devtools": "^0.4.1",
     "@rsbuild/core": "^1.7.3",
     "@rsbuild/plugin-mdx": "^1.1.0",
-    "@rsbuild/plugin-vue": "^1.2.2",
+    "@rsbuild/plugin-vue": "^1.2.6",
     "@tailwindcss/postcss": "^4.1.18",
     "@tanstack/vue-query": "^5.92.1",
     "@tanstack/vue-query-devtools": "^6.1.2",
