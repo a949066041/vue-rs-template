@@ -84,8 +84,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       rolldown-vite:
-        specifier: ^7.3.0
-        version: 7.3.0(@types/node@24.2.0)(jiti@2.6.1)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.2)
+        specifier: ^7.3.1
+        version: 7.3.1(@types/node@24.2.0)(jiti@2.6.1)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.2)
       rspack-plugin-virtual-module:
         specifier: ^1.0.1
         version: 1.0.1
@@ -2684,8 +2684,8 @@ packages:
   rfdc@1.4.1:
     resolution: {integrity: sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==}
 
-  rolldown-vite@7.3.0:
-    resolution: {integrity: sha512-5hI5NCJwKBGtzWtdKB3c2fOEpI77Iaa0z4mSzZPU1cJ/OqrGbFafm90edVCd7T9Snz+Sh09TMAv4EQqyVLzuEg==}
+  rolldown-vite@7.3.1:
+    resolution: {integrity: sha512-LYzdNAjRHhF2yA4JUQm/QyARyi216N2rpJ0lJZb8E9FU2y5v6Vk+xq/U4XBOxMefpWixT5H3TslmAHm1rqIq2w==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -6082,7 +6082,7 @@ snapshots:
 
   rfdc@1.4.1: {}
 
-  rolldown-vite@7.3.0(@types/node@24.2.0)(jiti@2.6.1)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.2):
+  rolldown-vite@7.3.1(@types/node@24.2.0)(jiti@2.6.1)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.2):
     dependencies:
       '@oxc-project/runtime': 0.101.0
       fdir: 6.5.0(picomatch@4.0.3)
