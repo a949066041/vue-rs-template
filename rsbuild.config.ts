@@ -25,7 +25,7 @@ export default defineConfig({
       {
         tag: 'script',
         attrs: {
-          src: 'cdn.evgnet.com/beacon/q5568l55556tzib3w3n3n3d089563846/test/scripts/evergage.min.js',
+          src: 'https://cdn.evgnet.com/beacon/q5568l55556tzib3w3n3n3d089563846/test/scripts/evergage.min.js',
         },
       }
     ]
