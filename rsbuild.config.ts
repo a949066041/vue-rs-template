@@ -21,6 +21,14 @@ export default defineConfig({
   html: {
     favicon: './src/assets/icon/app-icon.png',
     title: APP_TITLE,
+    tags: [
+      {
+        tag: 'script',
+        attrs: {
+          src: 'cdn.evgnet.com/beacon/q5568l55556tzib3w3n3n3d089563846/test/scripts/evergage.min.js',
+        },
+      }
+    ]
   },
   performance: {
     buildCache: process.env.NODE_ENV === 'development',
