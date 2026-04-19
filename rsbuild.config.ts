@@ -21,11 +21,7 @@ export default defineConfig({
   html: {
     favicon: './src/assets/icon/app-icon.png',
     title: APP_TITLE,
-    template: `
-    <div id="root">
-      <div id="evergage-container"></div>
-      <div id="evergage2-container"></div>
-    `,
+    template: './index.html',
     tags: [
       {
         tag: 'script',
