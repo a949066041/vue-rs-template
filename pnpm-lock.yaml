@@ -63,8 +63,8 @@ importers:
         specifier: ^10.2.1
         version: 10.2.1(jiti@2.6.1)
       eslint-plugin-oxlint:
-        specifier: ^1.60.0
-        version: 1.60.0(oxlint@1.60.0)
+        specifier: ^1.62.0
+        version: 1.62.0(oxlint@1.60.0)
       eslint-plugin-unused-imports:
         specifier: ^4.4.1
         version: 4.4.1(@typescript-eslint/eslint-plugin@8.58.2(@typescript-eslint/parser@8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@5.9.2))(eslint@10.2.1(jiti@2.6.1))(typescript@5.9.2))(eslint@10.2.1(jiti@2.6.1))
@@ -1900,10 +1900,10 @@ packages:
     resolution: {integrity: sha512-brcKcxGnISN2CcVhXJ/kEQlNa0MEfGRtwKtWA16SkqXHKitaKIMrfemJKLKX1YqDU5C/5JY3PvZXd5jEW04e0Q==}
     engines: {node: '>=5.0.0'}
 
-  eslint-plugin-oxlint@1.60.0:
-    resolution: {integrity: sha512-9RUD23k7ablez1qg7JWnyPYPOlbucDDqaDr+qNUi0TbIQCPqIPCLzfllgqKF9lOxlg+l17H8hISErmarvm2J1w==}
+  eslint-plugin-oxlint@1.62.0:
+    resolution: {integrity: sha512-fJ1xrPPw7AwJPH+4rD10qaXbCQfMNa743WnwPwteXLFsUQ0qs9N1Zx8xGJvuWCwvciRJ19dwG+G460fLHrrPdw==}
     peerDependencies:
-      oxlint: ~1.60.0
+      oxlint: ~1.62.0
 
   eslint-plugin-perfectionist@5.9.0:
     resolution: {integrity: sha512-8TWzg02zmnBdZwCkWLi8jhzqXI+fE7Z/RwV8SL6xD45tJ8Bp3wGuYL2XtQgfe/Wd0eBqOUX+s6ey73IyszvKTA==}
@@ -5197,7 +5197,7 @@ snapshots:
 
   eslint-plugin-no-only-tests@3.3.0: {}
 
-  eslint-plugin-oxlint@1.60.0(oxlint@1.60.0):
+  eslint-plugin-oxlint@1.62.0(oxlint@1.60.0):
     dependencies:
       jsonc-parser: 3.3.1
       oxlint: 1.60.0
