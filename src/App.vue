@@ -10,6 +10,7 @@ const routes = [
   { path: '/auth', title: '用户鉴权', icon: 'icon-[material-symbols--dynamic-feed]' },
   { path: '/nesting/', title: '嵌套路由', icon: 'icon-[ant-design--layout-outlined]' },
   { path: '/404', title: 'not found page', icon: 'icon-[tabler--error-404]' },
+  { path: '/event/326?test=ps', title: '326', icon: 'icon-[material-symbols--dynamic-feed]' },
   { path: '/about', title: '关于', icon: 'icon-[ix--about]' },
 ]
 </script>
