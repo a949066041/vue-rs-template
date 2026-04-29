@@ -48,7 +48,7 @@
     "unist-util-visit": "^5.1.0",
     "unplugin-auto-import": "^21.0.0",
     "unplugin-vue-router": "^0.19.1",
-    "vue": "3.5.26",
+    "vue": "3.5.33",
     "vue-router": "^5.0.4",
     "zod": "^4.3.6"
   },
