@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "^8.2.0",
-    "@iconify/json": "^2.2.463",
+    "@iconify/json": "^2.2.469",
     "@iconify/tailwind": "^1.2.0",
     "@iconify/tools": "^5.0.11",
     "@pinia/colada": "^1.2.0",
