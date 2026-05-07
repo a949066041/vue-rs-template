@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@10.33.4",
   "scripts": {
     "dev": "rsbuild dev",
     "postinstall": "esno scripts/svg2json.ts",
