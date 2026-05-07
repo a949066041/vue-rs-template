@@ -1,11 +1,14 @@
-import { defineConfig } from '@rsbuild/core'
+import { defineConfig, loadEnv } from '@rsbuild/core'
 import { pluginMdx } from '@rsbuild/plugin-mdx'
 import { pluginVue } from '@rsbuild/plugin-vue'
+// @ts-expect-error error rspack
+import { rspack as VueRouter } from 'vue-router/unplugin'
 import { version } from './package.json' with { type: 'json' }
 import { pluginDemoMdOptions } from './scripts/remark'
-import RspackVueRouterPlugin from './vue-router-rspack'
 
 const APP_TITLE = 'template vue rs'
+
+const { publicVars } = loadEnv()
 
 export default defineConfig({
   plugins: [
@@ -16,27 +19,32 @@ export default defineConfig({
     define: {
       APP_TITLE: JSON.stringify(APP_TITLE),
       APP_VERSION: JSON.stringify(version),
+      ...publicVars,
     },
   },
   html: {
-    favicon: './src/assets/icon/app-icon.png',
     title: APP_TITLE,
-    template: './index.html',
     tags: [
       {
         tag: 'script',
         attrs: {
           src: 'https://cdn.evgnet.com/beacon/q5568l55556tzib3w3n3n3d089563846/test/scripts/evergage.min.js',
         },
-      }
-    ]
+      },
+    ],
   },
   performance: {
-    buildCache: process.env.NODE_ENV === 'development',
+    buildCache: false,
+    removeConsole: false,
   },
   tools: {
     rspack: {
-      plugins: [new RspackVueRouterPlugin()],
+      plugins: [
+        VueRouter({
+          dts: 'src/route-map.d.ts',
+          exclude: ['**/components/**/*'],
+        }),
+      ],
     },
   },
 })
