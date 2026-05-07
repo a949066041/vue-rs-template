@@ -1,6 +1,3 @@
 {
-  "installCommand": "corepack enable && corepack prepare pnpm@10.20.0 --activate && pnpm install --frozen-lockfile",
-  "buildCommand": "corepack enable && corepack prepare pnpm@10.20.0 --activate && pnpm build",
-  "outputDirectory": "dist",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
