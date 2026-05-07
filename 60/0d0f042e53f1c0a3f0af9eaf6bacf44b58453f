@@ -1,0 +1,16 @@
+src/pages/nesting.vue
+  h_47deb149cdb37b 13
+src/pages/[...path].vue
+  h_47deb149cdb37b 4,8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.1",
+  "base_commit_sha": "600d0f042e53f1c0a3f0af9eaf6bacf44b58453f",
+  "prompts": {},
+  "humans": {
+    "h_47deb149cdb37b": {
+      "author": "a949066041 <949066041@qq.com>"
+    }
+  }
+}
