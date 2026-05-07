@@ -1,0 +1,55 @@
+package.json
+  s_81a89d78f0c018::t_6d6ee85a950cae 11
+eslint.config.mjs
+  s_81a89d78f0c018::t_c46b01b6ffa7ed 8-9,16-17
+src/pages/query/[id].vue
+  s_81a89d78f0c018::t_1bc6f95894fd4c 9
+  s_81a89d78f0c018::t_c457e6c39d96c4 7
+src/pages/n.vue
+  s_81a89d78f0c018::t_56984cf2032f0d 2
+  s_81a89d78f0c018::t_fb37b2d5f858b9 3-6,12
+rsbuild.config.ts
+  s_81a89d78f0c018::t_f7f2783e0da2e5 6,19,25
+config.ts
+  s_81a89d78f0c018::t_8d6b77af0cb4fd 1-2
+src/index.ts
+  h_47deb149cdb37b 15
+src/pages/user/create.[id].vue
+  s_81a89d78f0c018::t_36da186bd9a34b 4
+src/pages/user/[id].vue
+  s_81a89d78f0c018::t_31db6ac52b3a0e 7
+src/env.d.ts
+  s_81a89d78f0c018::t_b7da1e975148eb 5,12
+tsconfig.json
+  s_81a89d78f0c018::t_bc326eca2e2172 23
+README.md
+  s_81a89d78f0c018::t_653cebb2d67f51 25-31
+src/pages/[...path].vue
+  s_81a89d78f0c018::t_98da96fffc71ff 4,8
+src/pages/n/value-[[more]]+/index.vue
+  s_81a89d78f0c018::t_a914dbc78db549 4
+src/pages/query/page.vue
+  s_81a89d78f0c018::t_542ffa24881025 2-3,6-7,14-16,19-20
+  s_81a89d78f0c018::t_2bc9dc11072e96 5,13,17-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.1",
+  "base_commit_sha": "31c406a104a99cd09ba0acb7254d891b9ffd935a",
+  "prompts": {},
+  "humans": {
+    "h_47deb149cdb37b": {
+      "author": "a949066041 <949066041@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_81a89d78f0c018": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "61e85267-804b-440a-9506-e94e3c379ce8",
+        "model": "premium"
+      },
+      "human_author": "a949066041 <949066041@qq.com>"
+    }
+  }
+}
