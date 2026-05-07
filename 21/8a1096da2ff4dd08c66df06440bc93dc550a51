@@ -1,0 +1,27 @@
+tsconfig.json
+  s_3378b55ef1aac6::t_6e8c10e99c77b7 11
+vercel.json
+  s_3378b55ef1aac6::t_fa7095b71279a1 3
+  s_3378b55ef1aac6::t_75fea6ab264772 2,4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.1",
+  "base_commit_sha": "218a1096da2ff4dd08c66df06440bc93dc550a51",
+  "prompts": {},
+  "humans": {
+    "h_47deb149cdb37b": {
+      "author": "a949066041 <949066041@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_3378b55ef1aac6": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "93142a20-d5fd-494e-8032-d766b7a35e30",
+        "model": "premium"
+      },
+      "human_author": "a949066041 <949066041@qq.com>"
+    }
+  }
+}
