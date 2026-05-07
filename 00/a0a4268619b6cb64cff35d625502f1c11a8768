@@ -1,0 +1,18 @@
+eslint.config.mjs
+  h_47deb149cdb37b 46
+package.json
+  h_47deb149cdb37b 25
+rsbuild.config.ts
+  h_47deb149cdb37b 1,4-5,11-12,22,33-34,37-38,43-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.1",
+  "base_commit_sha": "00a0a4268619b6cb64cff35d625502f1c11a8768",
+  "prompts": {},
+  "humans": {
+    "h_47deb149cdb37b": {
+      "author": "a949066041 <949066041@qq.com>"
+    }
+  }
+}
