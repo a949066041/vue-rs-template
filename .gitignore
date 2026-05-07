@@ -11,7 +11,5 @@ dist/
 !.vscode/extensions.json
 .idea
 
-typed-router.d.ts
-
 # assets
 custom.json

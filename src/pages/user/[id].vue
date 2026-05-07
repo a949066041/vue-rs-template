@@ -4,7 +4,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { fetchUser } from '~/api'
 
-const route = useRoute('/user/[id]')
+const route = useRoute()
 const paramsId = computed(() => +route.params.id)
 const { data } = useQuery({
   queryKey: ['user-list', paramsId],

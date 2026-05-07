@@ -22,6 +22,13 @@ Build the app for production:
 pnpm build
 ```
 
+Run lint and type checks:
+
+```bash
+pnpm lint
+pnpm typecheck
+```
+
 Preview the production build locally:
 
 ```bash

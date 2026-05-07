@@ -4,25 +4,17 @@ import unusedImports from 'eslint-plugin-unused-imports'
 export default antfu({
   unocss: false,
   vue: true,
-
-  // Enable stylistic formatting rules
-  // stylistic: true,
-
-  // Or customize the stylistic rules
   stylistic: {
-    indent: 2, // 4, or 'tab'
-    quotes: 'single', // or 'double'
+    indent: 2,
+    quotes: 'single',
   },
   typescript: true,
-
-  // Disable jsonc and yaml support
   jsonc: true,
   yaml: false,
-
-  // `.eslintignore` is no longer supported in Flat config, use `ignores` instead
   ignores: [
     '**/fixtures',
-    // ...globs
+    '**/dist/**',
+    '**/node_modules/**',
   ],
 }, {
   plugins: {
