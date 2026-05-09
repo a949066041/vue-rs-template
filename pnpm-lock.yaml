@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@pinia/colada':
-        specifier: ^1.2.1
-        version: 1.2.1(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3))
+        specifier: ^1.3.0
+        version: 1.3.0(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3))
       '@tanstack/vue-query':
         specifier: ^5.100.9
         version: 5.100.9(vue@3.5.26(typescript@6.0.3))
@@ -31,7 +31,7 @@ importers:
         version: 3.5.26(typescript@6.0.3)
       vue-router:
         specifier: ^5.0.6
-        version: 5.0.6(@pinia/colada@1.2.1(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3)))(@vue/compiler-sfc@3.5.26)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3))
+        version: 5.0.6(@pinia/colada@1.3.0(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3)))(@vue/compiler-sfc@3.5.26)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3))
       zod:
         specifier: ^4.4.3
         version: 4.4.3
@@ -667,8 +667,8 @@ packages:
   '@pinia/colada-devtools@1.0.0':
     resolution: {integrity: sha512-DS23RyFqQ+Gy2B4Wu5GjRLEeCRKZCnP0txjFxN04CMyt6quYudCdq4JnFByT6Km2aNd/TjjENFdfJK/gd8A+Sg==}
 
-  '@pinia/colada@1.2.1':
-    resolution: {integrity: sha512-bld1LhCtct0TdYYyy8tEHFEeW0AZGRfdCMOLwdTD/Usqg7aGvDLj+GKsl9QcK4ZrFAL2HulbhLEHTy9ESZs12Q==}
+  '@pinia/colada@1.3.0':
+    resolution: {integrity: sha512-ORPCRMHd8sdm90p9f1Z6Wurg/2UafwL2oozeAVRSxtB8AgQhYVlm57AO1A49oMybAX+4cyI2iyVzoup8kFT+cg==}
     peerDependencies:
       pinia: ^2.2.6 || ^3.0.0
       vue: ^3.5.17
@@ -727,6 +727,12 @@ packages:
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+
+  '@rspack/binding-linux-x64-gnu@2.0.2':
+    resolution: {integrity: sha512-bBjsZxMHRaPo6X9SokApm6ucs+UhXtAJFyJJyuk2BH4XJsLeCU9Dz1vMwioeohFbJUUeTASVPm6/BL+RhSaunw==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
 
   '@rspack/binding-linux-x64-musl@2.0.2':
     resolution: {integrity: sha512-HjlpInqzabDNkhVsUJpsHPqa9QYVWBViJoyWNjzXCAW0vKMDvwaphyUvokSinX8FGTlZi/sr5UEaHJo6XtQ35g==}
@@ -1060,6 +1066,7 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   '@vitest/eslint-plugin@1.6.16':
     resolution: {integrity: sha512-2pBN1F1JXq6zTSaYC58CMJa7pGxXIRsLfOioeZM4cPE3pRdSh1ySTSoHPQlOTEF5WgoVzWZQxhGQ3ygT78hOVg==}
@@ -3465,7 +3472,7 @@ snapshots:
 
   '@pinia/colada-devtools@1.0.0': {}
 
-  '@pinia/colada@1.2.1(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3))':
+  '@pinia/colada@1.3.0(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3))':
     dependencies:
       pinia: 3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3))
       vue: 3.5.26(typescript@6.0.3)
@@ -3517,6 +3524,9 @@ snapshots:
   '@rspack/binding-linux-arm64-musl@2.0.2':
     optional: true
 
+  '@rspack/binding-linux-x64-gnu@2.0.2':
+    optional: true
+
   '@rspack/binding-linux-x64-musl@2.0.2':
     optional: true
 
@@ -3542,6 +3552,7 @@ snapshots:
       '@rspack/binding-darwin-x64': 2.0.2
       '@rspack/binding-linux-arm64-gnu': 2.0.2
       '@rspack/binding-linux-arm64-musl': 2.0.2
+      '@rspack/binding-linux-x64-gnu': 2.0.2
       '@rspack/binding-linux-x64-musl': 2.0.2
       '@rspack/binding-wasm32-wasi': 2.0.2
       '@rspack/binding-win32-arm64-msvc': 2.0.2
@@ -6221,7 +6232,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-router@5.0.6(@pinia/colada@1.2.1(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3)))(@vue/compiler-sfc@3.5.26)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3)):
+  vue-router@5.0.6(@pinia/colada@1.3.0(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3)))(@vue/compiler-sfc@3.5.26)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3)):
     dependencies:
       '@babel/generator': 7.29.1
       '@vue-macros/common': 3.1.1(vue@3.5.26(typescript@6.0.3))
@@ -6242,7 +6253,7 @@ snapshots:
       vue: 3.5.26(typescript@6.0.3)
       yaml: 2.8.3
     optionalDependencies:
-      '@pinia/colada': 1.2.1(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3))
+      '@pinia/colada': 1.3.0(pinia@3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3)))(vue@3.5.26(typescript@6.0.3))
       '@vue/compiler-sfc': 3.5.26
       pinia: 3.0.4(typescript@6.0.3)(vue@3.5.26(typescript@6.0.3))
 
