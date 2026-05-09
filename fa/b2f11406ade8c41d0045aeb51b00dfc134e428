@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.1",
+  "base_commit_sha": "fab2f11406ade8c41d0045aeb51b00dfc134e428",
+  "prompts": {},
+  "humans": {
+    "h_47deb149cdb37b": {
+      "author": "a949066041 <949066041@qq.com>"
+    }
+  }
+}
