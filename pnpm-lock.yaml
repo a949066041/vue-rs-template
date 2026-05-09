@@ -52,14 +52,14 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       '@rsbuild/core':
-        specifier: 2.0.4
-        version: 2.0.4(core-js@3.47.0)
+        specifier: 2.0.5
+        version: 2.0.5(core-js@3.47.0)
       '@rsbuild/plugin-mdx':
         specifier: ^1.1.1
-        version: 1.1.1(@rsbuild/core@2.0.4(core-js@3.47.0))(acorn@8.16.0)(webpack@5.104.1)
+        version: 1.1.1(@rsbuild/core@2.0.5(core-js@3.47.0))(acorn@8.16.0)(webpack@5.104.1)
       '@rsbuild/plugin-vue':
         specifier: ^1.2.7
-        version: 1.2.7(@rsbuild/core@2.0.4(core-js@3.47.0))(@rspack/core@2.0.2(@swc/helpers@0.5.21))(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@6.0.3))
+        version: 1.2.7(@rsbuild/core@2.0.5(core-js@3.47.0))(@rspack/core@2.0.2(@swc/helpers@0.5.21))(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@6.0.3))
       '@tailwindcss/postcss':
         specifier: ^4.2.4
         version: 4.2.4
@@ -680,8 +680,8 @@ packages:
   '@quansync/fs@1.0.0':
     resolution: {integrity: sha512-4TJ3DFtlf1L5LDMaM6CanJ/0lckGNtJcMjQ1NAV6zDmA0tEHKZtxNKin8EgPaVX1YzljbxckyT2tJrpQKAtngQ==}
 
-  '@rsbuild/core@2.0.4':
-    resolution: {integrity: sha512-ahnE0vXpt1KI07gRbz0QQesyB8hUSOqTb13tHoQf2gJwRpPaY3YNe9wLAdoFvfW4k/2L9d5PU7ByFgGKEJAHxw==}
+  '@rsbuild/core@2.0.5':
+    resolution: {integrity: sha512-KajO50hbXb32S8MsyDh2f+xKcVeRy9Gfzdcy0JjpMLj22djHugly6jrGo7jH7ls9X6/TDcyCTncSuNK4+D2lTw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -727,6 +727,12 @@ packages:
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+
+  '@rspack/binding-linux-x64-gnu@2.0.2':
+    resolution: {integrity: sha512-bBjsZxMHRaPo6X9SokApm6ucs+UhXtAJFyJJyuk2BH4XJsLeCU9Dz1vMwioeohFbJUUeTASVPm6/BL+RhSaunw==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
 
   '@rspack/binding-linux-x64-musl@2.0.2':
     resolution: {integrity: sha512-HjlpInqzabDNkhVsUJpsHPqa9QYVWBViJoyWNjzXCAW0vKMDvwaphyUvokSinX8FGTlZi/sr5UEaHJo6XtQ35g==}
@@ -1060,6 +1066,7 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   '@vitest/eslint-plugin@1.6.16':
     resolution: {integrity: sha512-2pBN1F1JXq6zTSaYC58CMJa7pGxXIRsLfOioeZM4cPE3pRdSh1ySTSoHPQlOTEF5WgoVzWZQxhGQ3ygT78hOVg==}
@@ -3476,7 +3483,7 @@ snapshots:
     dependencies:
       quansync: 1.0.0
 
-  '@rsbuild/core@2.0.4(core-js@3.47.0)':
+  '@rsbuild/core@2.0.5(core-js@3.47.0)':
     dependencies:
       '@rspack/core': 2.0.2(@swc/helpers@0.5.21)
       '@swc/helpers': 0.5.21
@@ -3485,21 +3492,21 @@ snapshots:
     transitivePeerDependencies:
       - '@module-federation/runtime-tools'
 
-  '@rsbuild/plugin-mdx@1.1.1(@rsbuild/core@2.0.4(core-js@3.47.0))(acorn@8.16.0)(webpack@5.104.1)':
+  '@rsbuild/plugin-mdx@1.1.1(@rsbuild/core@2.0.5(core-js@3.47.0))(acorn@8.16.0)(webpack@5.104.1)':
     dependencies:
       '@mdx-js/loader': 3.1.1(acorn@8.16.0)(webpack@5.104.1)
     optionalDependencies:
-      '@rsbuild/core': 2.0.4(core-js@3.47.0)
+      '@rsbuild/core': 2.0.5(core-js@3.47.0)
     transitivePeerDependencies:
       - acorn
       - supports-color
       - webpack
 
-  '@rsbuild/plugin-vue@1.2.7(@rsbuild/core@2.0.4(core-js@3.47.0))(@rspack/core@2.0.2(@swc/helpers@0.5.21))(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@6.0.3))':
+  '@rsbuild/plugin-vue@1.2.7(@rsbuild/core@2.0.5(core-js@3.47.0))(@rspack/core@2.0.2(@swc/helpers@0.5.21))(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@6.0.3))':
     dependencies:
       rspack-vue-loader: 17.5.0(@rspack/core@2.0.2(@swc/helpers@0.5.21))(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@6.0.3))
     optionalDependencies:
-      '@rsbuild/core': 2.0.4(core-js@3.47.0)
+      '@rsbuild/core': 2.0.5(core-js@3.47.0)
     transitivePeerDependencies:
       - '@rspack/core'
       - '@vue/compiler-sfc'
@@ -3515,6 +3522,9 @@ snapshots:
     optional: true
 
   '@rspack/binding-linux-arm64-musl@2.0.2':
+    optional: true
+
+  '@rspack/binding-linux-x64-gnu@2.0.2':
     optional: true
 
   '@rspack/binding-linux-x64-musl@2.0.2':
@@ -3542,6 +3552,7 @@ snapshots:
       '@rspack/binding-darwin-x64': 2.0.2
       '@rspack/binding-linux-arm64-gnu': 2.0.2
       '@rspack/binding-linux-arm64-musl': 2.0.2
+      '@rspack/binding-linux-x64-gnu': 2.0.2
       '@rspack/binding-linux-x64-musl': 2.0.2
       '@rspack/binding-wasm32-wasi': 2.0.2
       '@rspack/binding-win32-arm64-msvc': 2.0.2
