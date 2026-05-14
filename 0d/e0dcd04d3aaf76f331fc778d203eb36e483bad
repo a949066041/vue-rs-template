@@ -1,0 +1,14 @@
+package.json
+  h_47deb149cdb37b 6,9,18,23,25,29-30,34,38,40,51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "0de0dcd04d3aaf76f331fc778d203eb36e483bad",
+  "prompts": {},
+  "humans": {
+    "h_47deb149cdb37b": {
+      "author": "a949066041 <949066041@qq.com>"
+    }
+  }
+}
