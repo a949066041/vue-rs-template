@@ -1,18 +1,15 @@
 import { defineConfig, loadEnv } from '@rsbuild/core'
-import { pluginMdx } from '@rsbuild/plugin-mdx'
 import { pluginVue } from '@rsbuild/plugin-vue'
 // @ts-expect-error error rspack
 import { rspack as VueRouter } from 'vue-router/unplugin'
 import { appConfig } from './config'
 import { version } from './package.json' with { type: 'json' }
-import { pluginDemoMdOptions } from './scripts/remark'
 
 const { publicVars } = loadEnv()
 
 export default defineConfig({
   plugins: [
     pluginVue(),
-    pluginMdx(pluginDemoMdOptions),
   ],
   source: {
     define: {
@@ -33,8 +30,8 @@ export default defineConfig({
     ],
   },
   performance: {
-    buildCache: false,
-    removeConsole: false,
+    buildCache: true,
+    removeConsole: true,
   },
   tools: {
     rspack: {
