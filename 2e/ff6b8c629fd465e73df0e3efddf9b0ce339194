@@ -1,0 +1,14 @@
+rsbuild.config.ts
+  h_47deb149cdb37b 33-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "2eff6b8c629fd465e73df0e3efddf9b0ce339194",
+  "prompts": {},
+  "humans": {
+    "h_47deb149cdb37b": {
+      "author": "a949066041 <949066041@qq.com>"
+    }
+  }
+}
