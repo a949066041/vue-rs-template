@@ -1,0 +1,27 @@
+vercel.json
+  s_a6e90a8ad58f83::t_27f703e456fc6a 2-7
+package.json
+  s_a6e90a8ad58f83::t_ad7a0e2f8f53c3 7,9
+  h_47deb149cdb37b 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "f3b6ad046c8e88a9c35cddf1dac4b64c2e323e28",
+  "prompts": {},
+  "humans": {
+    "h_47deb149cdb37b": {
+      "author": "a949066041 <949066041@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_a6e90a8ad58f83": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "1252ccff-5e70-49be-9cfc-f41a718419df",
+        "model": "composer-2"
+      },
+      "human_author": "a949066041 <949066041@qq.com>"
+    }
+  }
+}
