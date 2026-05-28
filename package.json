@@ -39,7 +39,7 @@
     "@rsbuild/plugin-vue": "^1.2.8",
     "@tailwindcss/postcss": "^4.3.0",
     "@tanstack/vue-query-devtools": "^6.1.29",
-    "@types/node": "^25.8.0",
+    "@types/node": "^25.9.1",
     "eslint": "^10.4.0",
     "eslint-plugin-unused-imports": "^4.4.1",
     "shiki": "^4.0.2",
