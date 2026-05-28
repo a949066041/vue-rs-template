@@ -32,7 +32,7 @@
     "@antfu/eslint-config": "^9.0.0",
     "@iconify/json": "^2.2.474",
     "@iconify/tailwind": "^1.2.0",
-    "@iconify/tools": "^5.0.11",
+    "@iconify/tools": "^5.0.12",
     "@pinia/colada-devtools": "^1.0.0",
     "@rsbuild/core": "^2.0.6",
     "@rsbuild/plugin-mdx": "^1.1.1",
