@@ -20,11 +20,7 @@ import type {
 
 declare module 'vue-router' {
   interface TypesConfig {
-    _ParamParsers: {
-      int: {
-        type: number
-      }
-    }
+    _ParamParsers: {}
     RouteNamedMap: import('vue-router/auto-routes').RouteNamedMap
     _RouteFileInfoMap: import('vue-router/auto-routes')._RouteFileInfoMap
   }
@@ -66,8 +62,8 @@ declare module 'vue-router/auto-routes' {
     '/about/[id=int]': RouteRecordInfo<
       '/about/[id=int]',
       '/about/:id',
-      { id: _ExtractParamParserType<'int', true> },
-      { id: _ExtractParamParserType<'int', false> },
+      { id: ParamValue<true> },
+      { id: ParamValue<false> },
       | never
     >,
     '/about/[value]/': RouteRecordInfo<
@@ -193,8 +189,8 @@ declare module 'vue-router/auto-routes' {
     '/query/[id=int]': RouteRecordInfo<
       '/query/[id=int]',
       '/query/:id',
-      { id: _ExtractParamParserType<'int', true> },
-      { id: _ExtractParamParserType<'int', false> },
+      { id: ParamValue<true> },
+      { id: ParamValue<false> },
       | never
     >,
     '/query/action': RouteRecordInfo<
@@ -238,15 +234,15 @@ declare module 'vue-router/auto-routes' {
     '/user/[id=int]': RouteRecordInfo<
       '/user/[id=int]',
       '/user/:id',
-      { id: _ExtractParamParserType<'int', true> },
-      { id: _ExtractParamParserType<'int', false> },
+      { id: ParamValue<true> },
+      { id: ParamValue<false> },
       | never
     >,
     '/user/create.[id=int]': RouteRecordInfo<
       '/user/create.[id=int]',
       '/user/create/:id',
-      { id: _ExtractParamParserType<'int', true> },
-      { id: _ExtractParamParserType<'int', false> },
+      { id: ParamValue<true> },
+      { id: ParamValue<false> },
       | never
     >,
     '/user/page': RouteRecordInfo<

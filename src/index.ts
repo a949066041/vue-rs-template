@@ -1,38 +1,23 @@
 import { PiniaColada } from '@pinia/colada'
 import { VueQueryPlugin } from '@tanstack/vue-query'
-import NProgress from 'nprogress'
 import { createApp } from 'vue'
-import { createWebHistory } from 'vue-router'
-import { routes } from 'vue-router/auto-routes'
-import { createFixedResolver, experimental_createRouter, normalizeRouteRecord } from 'vue-router/experimental'
 import App from './App.vue'
+import { router } from './router'
 import { authSetup } from './setup'
 import { pinia, queryClient } from './store'
 import './style/index.css'
-import './style/nprogress.css'
 
-NProgress.configure({ showSpinner: false })
+declare module 'vue-router' {
+  export interface TypesConfig {
+    Router: typeof router
+  }
+}
 
 function bootstrap() {
-  const normalizedRoutes = routes.map(route => normalizeRouteRecord(route as any))
-  const resolver = createFixedResolver(normalizedRoutes as any) as any
-  const router = experimental_createRouter({
-    history: createWebHistory(),
-    resolver,
-  }) as any
-
-  router.beforeEach(() => {
-    NProgress.start()
-  })
-
-  router.afterEach(() => {
-    NProgress.done()
-  })
-
-  authSetup(router)
-
   const app = createApp(App)
   app.use(pinia)
+
+  authSetup(router, app)
 
   app.use(PiniaColada, {
     queryOptions: {

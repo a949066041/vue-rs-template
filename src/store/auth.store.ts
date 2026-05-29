@@ -7,7 +7,7 @@ import { queryClient } from '.'
 import { useCacheStore } from './cache.store'
 
 export const useAuthStore = createGlobalState(() => {
-  const userInfo = ref<Omit<LoginRes, 'accessToken'>>(undefined!)
+  const userInfo = ref<Omit<LoginRes, 'accessToken'>>(null!)
   const { setToken, removeToken } = useCacheStore()
 
   async function loginUser(params: ILoginUserParams) {

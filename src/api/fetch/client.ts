@@ -1,7 +1,7 @@
 import type { ZodType } from 'zod'
 
-type RequestParams = Record<string, any>
-type RequestBody = Record<string, any>
+type RequestParams = Record<string, unknown>
+type RequestBody = Record<string, unknown>
 
 export const fetchClient = {
   async get<T>(url: string, params: (RequestParams | ZodType) = {}, schema?: ZodType) {
