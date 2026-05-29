@@ -8,7 +8,7 @@ const { data, isLoading } = useQuery(userQueryListOptions)
 <template>
   <div class="space-x-3">
     <ul v-if="!isLoading" class="w-1/3 rounded-lg bg-green-300 px-2">
-      <li v-for=" item of data?.users" :key="item.id" @click="$router.push({ name: '/user/[id=int]' })">
+      <li v-for=" item of data?.users" :key="item.id">
         <RouterLink :to="{ name: '/user/[id=int]', params: { id: item.id } }">
           {{ `${item.firstName} ${item.lastName}` }} <span class="icon-[maki--arrow] ml-2" />
         </RouterLink>
