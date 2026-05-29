@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { useRoute } from 'vue-router'
 
-const route = useRoute()
+const route = useRoute('/about/[id=int]')
 </script>
 
 <template>
-  <div>{{ (route.params as any).more }}</div>
+  <div>about - {{ route.params.id }}</div>
 </template>

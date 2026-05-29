@@ -1,3 +1,3 @@
 <template>
-  <div>Hello "/about/[value]/"! {{ $route.params.value }}</div>
+  <div>Hello "/about/[value]/"! {{ ($route.params as any).value }}</div>
 </template>

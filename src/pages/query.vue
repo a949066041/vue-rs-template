@@ -16,7 +16,7 @@ const { data, isLoading } = useQuery({
     </RouterLink>
     <ul v-if="!isLoading" class="w-1/3 rounded-lg bg-green-300 px-2">
       <li v-for=" item of data?.users" :key="item.id">
-        <RouterLink :to="{ name: '/query/[id]', params: { id: item.id } }">
+        <RouterLink :to="{ name: '/query/[id=int]', params: { id: item.id } }">
           {{ `${item.firstName} ${item.lastName}` }} <span class="icon-[maki--arrow] ml-2" />
         </RouterLink>
       </li>
