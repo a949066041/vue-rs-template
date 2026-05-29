@@ -1,0 +1,74 @@
+src/pages/about/[id=int].vue
+  s_ee18188497a7df::t_769bb7139be347 4
+src/pages/n.vue
+  s_ee18188497a7df::t_76bdf2be6539d1 3-6
+pnpm-workspace.yaml
+  s_ee18188497a7df::t_a9acf59d415fa3 4-5
+src/route-map.d.ts
+  s_ee18188497a7df::t_d807234b7fa52b 248-249
+  s_ee18188497a7df::t_db67159332d687 29,277-278,285-286,293-294,301-302,304,306,309-310,317-318,325-326,333-334,341-342,349-350,357-358,367-368,375-376,383-384,395-396,403-404,413-414,421-422,429-430,436,441-442,449-450,452,454,457-458,465-466,473-474,481-482,488-489,493-494,501-502,504,506,509-510,512,514,517-518,525
+  s_ee18188497a7df::t_da6904f2994f5c 196-197
+  s_ee18188497a7df::t_7f0170dceebc78 23-27
+  s_ee18188497a7df::t_c3b009046a755f 69-70
+  s_ee18188497a7df::t_661ae22ad5b511 241-242
+src/pages/query/[id=int].vue
+  s_ee18188497a7df::t_b22ae09d45982c 6
+src/pages/about/name/[name].vue
+  s_ee18188497a7df::t_c04da073d592fe 2
+src/pages/user/create.[id=int].vue
+  s_ee18188497a7df::t_7288797ec522ee 6
+src/pages/n/value-[[more]]+/index.vue
+  s_ee18188497a7df::t_92ea0c66634282 8
+src/index.ts
+  s_ee18188497a7df::t_620da1b336630d 3,12-14
+  s_ee18188497a7df::t_66244aa9bd611d 24-29
+  s_ee18188497a7df::t_b2763013809441 5,17,19,21-22
+  s_ee18188497a7df::t_e985b9f242d44d 23
+  s_ee18188497a7df::t_d253432037adb0 18
+  s_ee18188497a7df::t_b8d358f4c97ccc 7
+src/params/int.ts
+  s_ee18188497a7df::t_283254b43c8874 6-7,10
+  s_ee18188497a7df::t_aa69caec2129d0 1-5,8-9,11
+src/pages/about/[value]/index.vue
+  s_ee18188497a7df::t_22cbbbf15dbe01 2
+package.json
+  s_ee18188497a7df::t_f9e3239120635c 28
+  s_ee18188497a7df::t_548674f379be68 25,43
+  s_ee18188497a7df::t_a9acf59d415fa3 29
+src/pages/user/[id=int].vue
+  s_ee18188497a7df::t_b17acc354c80fd 4
+src/pages/query.vue
+  s_ee18188497a7df::t_b5ad622f24cb8d 19
+src/pages/user.vue
+  s_ee18188497a7df::t_b6544e96acab6e 11-12
+src/pages/nesting/nesting2.vue
+  s_ee18188497a7df::t_d2064a840faf6d 2
+src/style/nprogress.css
+  s_ee18188497a7df::t_9b2f043da3de4f 1-25
+src/pages/about/[value]/create.vue
+  s_ee18188497a7df::t_2b6cfaffd4acd9 2
+rsbuild.config.ts
+  s_ee18188497a7df::t_9e56e9801c5260 42-44,47-49
+  s_ee18188497a7df::t_efd7b4a8506acd 45-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "574b953bf6d87519d1b68a2b631242a58b9bc07f",
+  "prompts": {},
+  "humans": {
+    "h_47deb149cdb37b": {
+      "author": "a949066041 <949066041@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_ee18188497a7df": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5b08b07c-dde4-4b10-b143-dd960d4b461e",
+        "model": "mimo-v2.5-pro"
+      },
+      "human_author": "a949066041 <949066041@qq.com>"
+    }
+  }
+}
