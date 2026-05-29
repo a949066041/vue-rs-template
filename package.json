@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.0.0",
-    "@iconify/json": "^2.2.479",
+    "@iconify/json": "^2.2.480",
     "@iconify/tailwind": "^1.2.0",
     "@iconify/tools": "^5.0.12",
     "@pinia/colada-devtools": "^1.0.0",
