@@ -34,7 +34,7 @@
     "@iconify/tailwind": "^1.2.0",
     "@iconify/tools": "^5.0.12",
     "@pinia/colada-devtools": "^1.0.0",
-    "@rsbuild/core": "^2.0.7",
+    "@rsbuild/core": "^2.0.8",
     "@rsbuild/plugin-vue": "^1.2.8",
     "@tailwindcss/postcss": "^4.3.0",
     "@tanstack/vue-query-devtools": "^6.1.33",
