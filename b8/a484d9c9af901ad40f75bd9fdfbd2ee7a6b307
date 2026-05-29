@@ -1,0 +1,34 @@
+src/api/fetch/client.ts
+  h_47deb149cdb37b 3-4
+src/style/index.css
+  h_47deb149cdb37b 3
+src/index.ts
+  h_47deb149cdb37b 5,10-14,20-21
+src/router/index.ts
+  h_47deb149cdb37b 1-12
+src/store/auth.store.ts
+  h_47deb149cdb37b 10
+src/pages/about/[value]/create.vue
+  h_47deb149cdb37b 1-6,8
+src/pages/about/name/[name].vue
+  h_47deb149cdb37b 1-6
+src/pages/n/value-[[more]]+/index.vue
+  h_47deb149cdb37b 4
+src/setup/auth.setup.ts
+  h_47deb149cdb37b 1,3-4,7-12,18
+.gitignore
+  h_47deb149cdb37b 16
+src/pages/about/[value]/index.vue
+  h_47deb149cdb37b 1-6,8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "b8a484d9c9af901ad40f75bd9fdfbd2ee7a6b307",
+  "prompts": {},
+  "humans": {
+    "h_47deb149cdb37b": {
+      "author": "a949066041 <949066041@qq.com>"
+    }
+  }
+}
