@@ -1,0 +1,76 @@
+src/store/index.ts
+  s_e913b896808a5c::t_a8b0e7c70ab247 9
+src/api/module/user.api.ts
+  s_e913b896808a5c::t_967ee3ba7ddc1d 1,6-8,10,13,16-17,20-25,28-29,32-33,37,39,44,51,62-63,67,74-77,79,82,84
+src/router/index.ts
+  s_e913b896808a5c::t_796b4164c29e9f 5,11
+src/pages/user/create.[id=int].vue
+  s_e913b896808a5c::t_50a9936ba485c1 9
+src/pages/query/[id=int].vue
+  s_e913b896808a5c::t_5d3101c3607ccf 7
+  s_e913b896808a5c::t_aa4db9327db1a0 4
+src/api/module/user.type.ts
+  s_e913b896808a5c::t_d862e5a164af29 1,9,15,21,23-24
+src/store/auth.store.ts
+  s_e913b896808a5c::t_fb799ea3d9fcfc 1,5,7,10-11,13-14,20,22-23
+src/App.vue
+  s_e913b896808a5c::t_dc8ad7ece3af19 19-20,22,28-30
+  s_e913b896808a5c::t_e7c30c032189d7 4,11
+  s_e913b896808a5c::t_416e05e3a02e87 21
+src/store/count.store.ts
+  s_e913b896808a5c::t_fa8ea6b39f3558 4,6
+src/setup/index.ts
+  s_e913b896808a5c::t_ce62ce16187d0f 1-2
+src/setup/fetch.setup.ts
+  s_e913b896808a5c::t_36685821409d5e 2,4-5,8-13,20,22-24,27-29,31,36-40
+src/pages/user.vue
+  s_e913b896808a5c::t_b8315cb77edb42 3,5
+src/pages/nesting.vue
+  s_e913b896808a5c::t_656916a2c3a5be 10
+src/pages/nesting/nesting2.vue
+  s_e913b896808a5c::t_0908a0693b2298 7
+src/bootstrap.ts
+  s_e913b896808a5c::t_3d7a252c755401 6,11-12,15-18,21,28,31,34,36-45
+src/store/cache.store.ts
+  s_e913b896808a5c::t_b9c44e70660069 1-2
+src/api/fetch/patch.ts
+  s_e913b896808a5c::t_9f14767bf6de56 2
+  s_e913b896808a5c::t_7ecadc8427f3a1 37
+  s_e913b896808a5c::t_582c59a6cd763a 9-10
+  s_e913b896808a5c::t_0bb9077a2937ac 1,3-8,11-15,18-19,23-24,27,29-30,32-33,35-36,38-41
+src/api/fetch/client.ts
+  s_e913b896808a5c::t_582c59a6cd763a 8-9,46-47,71-72
+  s_e913b896808a5c::t_55b5b9bb617d83 35-38,44-45,48,69-70,73
+  s_e913b896808a5c::t_619b9bae74e550 6-7,10-20,22-24,26-33,39-42,49,52-53,55-56,58-59,62,65-67,74,77-80
+  s_e913b896808a5c::t_b7d3e08d280e58 4
+src/store/token.store.ts
+  s_e913b896808a5c::t_b9178f442aa9e9 1-19
+src/setup/auth.setup.ts
+  s_e913b896808a5c::t_582c59a6cd763a 27-28
+  s_e913b896808a5c::t_cb259f73d73ff4 5-9,12,17,19-20,22,25-26,29-31
+src/pages/auth.vue
+  s_e913b896808a5c::t_26ce4bdf7d4a15 2,11,31,33-34,37-38,40
+CLAUDE.md
+  s_e913b896808a5c::t_8a6c94a0b1e33f 1-59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "8e7b741f88c15281e4277499cbb7cc55528e76fe",
+  "prompts": {},
+  "humans": {
+    "h_47deb149cdb37b": {
+      "author": "a949066041 <949066041@qq.com>"
+    }
+  },
+  "sessions": {
+    "s_e913b896808a5c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "498eebae-c76c-4c2c-89a3-eaaede535a1b",
+        "model": "mimo-v2.5-pro"
+      },
+      "human_author": "a949066041 <949066041@qq.com>"
+    }
+  }
+}
