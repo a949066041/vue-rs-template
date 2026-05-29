@@ -6,7 +6,7 @@ import { fetchUser } from '~/api'
 const route = useRoute('/user/create.[id=int]')
 const { data } = useQuery({
   queryKey: ['user-list', () => route.params.id],
-  queryFn: () => fetchUser(route.params.id),
+  queryFn: () => fetchUser(Number(route.params.id)),
 })
 </script>
 

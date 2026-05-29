@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { useQuery } from '@pinia/colada'
 import { useRoute } from 'vue-router'
-import { documentByIdQuery } from '~/api'
+import { userByIdQuery } from '~/api'
 
 const route = useRoute('/query/[id=int]')
-const { data, asyncStatus } = useQuery(() => documentByIdQuery({ id: route.params.id }))
+const { data, asyncStatus } = useQuery(() => userByIdQuery({ id: Number(route.params.id) }))
 </script>
 
 <template>

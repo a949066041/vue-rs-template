@@ -1,24 +1,26 @@
-import type { ILoginUserParams, LoginRes } from '~/api'
+import type { LoginRes, UserLoginParams } from '~/api'
 import { createGlobalState } from '@vueuse/core'
 import { omit } from 'es-toolkit'
 import { ref } from 'vue'
-import { loginUser as loginUserAction, userMeQueryOptions } from '~/api'
+import { loginUser as loginUserApi, userMeQueryOptions } from '~/api'
 import { queryClient } from '.'
-import { useCacheStore } from './cache.store'
+import { useTokenStore } from './token.store'
 
 export const useAuthStore = createGlobalState(() => {
-  const userInfo = ref<Omit<LoginRes, 'accessToken'>>(null!)
-  const { setToken, removeToken } = useCacheStore()
+  const userInfo = ref<Omit<LoginRes, 'accessToken'> | null>(null)
+  const { setToken, removeToken } = useTokenStore()
 
-  async function loginUser(params: ILoginUserParams) {
-    const res = await loginUserAction(params)
+  async function loginUser(params: UserLoginParams) {
+    const res = await loginUserApi(params)
     userInfo.value = omit(res, ['accessToken'])
     setToken(res.accessToken)
   }
 
   async function logoutUser() {
-    userInfo.value = undefined!
+    userInfo.value = null
     removeToken()
+    // 清除查询缓存，防止注销后返回前用户数据
+    queryClient.clear()
   }
 
   async function infoUser() {

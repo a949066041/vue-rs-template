@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { useQuery } from '@tanstack/vue-query'
-import { userQueryListOptions } from '~/api'
+import { userListQueryOptions } from '~/api'
 
-const { data, isLoading } = useQuery(userQueryListOptions)
+const { data, isLoading } = useQuery(userListQueryOptions)
 </script>
 
 <template>

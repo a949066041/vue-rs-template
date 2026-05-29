@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ILoginUserParams } from '~/api'
+import type { UserLoginParams } from '~/api'
 import { useMutation } from '@tanstack/vue-query'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '~/store'
@@ -8,7 +8,7 @@ const { loginUser } = useAuthStore()
 const router = useRouter()
 const { mutateAsync, isPending } = useMutation({
   mutationKey: ['login'],
-  mutationFn: (params: ILoginUserParams) => loginUser({
+  mutationFn: (params: UserLoginParams) => loginUser({
     ...params,
     username: 'emilys',
     password: 'emilyspass',
@@ -28,16 +28,16 @@ async function handleSubmitLogin(evt: unknown) {
 <template>
   <div>
     login page
-    <form class=" mt-2 border-t" @submit.prevent="handleSubmitLogin">
+    <form class="mt-2 border-t" @submit.prevent="handleSubmitLogin">
       <div>
-        <label htmlFor="username">username：</label>
-        <input name="username" class=" border" type="text" required>
+        <label for="username">username：</label>
+        <input name="username" class="border" type="text" required>
       </div>
       <div>
-        <label htmlFor="password">password：</label>
-        <input name="password" class=" border" type="text" required>
+        <label for="password">password：</label>
+        <input name="password" class="border" type="text" required>
       </div>
-      <button class=" px-2 border-red-400 border ml-2" type="submit" :disabled="isPending">
+      <button class="px-2 border-red-400 border ml-2" type="submit" :disabled="isPending">
         {{
           isPending ? 'login...' : 'login'
         }}

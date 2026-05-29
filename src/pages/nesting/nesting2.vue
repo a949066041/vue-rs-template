@@ -4,7 +4,7 @@ const secondNestingList = [{ name: '/nesting/nesting2/test2' as const, title: 'ç
 
 <template>
   <div>
-    <ul className="flex space-x-2">
+    <ul class="flex space-x-2">
       <RouterLink v-for=" item of secondNestingList" :key="item.name" :to="{ name: item.name }" active-class=" text-red-500">
         {{ item.title }}
       </RouterLink>

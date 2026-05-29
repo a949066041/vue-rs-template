@@ -1,51 +1,54 @@
-import type { ILoginUserParams, IUserEntity, IUserList, LoginRes } from './user.type'
+import type { LoginRes, UserEntity, UserList, UserLoginParams } from './user.type'
 import { defineQueryOptions } from '@pinia/colada'
 import { infiniteQueryOptions, queryOptions } from '@tanstack/vue-query'
 import { fetchClient } from '~/api/fetch'
-import { delay } from '~/utils'
 
-const baseUrl = '/users'
+const BASE_URL = '/users'
+const USER_PAGER_LIMIT = 40
+
 /**
- * api
+ * API 请求函数
  */
 export function fetchUserList() {
-  return fetchClient.get<IUserList>(`${baseUrl}?limit=3`)
+  return fetchClient.get<UserList>(`${BASE_URL}?limit=3`)
 }
 
-export function fetchUser(id: IUserEntity['id']) {
-  return fetchClient.get<IUserEntity>(`${baseUrl}/${id}`)
+export function fetchUser(id: UserEntity['id']) {
+  return fetchClient.get<UserEntity>(`${BASE_URL}/${id}`)
 }
 
-const USER_PAGER_LIMIT = 40
-export function fetchUserPager({ pageParam: offset }: { pageParam: number }): Promise<IUserList> {
-  return fetchClient.get<IUserList>(`${baseUrl}?limit=${USER_PAGER_LIMIT}&skip=${USER_PAGER_LIMIT * (offset - 1)}`)
+export function fetchUserPager({ pageParam: page }: { pageParam: number }): Promise<UserList> {
+  const skip = USER_PAGER_LIMIT * page
+  return fetchClient.get<UserList>(`${BASE_URL}`, {
+    limit: USER_PAGER_LIMIT,
+    skip,
+  })
 }
 
-export function loginUser(params: ILoginUserParams) {
-  return fetchClient.post<LoginRes>(`${baseUrl}/login`, params)
+export function loginUser(params: UserLoginParams) {
+  return fetchClient.post<LoginRes>(`${BASE_URL}/login`, params)
 }
 
-export async function getUserMe() {
-  await delay(2000)
-  return fetchClient.get<LoginRes>(`${baseUrl}/me`)
+export function getUserMe() {
+  return fetchClient.get<LoginRes>(`${BASE_URL}/me`)
 }
 
 /**
- * react query client
+ * Vue Query 配置
  */
-export const userQueryListOptions = queryOptions({
+export const userListQueryOptions = queryOptions({
   queryKey: ['user-list'],
   queryFn: fetchUserList,
 })
 
-export function userQueryOptions(id: IUserEntity['id']) {
+export function userQueryOptions(id: UserEntity['id']) {
   return queryOptions({
     queryKey: ['user-list', { id }],
     queryFn: () => fetchUser(id),
   })
 }
 
-export const userQueryPagerOptions = infiniteQueryOptions({
+export const userPagerQueryOptions = infiniteQueryOptions({
   queryKey: ['user-pager'],
   queryFn: fetchUserPager,
   initialPageParam: 0,
@@ -56,30 +59,29 @@ export const userQueryPagerOptions = infiniteQueryOptions({
     }
   },
   getNextPageParam: (res, list) => {
-    return res.total > list.map(item => item.users).flat().length
-      ? (res.skip + USER_PAGER_LIMIT)
-      : undefined
+    const totalLoaded = list.flatMap(item => item.users).length
+    return res.total > totalLoaded ? list.length : undefined
   },
 })
 
-export function userMeQueryOptions(enabled = false) {
+export function userMeQueryOptions() {
   return queryOptions({
     queryKey: ['user-me'],
     queryFn: getUserMe,
-    enabled,
   })
 }
 
-// pinia query
-export const DOCUMENT_QUERY_KEYS = {
+/**
+ * Pinia Colada 配置
+ */
+export const USER_QUERY_KEYS = {
   root: ['user'] as const,
-  byId: (id: number) => [...DOCUMENT_QUERY_KEYS.root, id] as const,
-  byIdWithComments: (id: number) => [...DOCUMENT_QUERY_KEYS.byId(id)] as const,
+  byId: (id: number) => [...USER_QUERY_KEYS.root, id] as const,
 }
 
-export const documentByIdQuery = defineQueryOptions(
+export const userByIdQuery = defineQueryOptions(
   ({ id }: { id: number }) => ({
-    key: DOCUMENT_QUERY_KEYS.byIdWithComments(id),
+    key: USER_QUERY_KEYS.byId(id),
     query: () => fetchUser(id),
   }),
 )
