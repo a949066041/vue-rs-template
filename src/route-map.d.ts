@@ -59,8 +59,8 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/about/[id]': RouteRecordInfo<
-      '/about/[id]',
+    '/about/[id=int]': RouteRecordInfo<
+      '/about/[id=int]',
       '/about/:id',
       { id: ParamValue<true> },
       { id: ParamValue<false> },
@@ -175,7 +175,7 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       Record<never, never>,
       | '/query/'
-      | '/query/[id]'
+      | '/query/[id=int]'
       | '/query/action'
       | '/query/page'
     >,
@@ -186,8 +186,8 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/query/[id]': RouteRecordInfo<
-      '/query/[id]',
+    '/query/[id=int]': RouteRecordInfo<
+      '/query/[id=int]',
       '/query/:id',
       { id: ParamValue<true> },
       { id: ParamValue<false> },
@@ -220,8 +220,8 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       Record<never, never>,
       | '/user/'
-      | '/user/[id]'
-      | '/user/create.[id]'
+      | '/user/[id=int]'
+      | '/user/create.[id=int]'
       | '/user/page'
     >,
     '/user/': RouteRecordInfo<
@@ -231,15 +231,15 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/user/[id]': RouteRecordInfo<
-      '/user/[id]',
+    '/user/[id=int]': RouteRecordInfo<
+      '/user/[id=int]',
       '/user/:id',
       { id: ParamValue<true> },
       { id: ParamValue<false> },
       | never
     >,
-    '/user/create.[id]': RouteRecordInfo<
-      '/user/create.[id]',
+    '/user/create.[id=int]': RouteRecordInfo<
+      '/user/create.[id=int]',
       '/user/create/:id',
       { id: ParamValue<true> },
       { id: ParamValue<false> },
@@ -297,9 +297,9 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'src/pages/about/[id].vue': {
+    'src/pages/about/[id=int].vue': {
       routes:
-        | '/about/[id]'
+        | '/about/[id=int]'
       views:
         | never
       pathParamNames:
@@ -429,7 +429,7 @@ declare module 'vue-router/auto-routes' {
       routes:
         | '/query'
         | '/query/'
-        | '/query/[id]'
+        | '/query/[id=int]'
         | '/query/action'
         | '/query/page'
       views:
@@ -445,9 +445,9 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'src/pages/query/[id].vue': {
+    'src/pages/query/[id=int].vue': {
       routes:
-        | '/query/[id]'
+        | '/query/[id=int]'
       views:
         | never
       pathParamNames:
@@ -481,8 +481,8 @@ declare module 'vue-router/auto-routes' {
       routes:
         | '/user'
         | '/user/'
-        | '/user/[id]'
-        | '/user/create.[id]'
+        | '/user/[id=int]'
+        | '/user/create.[id=int]'
         | '/user/page'
       views:
         | 'default'
@@ -497,17 +497,17 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'src/pages/user/[id].vue': {
+    'src/pages/user/[id=int].vue': {
       routes:
-        | '/user/[id]'
+        | '/user/[id=int]'
       views:
         | never
       pathParamNames:
         | 'id'
     }
-    'src/pages/user/create.[id].vue': {
+    'src/pages/user/create.[id=int].vue': {
       routes:
-        | '/user/create.[id]'
+        | '/user/create.[id=int]'
       views:
         | never
       pathParamNames:

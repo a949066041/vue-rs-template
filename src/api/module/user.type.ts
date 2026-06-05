@@ -1,4 +1,4 @@
-export interface IUserEntity {
+export interface UserEntity {
   id: number
   email: string
   gender: string
@@ -6,22 +6,22 @@ export interface IUserEntity {
   lastName: string
 }
 
-export interface ILoginUserParams {
+export interface UserLoginParams {
   username: string
   password: string
   expiresInMins?: number
 }
 
-export interface ILogRes {
+export interface LoginResponse {
   image: string
   accessToken: string
   refreshToken: string
 }
 
-export type LoginRes = ILogRes & IUserEntity
+export type LoginRes = LoginResponse & UserEntity
 
-export interface IUserList {
-  users: IUserEntity[]
+export interface UserList {
+  users: UserEntity[]
   skip: number
   limit: number
   total: number

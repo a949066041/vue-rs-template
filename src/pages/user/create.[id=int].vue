@@ -1,14 +1,12 @@
 <script lang="ts" setup>
 import { useQuery } from '@tanstack/vue-query'
-import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { fetchUser } from '~/api'
 
-const route = useRoute()
-const paramsId = computed(() => +route.params.id)
+const route = useRoute('/user/create.[id=int]')
 const { data } = useQuery({
-  queryKey: ['user-list', paramsId],
-  queryFn: () => fetchUser(paramsId.value),
+  queryKey: ['user-list', () => route.params.id],
+  queryFn: () => fetchUser(Number(route.params.id)),
 })
 </script>
 

@@ -1,33 +1,45 @@
-export type FetchRequestIntercept = (config: RequestInit) => RequestInit
-export type FetchResponseIntercept = (config: Response) => void
+export type FetchRequestIntercept = (init: RequestInit) => RequestInit
+export type FetchResponseIntercept = (response: Response) => Response | void | Promise<Response | void>
+
+function normalizeBaseUrl(url: string): string {
+  return url.endsWith('/') ? url.slice(0, -1) : url
+}
+
+function buildUrl(baseUrl: string | undefined, resource: string | URL | Request): string {
+  if (!baseUrl)
+    return String(resource)
+  const path = String(resource)
+  const normalizedBase = normalizeBaseUrl(baseUrl)
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`
+  return `${normalizedBase}${normalizedPath}`
+}
 
 export function patchFetch(
-  requestIntercept: (FetchRequestIntercept | FetchRequestIntercept[]) = [],
-  responseIntercept: (FetchResponseIntercept | FetchResponseIntercept[]) = [],
+  requestInterceptors: FetchRequestIntercept | FetchRequestIntercept[] = [],
+  responseInterceptors: FetchResponseIntercept | FetchResponseIntercept[] = [],
   baseUrl?: string,
 ) {
   const { fetch: originFetch } = window
+  const reqInterceptors = Array.isArray(requestInterceptors) ? requestInterceptors : [requestInterceptors]
+  const resInterceptors = Array.isArray(responseInterceptors) ? responseInterceptors : [responseInterceptors]
 
   window.fetch = async (...args) => {
-    const [resource, config = {}] = args
+    const [resource, init = {}] = args
 
-    const fetchUrl = baseUrl ? `${baseUrl}${resource}` : resource
+    // 执行请求拦截器
+    const modifiedInit = reqInterceptors.reduce((acc, interceptor) => interceptor(acc), init)
 
-    requestIntercept = Array.isArray(requestIntercept) ? requestIntercept : [requestIntercept]
-    requestIntercept.forEach(req => req(config))
+    const url = buildUrl(baseUrl, resource)
+    let response = await originFetch(url, modifiedInit)
 
-    const response = await originFetch(fetchUrl, config)
+    // 执行响应拦截器
+    for (const interceptor of resInterceptors) {
+      const result = await interceptor(response)
+      if (result instanceof Response) {
+        response = result
+      }
+    }
 
-    responseIntercept = Array.isArray(responseIntercept) ? responseIntercept : [responseIntercept]
-    responseIntercept.map(res => res(response))
-
-    const json = () =>
-      response
-        .clone()
-        .json()
-        .then(data => data)
-
-    response.json = json
     return response
   }
 }

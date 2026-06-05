@@ -39,6 +39,14 @@ export default defineConfig({
         VueRouter({
           dts: 'src/route-map.d.ts',
           exclude: ['**/components/**/*'],
+          paramsParser: {
+            int: (value: string) => {
+              const num = Number(value)
+              if (Number.isNaN(num))
+                return
+              return num
+            },
+          },
         }),
       ],
     },

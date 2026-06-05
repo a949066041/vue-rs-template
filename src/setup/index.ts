@@ -1,9 +1,2 @@
-import { setupFetch } from './fetch.setup'
-
-export * from './auth.setup'
-
-function setupApp() {
-  setupFetch()
-}
-
-setupApp()
+export { authSetup } from './auth.setup'
+export { setupFetch } from './fetch.setup'
