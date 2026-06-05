@@ -1,22 +1,18 @@
 <script lang="ts" setup>
-interface RouteItem {
-  name: string
-  title: string
-  params: Record<string, unknown>
-}
+import type { RouteLocationRaw } from 'vue-router'
 
-const routes = [
-  { name: '/n', title: '首页', params: {} },
-  { name: '/n/value-[[more]]+/', title: '动态可选数组', params: { more: ['more1', 'more2', 'more3'] } },
-  { name: '/n/value-[[more]]+/', title: '动态可选数组(空)', params: {} },
-] satisfies RouteItem[]
+const routeLinks: { title: string, to: RouteLocationRaw }[] = [
+  { title: '首页', to: { name: '/n', params: {} } },
+  { title: '动态可选数组', to: { name: '/n/value-[[more]]+/', params: { more: ['more1', 'more2', 'more3'] } } },
+  { title: '动态可选数组(空)', to: { name: '/n/value-[[more]]+/', params: {} } },
+]
 </script>
 
 <template>
   <div>
     root n
     <div class=" flex space-x-2">
-      <RouterLink v-for=" item of routes" :key="item.title" :to="{ name: item.name, params: item.params }">
+      <RouterLink v-for="item of routeLinks" :key="item.title" :to="item.to">
         {{ item.title }}
       </RouterLink>
     </div>

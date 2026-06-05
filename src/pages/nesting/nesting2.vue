@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const secondNestingList = [{ name: '/nesting/nesting2/test2', title: '第二层嵌套-1' }, { name: '/nesting/nesting2/test3', title: '第二层嵌套-2' }]
+const secondNestingList = [{ name: '/nesting/nesting2/test2', title: '第二层嵌套-1' }, { name: '/nesting/nesting2/test3', title: '第二层嵌套-2' }] as const
 </script>
 
 <template>

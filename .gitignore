@@ -2,10 +2,12 @@
 .DS_Store
 *.local
 *.log*
+*.local.json
 
 # Dist
 node_modules
 dist/
+.codegraph/
 
 # IDE
 !.vscode/extensions.json
