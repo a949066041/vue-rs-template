@@ -4,7 +4,6 @@ import { createPinia } from 'pinia'
 export const pinia = createPinia()
 
 export * from './auth.store'
-export * from './cache.store'
 export * from './count.store'
 export * from './token.store'
 

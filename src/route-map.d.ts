@@ -108,6 +108,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/i18n': RouteRecordInfo<
+      '/i18n',
+      '/i18n',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/n': RouteRecordInfo<
       '/n',
       '/n',
@@ -348,6 +355,14 @@ declare module 'vue-router/auto-routes' {
     'src/pages/event/326.vue': {
       routes:
         | '/event/326'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'src/pages/i18n.vue': {
+      routes:
+        | '/i18n'
       views:
         | never
       pathParamNames:

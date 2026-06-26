@@ -1,6 +1,8 @@
+import type { MaybeRefOrGetter } from 'vue'
 import type { LoginRes, UserEntity, UserList, UserLoginParams } from './user.type'
 import { defineQueryOptions } from '@pinia/colada'
 import { infiniteQueryOptions, queryOptions } from '@tanstack/vue-query'
+import { toValue } from 'vue'
 import { fetchClient } from '~/api/fetch'
 
 const BASE_URL = '/users'
@@ -41,10 +43,10 @@ export const userListQueryOptions = queryOptions({
   queryFn: fetchUserList,
 })
 
-export function userQueryOptions(id: UserEntity['id']) {
+export function userQueryOptions(id: MaybeRefOrGetter<UserEntity['id']>) {
   return queryOptions({
-    queryKey: ['user-list', { id }],
-    queryFn: () => fetchUser(id),
+    queryKey: ['user-detail', id],
+    queryFn: () => fetchUser(toValue(id)),
   })
 }
 

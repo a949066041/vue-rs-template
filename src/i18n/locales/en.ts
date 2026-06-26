@@ -1,0 +1,26 @@
+export default {
+  nav: {
+    home: 'Home',
+    store: 'Global State',
+    vueQuery: 'vue query',
+    piniaQuery: 'pinia query',
+    dynamic: 'Dynamic Route',
+    auth: 'Auth',
+    nesting: 'Nested Route',
+    notFound: 'not found page',
+    event: '326',
+    about: 'About',
+    i18n: 'i18n',
+  },
+  i18n: {
+    title: 'Internationalization (vue-i18n)',
+    intro: 'Switch language at the top-right. Nav and this page update instantly and persist to localStorage.',
+    currentLocale: 'Current locale',
+    nameLabel: 'Name',
+    greeting: 'Hello, {name}!',
+    countLabel: 'Apple count',
+    apples: 'no apples | one apple | {count} apples',
+    money: 'Money',
+    now: 'Now',
+  },
+}

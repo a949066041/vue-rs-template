@@ -2,42 +2,26 @@
 import { useCountStore } from '~/store'
 
 const { count, increment, decrement } = useCountStore()
-
-function handleTestValue() {
-  return new Promise<string>((resolve) => {
-    setTimeout(() => {
-      resolve('wait 3s')
-    }, 3000)
-  })
-}
-
-async function hanldeAddCountValue() {
-  await handleTestValue()
-  count.value++
-}
 </script>
 
 <template>
-  <div>
-    <div>
-      this is about
+  <div class="space-y-3">
+    <h1 class="font-bold">
+      createGlobalState 全局状态示例
+    </h1>
+    <p>
+      当前计数：<span class="text-blue-500">{{ count }}</span>
+    </p>
+    <div class="space-x-2">
+      <button class="border border-orange-500 rounded-lg px-4 py-1" @click="increment">
+        +1
+      </button>
+      <button class="border border-orange-500 rounded-lg px-4 py-1" @click="decrement">
+        -1
+      </button>
     </div>
-    <span class="text-blue">{{ count }}</span>
-    <button v-if="count" class="border border-orange-500 rounded-lg border-solid px-20" @click="increment">
-      add
-    </button>
-    <button class="border border-orange-500 rounded-lg border-solid px-20" @click="decrement">
-      sub 1
-    </button>
-    <button @click="hanldeAddCountValue">
-      change state
-    </button>
-    <h1>list</h1>
-    <ul>
-      <li v-for="item of count" :key="item">
-        {{ item }}
-      </li>
-    </ul>
-    <RouterView />
+    <p class="text-sm text-gray-500">
+      切换到其他页面再返回，计数会保持不变（全局单例状态）。
+    </p>
   </div>
 </template>

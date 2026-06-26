@@ -1,0 +1,26 @@
+export default {
+  nav: {
+    home: '首页',
+    store: '全局状态',
+    vueQuery: 'vue query',
+    piniaQuery: 'pinia query',
+    dynamic: '动态路由',
+    auth: '用户鉴权',
+    nesting: '嵌套路由',
+    notFound: 'not found page',
+    event: '326',
+    about: '关于',
+    i18n: '国际化',
+  },
+  i18n: {
+    title: '国际化 (vue-i18n)',
+    intro: '点击右上角切换语言，导航与本页文案会即时更新，并持久化到 localStorage。',
+    currentLocale: '当前语言',
+    nameLabel: '名字',
+    greeting: '你好，{name}！',
+    countLabel: '苹果数量',
+    apples: '没有苹果 | 一个苹果 | {count} 个苹果',
+    money: '金额',
+    now: '当前时间',
+  },
+}

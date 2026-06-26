@@ -1,12 +1,7 @@
 import type { ZodType } from 'zod'
 
-<<<<<<< HEAD
-type RequestParams = Record<string, string | number | boolean | null | undefined>
-type RequestBody = object
-=======
 type RequestParams = Record<string, unknown>
 type RequestBody = Record<string, unknown> | object
->>>>>>> 41bccda4c28974293d667d7e695d44bb6aba2559
 
 function buildQueryString(params: RequestParams): string {
   const entries = Object.entries(params)

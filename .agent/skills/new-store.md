@@ -38,5 +38,5 @@ export * from './<name>.store'
 ## Notes
 - Use `ref()` for reactive state
 - Use `useLocalStorage` for persisted state
-- Access other stores via their composable: `const { token } = useCacheStore()`
+- Access other stores via their composable: `const { token } = useTokenStore()`
 - Do NOT use Pinia's `defineStore`

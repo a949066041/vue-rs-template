@@ -1,3 +1,7 @@
 @import "tailwindcss";
 
-@plugin './plugins.ts';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@plugin "@iconify/tailwind4" {
+  icon-sets: from-folder(custom, "./svgs");
+ }

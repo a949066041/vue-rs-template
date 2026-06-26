@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useInfiniteQuery } from '@tanstack/vue-query'
-import { computed } from 'vue'
-import { fetchUserPager } from '~/api'
+import { userPagerQueryOptions } from '~/api'
 
 const {
   status,
@@ -9,58 +8,44 @@ const {
   error,
   isFetching,
   isFetchingNextPage,
-  isFetchingPreviousPage,
   fetchNextPage,
-  fetchPreviousPage,
   hasNextPage,
-  hasPreviousPage,
-} = useInfiniteQuery({
-  queryKey: ['user-page'],
-  queryFn: async (data) => {
-    const response = await fetchUserPager({ pageParam: data.pageParam })
-    return response
-  },
-  initialPageParam: 1,
-  getNextPageParam: (lastPage, allPages, lastPageParam) => {
-    return allPages.map(item => item.users.flat()).flat().length >= lastPage.total ? undefined : (lastPageParam! + 1)
-  },
-})
-
-const renderData = computed(() => {
-  return data.value?.pages.map(item => item.users).flat()
-})
+} = useInfiniteQuery(userPagerQueryOptions)
 </script>
 
 <template>
-  <div class="flex flex-col h-[400px] overflow-hidden">
-    <h1>Infinite Loading</h1>
-    <p v-if="status === 'pending'">
+  <div class="space-y-3">
+    <h1 class="text-lg font-semibold">
+      无限滚动加载
+    </h1>
+    <p v-if="status === 'pending'" class="text-sm text-gray-500 dark:text-gray-400">
       loading...
     </p>
-    <p v-else-if="status === 'error'">
+    <p v-else-if="status === 'error'" class="text-sm text-red-500">
       {{ error?.message }}
     </p>
-    <div v-else class=" flex-1 overflow-auto">
-      <button type="button" :disabled="!hasPreviousPage || isFetchingPreviousPage" @click="() => fetchPreviousPage()">
-        {{ isFetchingPreviousPage
-          ? 'Loading more...'
-          : hasPreviousPage
-            ? 'Load Older'
-            : 'Nothing more to load' }}
-      </button>
-      <ul>
-        <li v-for="item of renderData" :key="item.id" :style="{ background: `hsla(${item.id * 30}, 60%, 80%, 1)` }">
-          {{ item.id }}
-        </li>
-        <li @click="() => fetchNextPage()">
-          {{ isFetchingNextPage ? 'Loading more...' : (hasNextPage ? 'next' : 'last') }}
+    <div v-else class="space-y-3">
+      <ul class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+        <li
+          v-for="item of data?.pages"
+          :key="item.id"
+          class="rounded-lg border border-gray-200 px-3 py-2 text-sm dark:border-gray-800"
+        >
+          <span class="text-gray-400">#{{ item.id }}</span>
+          {{ item.firstName }} {{ item.lastName }}
         </li>
       </ul>
-      <div>
-        {{ isFetching && !isFetchingNextPage
-          ? 'Background Updating...'
-          : null }}
-      </div>
+      <button
+        type="button"
+        class="rounded-lg border border-blue-400 px-4 py-1 text-sm text-blue-500 transition-colors hover:bg-blue-50 disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-blue-500/10"
+        :disabled="!hasNextPage || isFetchingNextPage"
+        @click="() => fetchNextPage()"
+      >
+        {{ isFetchingNextPage ? '加载中...' : (hasNextPage ? '加载更多' : '没有更多了') }}
+      </button>
+      <p v-if="isFetching && !isFetchingNextPage" class="text-xs text-gray-400">
+        Background Updating...
+      </p>
     </div>
   </div>
 </template>

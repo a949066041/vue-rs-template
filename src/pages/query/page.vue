@@ -9,15 +9,24 @@ const { data, isLoading } = useQuery({
 </script>
 
 <template>
-  <div class="flex flex-col overflow-hidden h-[80%]">
-    <p v-if="isLoading">
+  <div class="space-y-3">
+    <p v-if="isLoading" class="text-sm text-gray-500 dark:text-gray-400">
       loading...
     </p>
-    <div v-else class="flex-1 overflow-auto">
-      <p>当前列表 {{ data?.users?.length || 0 }} users</p>
-      <blockquote v-for="user in data?.users || []" :key="user.id">
-        {{ user.id }} - {{ user.firstName }} {{ user.lastName }}
-      </blockquote>
+    <div v-else class="space-y-2">
+      <p class="text-sm text-gray-500 dark:text-gray-400">
+        当前列表 {{ data?.users?.length || 0 }} users
+      </p>
+      <ul class="space-y-1">
+        <li
+          v-for="user in data?.users || []"
+          :key="user.id"
+          class="rounded-lg border border-gray-200 px-3 py-2 text-sm dark:border-gray-800"
+        >
+          <span class="text-gray-400">#{{ user.id }}</span>
+          {{ user.firstName }} {{ user.lastName }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>

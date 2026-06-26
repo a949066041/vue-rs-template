@@ -3,80 +3,47 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-<<<<<<< HEAD
-  "packageManager": "pnpm@11.5.1",
-=======
-  "packageManager": "pnpm@11.4.0",
->>>>>>> 41bccda4c28974293d667d7e695d44bb6aba2559
+  "packageManager": "pnpm@11.9.0",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
     "dev": "rsbuild dev",
-    "postinstall": "tsx scripts/svg2json.ts",
     "build": "rsbuild build",
     "preview": "rsbuild preview",
+    "icons": "tsx scripts/icon-gallery.ts",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@iconify/tailwind4": "^1.2.3",
     "@pinia/colada": "^1.3.1",
-<<<<<<< HEAD
-    "@tanstack/vue-query": "^5.101.0",
-=======
-    "@tanstack/vue-query": "^5.100.14",
->>>>>>> 41bccda4c28974293d667d7e695d44bb6aba2559
+    "@rsbuild/plugin-tailwindcss": "^2.0.3",
+    "@tanstack/vue-query": "^5.101.1",
     "@vueuse/core": "^14.3.0",
     "dayjs": "^1.11.21",
-    "es-toolkit": "^1.47.0",
+    "es-toolkit": "^1.48.1",
     "pinia": "^3.0.4",
-<<<<<<< HEAD
     "tsx": "^4.22.4",
-    "vue": "3.5.34",
-=======
-    "tsx": "^4.22.3",
-    "vue": "^3.5.35",
->>>>>>> 41bccda4c28974293d667d7e695d44bb6aba2559
+    "vue": "^3.5.38",
+    "vue-i18n": "^11.4.6",
     "vue-router": "^5.1.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^9.0.0",
-<<<<<<< HEAD
-    "@iconify/json": "^2.2.481",
-    "@iconify/tailwind": "^1.2.0",
-    "@iconify/tools": "^5.0.12",
+    "@antfu/eslint-config": "^9.1.0",
+    "@iconify/json": "^2.2.490",
     "@pinia/colada-devtools": "^1.0.0",
-    "@rsbuild/core": "^2.0.11",
-    "@rsbuild/plugin-mdx": "^1.1.2",
-    "@rsbuild/plugin-vue": "^1.2.9",
-    "@tailwindcss/postcss": "^4.3.0",
-    "@tanstack/vue-query-devtools": "^6.1.33",
-    "@types/node": "^25.9.1",
-    "eslint": "^10.4.1",
+    "@rsbuild/core": "^2.0.15",
+    "@rsbuild/plugin-vue": "^2.0.0",
+    "@tanstack/vue-query-devtools": "^6.1.35",
+    "@types/node": "^26.0.1",
+    "eslint": "^10.5.0",
     "eslint-plugin-unused-imports": "^4.4.1",
-    "shiki": "^4.2.0",
-    "tailwindcss": "^4.3.0",
-    "taze": "^19.14.1",
+    "tailwindcss": "^4.3.1",
     "typescript": "^6.0.3",
-    "vue-tsc": "^3.3.3"
-=======
-    "@iconify/json": "^2.2.479",
-    "@iconify/tailwind": "^1.2.0",
-    "@iconify/tools": "^5.0.12",
-    "@pinia/colada-devtools": "^1.0.0",
-    "@rsbuild/core": "^2.0.7",
-    "@rsbuild/plugin-vue": "^1.2.8",
-    "@tailwindcss/postcss": "^4.3.0",
-    "@tanstack/vue-query-devtools": "^6.1.33",
-    "@types/node": "^25.9.1",
-    "eslint": "^10.4.0",
-    "eslint-plugin-unused-imports": "^4.4.1",
-    "tailwindcss": "^4.3.0",
-    "typescript": "^6.0.3",
-    "vue-tsc": "^3.3.2"
->>>>>>> 41bccda4c28974293d667d7e695d44bb6aba2559
+    "vue-tsc": "^3.3.5"
   },
   "trustedDependencies": [
     "@tailwindcss/oxide",

@@ -2,6 +2,7 @@ import { PiniaColada } from '@pinia/colada'
 import { VueQueryPlugin } from '@tanstack/vue-query'
 import { createApp } from 'vue'
 import App from './App.vue'
+import { i18n } from './i18n'
 import { router } from './router'
 import { authSetup, setupFetch } from './setup'
 import { pinia, queryClient } from './store'
@@ -12,11 +13,14 @@ export function bootstrap() {
   // 注册 Pinia
   app.use(pinia)
 
+  // 注册 i18n
+  app.use(i18n)
+
   // 设置 fetch 拦截器
   setupFetch()
 
   // 设置路由守卫
-  authSetup(router, app)
+  authSetup(router)
 
   // 注册 Pinia Colada
   app.use(PiniaColada, {
@@ -37,7 +41,7 @@ export function bootstrap() {
   // 等待路由准备就绪后挂载
   router.isReady().then(
     () => app.mount('#root'),
-    (error) => {
+    (error: unknown) => {
       console.error('Router initialization failed:', error)
       // 即使路由初始化失败也尝试挂载应用
       app.mount('#root')
