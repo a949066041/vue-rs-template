@@ -12,6 +12,9 @@
     "build": "rsbuild build",
     "preview": "rsbuild preview",
     "icons": "tsx scripts/icon-gallery.ts",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release:cli": "pnpm --dir packages/create-vue-template build && changeset publish",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "vue-tsc --noEmit",
@@ -35,6 +38,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.1.0",
+    "@changesets/cli": "^2.31.0",
     "@iconify/json": "^2.2.490",
     "@pinia/colada-devtools": "^1.0.0",
     "@rsbuild/core": "^2.0.15",

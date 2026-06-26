@@ -19,7 +19,28 @@
 - Node >= 22
 - pnpm（`packageManager: pnpm@11.9.0`）
 
-## 快速开始
+## 用作脚手架
+
+通过 `@yy-web/vue-template` 一键生成新项目（交互式询问项目名 / 包管理器 / 是否安装依赖 / 是否 git init）：
+
+```bash
+pnpm create @yy-web/vue-template my-app
+# 或 npm create @yy-web/vue-template@latest
+```
+
+脚手架包源码见 [`packages/create-vue-template`](./packages/create-vue-template)。实际发布到 npm 的包名为 `@yy-web/create-vue-template`，以兼容 `npm create` 约定。
+
+发布规则：
+
+```bash
+# 首次需要在 packages/create-vue-template 本地手动 npm publish 一次
+# 后续使用 changeset + release PR 自动发布
+pnpm changeset
+```
+
+合并到 `main` 后，Changesets 会自动创建 release PR；该 PR 合并后自动发布 `@yy-web/create-vue-template`。
+
+## 快速开始（直接克隆开发）
 
 ```bash
 pnpm install      # 安装依赖
@@ -39,6 +60,9 @@ pnpm dev          # 开发服务器
 pnpm build        # 生产构建
 pnpm preview      # 本地预览生产构建
 pnpm icons        # 启动独立图标画廊（查看 svgs/ 下全部自定义图标）
+pnpm changeset    # 为脚手架包写一条发布说明
+pnpm version-packages # 本地执行 changeset version（通常由 CI 处理）
+pnpm release:cli  # 本地执行 build + changeset publish（通常由 CI 处理）
 pnpm test         # 运行单元测试（vitest run）
 pnpm test:watch   # 监听模式运行测试
 pnpm typecheck    # vue-tsc 类型检查

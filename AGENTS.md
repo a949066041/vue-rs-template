@@ -14,9 +14,14 @@ pnpm lint:fix     # Auto-fix lint issues
 pnpm test         # Run unit tests (vitest run)
 pnpm test:watch   # Run tests in watch mode
 pnpm icons        # Standalone icon gallery dev tool
+pnpm changeset    # Add a release note for the scaffold package
+pnpm version-packages # Run changeset version locally
+pnpm release:cli  # Build scaffold and publish via changesets
 ```
 
 **Testing:** Vitest + @vue/test-utils (jsdom). Test files live next to source as `*.test.ts` (see `src/api/fetch/client.test.ts`, `src/components/ThemeMode.test.ts`). Config in `vitest.config.ts` (mirrors the `~`/`~~` aliases). CI runs lint → typecheck → test → build via `.github/workflows/ci.yml`.
+
+**Release automation:** `@yy-web/create-vue-template` is versioned with Changesets. Contributors add release notes with `pnpm changeset`. `.github/workflows/release.yml` creates/updates the release PR on `main`, and after merge publishes the scaffold package to npm via OIDC Trusted Publishing.
 
 ## Architecture
 

@@ -15,6 +15,7 @@ export default antfu({
     '**/fixtures',
     '**/dist/**',
     '**/node_modules/**',
+    'packages/*/template/**',
   ],
 }, {
   plugins: {
@@ -34,5 +35,11 @@ export default antfu({
         argsIgnorePattern: '^_',
       },
     ],
+  },
+}, {
+  // 脚手架 CLI 需要直接输出到终端
+  files: ['packages/**/*.mjs'],
+  rules: {
+    'no-console': 'off',
   },
 })

@@ -16,3 +16,6 @@ dist/
 # assets
 custom.json
 route-map.d.ts
+
+# scaffold generated template copy
+packages/*/template/

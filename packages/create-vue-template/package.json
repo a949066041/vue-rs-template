@@ -1,0 +1,35 @@
+{
+  "name": "@yy-web/create-vue-template",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Scaffold a Vue 3 + Rsbuild app from @yy-web/vue-template.",
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a949066041/vue-rs-template.git",
+    "directory": "packages/create-vue-template"
+  },
+  "keywords": [
+    "vue",
+    "rsbuild",
+    "rspack",
+    "template",
+    "scaffold",
+    "create"
+  ],
+  "bin": {
+    "create-vue-template": "index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "template"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "prepublishOnly": "node build.mjs"
+  }
+}
