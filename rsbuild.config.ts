@@ -26,6 +26,10 @@ export default defineConfig({
   },
   html: {
     title: appConfig.title,
+    favicon: './src/assets/icon/app-icon.png',
+    meta: {
+      description: appConfig.description,
+    },
   },
   performance: {
     buildCache: true,

@@ -10,6 +10,11 @@ import { pinia, queryClient } from './store'
 export function bootstrap() {
   const app = createApp(App)
 
+  // 全局错误处理：兜底未捕获的组件渲染 / 生命周期异常
+  app.config.errorHandler = (err, _instance, info) => {
+    console.error(`[app error] ${info}:`, err)
+  }
+
   // 注册 Pinia
   app.use(pinia)
 

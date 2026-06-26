@@ -42,7 +42,16 @@ export const i18n = createI18n({
   numberFormats,
 })
 
+function syncHtmlLang(code: LocaleCode) {
+  if (typeof document !== 'undefined')
+    document.documentElement.lang = code
+}
+
+// 初始化时同步 <html lang>
+syncHtmlLang(localeStorage.value)
+
 export function setLocale(code: LocaleCode) {
   localeStorage.value = code
   i18n.global.locale.value = code
+  syncHtmlLang(code)
 }

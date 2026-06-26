@@ -5,10 +5,15 @@ function normalizeBaseUrl(url: string): string {
   return url.endsWith('/') ? url.slice(0, -1) : url
 }
 
+function isAbsoluteUrl(path: string): boolean {
+  return /^[a-z][a-z\d+\-.]*:\/\//i.test(path)
+}
+
 function buildUrl(baseUrl: string | undefined, resource: string | URL | Request): string {
-  if (!baseUrl)
-    return String(resource)
   const path = String(resource)
+  // 已是绝对地址（http(s):// 等）时不再拼接 baseUrl
+  if (!baseUrl || isAbsoluteUrl(path))
+    return path
   const normalizedBase = normalizeBaseUrl(baseUrl)
   const normalizedPath = path.startsWith('/') ? path : `/${path}`
   return `${normalizedBase}${normalizedPath}`

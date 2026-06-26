@@ -32,10 +32,12 @@ async function fetchResponseIntercept(res: Response): Promise<Response> {
   return res
 }
 
+const API_BASE_URL = import.meta.env.PUBLIC_API_BASE_URL || 'https://dummyjson.com'
+
 export function setupFetch() {
   patchFetch(
     [fetchAuthIntercept],
     [fetchResponseIntercept],
-    'https://dummyjson.com',
+    API_BASE_URL,
   )
 }

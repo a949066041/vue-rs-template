@@ -11,9 +11,12 @@ pnpm preview      # Preview production build
 pnpm typecheck    # Type-check with vue-tsc --noEmit
 pnpm lint         # Lint with ESLint
 pnpm lint:fix     # Auto-fix lint issues
+pnpm test         # Run unit tests (vitest run)
+pnpm test:watch   # Run tests in watch mode
+pnpm icons        # Standalone icon gallery dev tool
 ```
 
-No test framework is configured.
+**Testing:** Vitest + @vue/test-utils (jsdom). Test files live next to source as `*.test.ts` (see `src/api/fetch/client.test.ts`, `src/components/ThemeMode.test.ts`). Config in `vitest.config.ts` (mirrors the `~`/`~~` aliases). CI runs lint → typecheck → test → build via `.github/workflows/ci.yml`.
 
 ## Architecture
 
@@ -65,7 +68,7 @@ Simple global state uses `createGlobalState` from `@vueuse/core` (not Pinia's `d
 - `src/api/fetch/patch.ts` — patches `window.fetch` with request/response interceptors (auth token injection, 401 handling)
 - `src/api/fetch/client.ts` — provides `get`, `post`, `delete` with optional Zod schema validation in dev mode
 - `src/api/module/` — domain-specific API modules (types + fetch functions + query option factories)
-- Uses native `fetch` (no axios). Base URL: `https://dummyjson.com`
+- Uses native `fetch` (no axios). Base URL from `PUBLIC_API_BASE_URL` env var, falling back to `https://dummyjson.com` (see `src/setup/fetch.setup.ts`)
 
 ### Styling
 
