@@ -31,6 +31,17 @@ export default defineConfig({
       description: appConfig.description,
     },
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://dummyjson.com',
+        pathRewrite: {
+          '^/api': '',
+        },
+        changeOrigin: true,
+      },
+    },
+  },
   performance: {
     buildCache: true,
     removeConsole: true,

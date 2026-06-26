@@ -4,7 +4,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { i18n } from './i18n'
 import { router } from './router'
-import { authSetup, setupFetch } from './setup'
+import { authSetup } from './setup'
 import { pinia, queryClient } from './store'
 
 export function bootstrap() {
@@ -20,9 +20,6 @@ export function bootstrap() {
 
   // 注册 i18n
   app.use(i18n)
-
-  // 设置 fetch 拦截器
-  setupFetch()
 
   // 设置路由守卫
   authSetup(router)

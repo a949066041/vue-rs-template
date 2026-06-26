@@ -3,7 +3,7 @@ import type { LoginRes, UserEntity, UserList, UserLoginParams } from './user.typ
 import { defineQueryOptions } from '@pinia/colada'
 import { infiniteQueryOptions, queryOptions } from '@tanstack/vue-query'
 import { toValue } from 'vue'
-import { fetchClient } from '~/api/fetch'
+import fetchClient from '~/api/fetch/client'
 
 const BASE_URL = '/users'
 const USER_PAGER_LIMIT = 40
@@ -12,27 +12,27 @@ const USER_PAGER_LIMIT = 40
  * API 请求函数
  */
 export function fetchUserList() {
-  return fetchClient.get<UserList>(`${BASE_URL}?limit=3`)
+  return fetchClient.setPath(`${BASE_URL}?limit=3`).get<UserList>(true)
 }
 
 export function fetchUser(id: UserEntity['id']) {
-  return fetchClient.get<UserEntity>(`${BASE_URL}/${id}`)
+  return fetchClient.setPath(`${BASE_URL}/${id}`).get<UserEntity>()
 }
 
 export function fetchUserPager({ pageParam: page }: { pageParam: number }): Promise<UserList> {
   const skip = USER_PAGER_LIMIT * page
-  return fetchClient.get<UserList>(`${BASE_URL}`, {
+  return fetchClient.setPath(`${BASE_URL}`).get<UserList>({
     limit: USER_PAGER_LIMIT,
     skip,
   })
 }
 
 export function loginUser(params: UserLoginParams) {
-  return fetchClient.post<LoginRes>(`${BASE_URL}/login`, params)
+  return fetchClient.setPath(`${BASE_URL}/login`).post<LoginRes>(params)
 }
 
 export function getUserMe() {
-  return fetchClient.get<LoginRes>(`${BASE_URL}/me`)
+  return fetchClient.setPath(`${BASE_URL}/me`).get<LoginRes>()
 }
 
 /**

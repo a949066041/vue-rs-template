@@ -5,7 +5,10 @@ import { fetchUserList } from '~/api'
 
 const { data, isLoading } = useQuery({
   key: ['user-list'],
-  query: fetchUserList,
+  async query() {
+    const res = await fetchUserList()
+    return res
+  },
 })
 </script>
 

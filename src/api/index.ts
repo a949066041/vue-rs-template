@@ -1,3 +1,3 @@
-export { fetchClient } from './fetch'
+export { default as fetchClient } from './fetch/client'
 
 export * from './module'
