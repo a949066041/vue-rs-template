@@ -18,8 +18,8 @@ importers:
         specifier: ^14.3.0
         version: 14.3.0(vue@3.5.39(typescript@6.0.3))
       '@yy-web/request':
-        specifier: 2.1.0-beta.7
-        version: 2.1.0-beta.7
+        specifier: 2.1.0
+        version: 2.1.0
       dayjs:
         specifier: ^1.11.21
         version: 1.11.21
@@ -1329,8 +1329,8 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
-  '@yy-web/request@2.1.0-beta.7':
-    resolution: {integrity: sha512-O0u9/hijaBTqqq5WYM/1dSsRWASXJyjV4ULzX/OAfHCKjPMXiKSvZKeiAwmeiNIZRO6b53xWmLNsR6sgfL5Faw==}
+  '@yy-web/request@2.1.0':
+    resolution: {integrity: sha512-/Oh0UxBSFfqANXdtYVYvGkkQJO+3VOeaYxdJgB590Xjj2YGNovqSi7W2NTX/mvuBTzywpZAJrQTASrWTaLsCsw==}
     peerDependencies:
       axios: '>=1.0.0'
     peerDependenciesMeta:
@@ -4476,7 +4476,7 @@ snapshots:
     dependencies:
       vue: 3.5.39(typescript@6.0.3)
 
-  '@yy-web/request@2.1.0-beta.7': {}
+  '@yy-web/request@2.1.0': {}
 
   abbrev@2.0.0: {}
 
