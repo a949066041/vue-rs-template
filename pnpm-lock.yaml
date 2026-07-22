@@ -59,7 +59,7 @@ importers:
         version: 1.2.3(tailwindcss@4.3.3)
       '@pinia/colada-devtools':
         specifier: ^1.0.0
-        version: 1.1.0
+        version: 1.1.2
       '@rsbuild/core':
         specifier: ^2.1.0
         version: 2.1.6
@@ -710,8 +710,8 @@ packages:
   '@oxc-project/types@0.138.0':
     resolution: {integrity: sha512-1a7ZKmrRTCoN1XMZ4L0PyyqrMnrNlLyPuOkdSX2MZg7IiIGRUyurNhAm73ptDOraoBcIordsIGKNPKUzy3ZmfA==}
 
-  '@pinia/colada-devtools@1.1.0':
-    resolution: {integrity: sha512-11HUpxEDqt+ZeYD05DsNjgAlzueOe5qRrV9b05l2/0fECQLkfy1UMpn7+9L2BqAVbjeSaezrFLf2v/sQPwqfBg==}
+  '@pinia/colada-devtools@1.1.2':
+    resolution: {integrity: sha512-cD5y9N0hfveyuP8xB6Yh3W3UYVIf98Kq30bBHDnzxFSK/SFRLPJLWxRxLJdFTquWepInta/XYqcj3t+QQT3rLA==}
 
   '@pinia/colada@1.3.1':
     resolution: {integrity: sha512-DLHtyCud5sACbNLdVIHsoPrhcHMT/1LvObFHxxbmJKU2fqGPluc8Y8CtmCTQ71BgnzcNMuAl97G5XrAgOZqxvg==}
@@ -3909,7 +3909,7 @@ snapshots:
 
   '@oxc-project/types@0.138.0': {}
 
-  '@pinia/colada-devtools@1.1.0': {}
+  '@pinia/colada-devtools@1.1.2': {}
 
   '@pinia/colada@1.3.1(pinia@3.0.4(typescript@6.0.3)(vue@3.5.40(typescript@6.0.3)))(vue@3.5.40(typescript@6.0.3))':
     dependencies:
