@@ -1,7 +1,7 @@
 {
   "name": "@yy-web/create-vue-template",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Scaffold a Vue 3 + Rsbuild app from @yy-web/vue-template.",
   "author": "",
   "license": "MIT",
